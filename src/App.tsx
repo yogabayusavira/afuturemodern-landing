@@ -73,7 +73,7 @@ export default function App() {
               <button className="btn btn-primary" onClick={() => setProjectModalOpen(true)}>Start a project</button>
               <button className="btn btn-join" onClick={() => setTalentModalOpen(true)}>Join the cooperative</button>
             </div>
-            <p className="hero-text-link"><a href="#">Prefer to talk first? Schedule a call →</a></p>
+            <p className="hero-text-link"><a href="#" onClick={(e) => { e.preventDefault(); (window as any).Calendly?.initPopupWidget({ url: 'https://calendly.com/a-future-modern/' }) }}>Prefer to talk first? Schedule a call →</a></p>
             <div className="cred-strip">
               <p>Contributors have shipped work at</p>
               <div className="cred-logos">
@@ -185,9 +185,10 @@ export default function App() {
         {/* ── Pillars ── */}
         <section className="section" data-od-id="pillars" id="pillars">
           <div className="container">
-            <div style={{ textAlign: 'center', maxWidth: '48ch', margin: '0 auto var(--gap-xl)' }}>
-              <p className="section-label">Three pillars, one cooperative</p>
-              <p className="lead" style={{ marginTop: 'var(--gap-sm)' }}>Every member sits in at least one pillar. Many sit across two. A handful move freely through all three. The pillar framing is how opportunities are routed and how teams are built for serious briefs.</p>
+            <div style={{ textAlign: 'center', maxWidth: '52ch', margin: '0 auto var(--gap-xl)' }}>
+              <p className="section-label">How we're organized</p>
+              <h2 style={{ marginBottom: 'var(--gap-md)' }}>Three pillars, one cooperative</h2>
+              <p className="lead" style={{ marginTop: 'var(--gap-sm)', maxWidth: '100%' }}>Every member sits in at least one pillar. Many sit across two. A handful move freely through all three. The pillar framing is how opportunities are routed and how teams are built for serious briefs.</p>
             </div>
             <div className="grid-3">
               <div className="pillar-card">
@@ -256,30 +257,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* ── Partners ── */}
-        <section className="section" data-od-id="partners" id="partners">
-          <div className="container">
-            <p className="section-label">Service partners</p>
-            <p className="lead" style={{ marginBottom: 'var(--gap-lg)', maxWidth: '100%' }}>External organizations Future Modern has signed letters of intent with for service co-delivery. Capabilities span engineering, design, film, growth, and photography.</p>
-            <div className="grid-2 partner-grid" style={{ marginBottom: 'var(--gap-lg)' }}>
-              {[
-                { name: 'BrainHub', cap: 'Software engineering · Web + frontend development · Blockchain · Technical project management' },
-                { name: 'Chaotic Neutral Studios', cap: 'Film production' },
-                { name: 'Hype-US', cap: 'UI / UX design · Frontend development · Web development' },
-                { name: 'Lucid Consulting', cap: 'Pitch decks + sales narrative · Growth + brand · Operations strategy · Fractional co-founder' },
-                { name: 'Nyoka', cap: 'Software engineering · Web + frontend development · Blockchain · Technical project management' },
-                { name: 'Syndika / Synthax.codes', cap: 'Software engineering · Web + frontend development · Blockchain · Technical project management' },
-                { name: 'Underscore Ave', cap: 'Photography' },
-              ].map(({ name, cap }) => (
-                <div className="partner-card" key={name}>
-                  <h3>{name}</h3>
-                  <p className="partner-cap">{cap}</p>
-                </div>
-              ))}
-            </div>
-            <a href="#" className="btn btn-ghost btn-arrow" style={{ fontSize: '14px' }}>See full ecosystem</a>
-          </div>
-        </section>
+
 
         {/* ── People-Powered ── */}
         <section className="section" data-od-id="people-powered">
