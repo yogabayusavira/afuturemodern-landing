@@ -8,15 +8,6 @@ export default function App() {
   const [talentModalOpen, setTalentModalOpen] = useState(false)
   const [projectModalOpen, setProjectModalOpen] = useState(false)
 
-  const scrollTo = (id) => {
-    const el = document.getElementById(id)
-    if (el) {
-      const top = el.getBoundingClientRect().top + window.scrollY - 70
-      window.scrollTo({ top, behavior: 'smooth' })
-    }
-    setMobileOpen(false)
-  }
-
   return (
     <div className="landing-page">
       {/* ── Top Navigation ── */}
