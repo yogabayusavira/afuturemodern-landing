@@ -238,7 +238,8 @@ app.post(
     console.error('Server error:', err)
     res.status(500).json({ error: err.message || 'Failed to send request. Please try again.' })
   }
-)
+})
+
 
 if (process.env.NODE_ENV === 'production') {
   const distPath = path.join(__dirname, '..', 'dist')
