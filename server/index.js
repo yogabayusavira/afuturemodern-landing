@@ -29,6 +29,21 @@ const upload = multer({
 app.use(cors())
 app.use(express.json())
 
+app.use((req, res, next) => {
+  const startedAt = Date.now()
+
+  console.log(`[request] ${req.method} ${req.originalUrl}`)
+
+  res.on('finish', () => {
+    console.log(
+      `[response] ${req.method} ${req.originalUrl} → ${res.statusCode} (${Date.now() - startedAt}ms)`
+    )
+  })
+
+  next()
+})
+
+
 app.post('/api/talent-applications', upload.array('files', 5), async (req, res) => {
   try {
     const {
@@ -101,7 +116,14 @@ app.post('/api/talent-applications', upload.array('files', 5), async (req, res) 
   }
 })
 
-app.post('/api/project-submissions', upload.array('files', 5), async (req, res) => {
+app.post(
+  '/api/project-submissions',
+  (req, _res, next) => {
+    console.log('[project-submissions] route reached')
+    next()
+  },
+  upload.array('files', 5),
+  async (req, res) => {
   try {
     const {
       path: projectPath,
@@ -216,7 +238,7 @@ app.post('/api/project-submissions', upload.array('files', 5), async (req, res) 
     console.error('Server error:', err)
     res.status(500).json({ error: err.message || 'Failed to send request. Please try again.' })
   }
-})
+)
 
 if (process.env.NODE_ENV === 'production') {
   const distPath = path.join(__dirname, '..', 'dist')

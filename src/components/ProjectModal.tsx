@@ -261,8 +261,20 @@ export default function ProjectModal({ isOpen, onClose }: ProjectModalProps) {
       })
 
       if (!res.ok) {
-        const body = await res.json().catch(() => ({}))
-        throw new Error(body.error || 'Failed to send request. Please try again.')
+        const textBody = await res.text()
+        console.log(`[response error] Status: ${res.status} | StatusText: ${res.statusText} | Body: ${textBody}`)
+
+        let payloadError = 'Failed to send request. Please try again.'
+        try {
+          const parsed = JSON.parse(textBody)
+          if (parsed && parsed.error) {
+            payloadError = parsed.error
+          }
+        } catch (e) {
+          // ignore parsing error
+        }
+
+        throw new Error(payloadError)
       }
 
       const body = await res.json()
