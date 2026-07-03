@@ -1,5 +1,6 @@
 import { useState, useRef, useCallback } from 'react'
 import { useTalentFormStore, type UploadedFile } from '../hooks/useTalentFormStore'
+import ScrollCue from './ScrollCue'
 
 const PILLARS = ['STEM', 'Creative Media', 'Professional Services'] as const
 const MAX_WORDS = 300
@@ -34,6 +35,7 @@ interface TalentModalProps {
 export default function TalentModal({ isOpen, onClose }: TalentModalProps) {
   const { data, update, setStep, reset } = useTalentFormStore()
   const [errors, setErrors] = useState<Record<string, string>>({})
+  const modalRef = useRef<HTMLDivElement>(null)
   const [submitState, setSubmitState] = useState<'idle' | 'submitting' | 'error' | 'done'>('idle')
   const [submitError, setSubmitError] = useState('')
   const fileInputRef = useRef<HTMLInputElement>(null)
@@ -209,7 +211,7 @@ export default function TalentModal({ isOpen, onClose }: TalentModalProps) {
 
   return (
     <div className="modal-overlay" onClick={handleClose}>
-      <div className="modal" onClick={(e) => e.stopPropagation()}>
+      <div className="modal" onClick={(e) => e.stopPropagation()} ref={modalRef}>
         <button className="modal-close" onClick={handleClose}>✕</button>
 
         <div className="modal-header">
@@ -460,6 +462,8 @@ export default function TalentModal({ isOpen, onClose }: TalentModalProps) {
             {submitError}
           </div>
         )}
+
+        <ScrollCue containerRef={modalRef} isOpen={isOpen} />
 
         <div className="modal-footer">
           {data.step === 2 && (

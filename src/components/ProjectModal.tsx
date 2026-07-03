@@ -1,5 +1,6 @@
 import { useState, useRef, useCallback, useEffect } from 'react'
 import { useProjectFormStore, type UploadedFile } from '../hooks/useProjectFormStore'
+import ScrollCue from './ScrollCue'
 
 const PILLARS = ['STEM', 'Creative Media', 'Professional Services'] as const
 const ENGAGEMENT_LENGTHS = [
@@ -979,6 +980,8 @@ export default function ProjectModal({ isOpen, onClose }: ProjectModalProps) {
             {submitError}
           </div>
         )}
+
+        <ScrollCue containerRef={modalRef} isOpen={isOpen} />
 
         <div className="modal-footer">
           {data.path !== 'selection' ? (
