@@ -317,8 +317,8 @@ export default function App() {
             <h2 style={{ marginBottom: 'var(--gap-md)' }}>A creator at heart — artist, engineer, builder.</h2>
             <p className="lead" style={{ margin: '0 auto var(--gap-lg)' }}>We have specialists, plenty of them. But the people who shape this cooperative are renaissance figures: comfortable directing a shoot in the morning, shipping a smart contract in the afternoon, sitting in a policy room that night.</p>
             <div className="hero-cta" style={{ justifyContent: 'center' }}>
-              <button className="btn btn-primary" onClick={() => setTalentModalOpen(true)}>Apply to join</button>
-              <button className="btn btn-secondary">Explore membership</button>
+              <button className="btn btn-primary" onClick={() => setProjectModalOpen(true)}>Start a project</button>
+              <button className="btn btn-join" onClick={() => setTalentModalOpen(true)}>Join the cooperative</button>
             </div>
           </div>
         </section>
