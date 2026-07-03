@@ -1,10 +1,12 @@
 import { useState } from 'react'
 import './style.css'
 import TalentModal from './components/TalentModal'
+import ProjectModal from './components/ProjectModal'
 
 export default function App() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [talentModalOpen, setTalentModalOpen] = useState(false)
+  const [projectModalOpen, setProjectModalOpen] = useState(false)
 
   const scrollTo = (id) => {
     const el = document.getElementById(id)
@@ -29,7 +31,7 @@ export default function App() {
           </div>
           <div className="nav-actions" style={{ gap: 'var(--gap-md)', paddingRight: '4px' }}>
             <button className="btn btn-join" onClick={() => setTalentModalOpen(true)}>Join the cooperative</button>
-            <button className="btn btn-primary">Start a project</button>
+            <button className="btn btn-primary" onClick={() => setProjectModalOpen(true)}>Start a project</button>
           </div>
           <button className="nav-toggle" aria-label="Menu" onClick={() => setMobileOpen(true)}>☰</button>
         </div>
@@ -48,7 +50,7 @@ export default function App() {
           <button className="close-btn" onClick={() => setMobileOpen(false)}>✕</button>
         </div>
         <div style={{ marginTop: 'var(--gap-xl)', display: 'flex', flexDirection: 'column', gap: 'var(--gap-sm)' }}>
-          <button className="btn btn-primary" style={{ width: '100%', justifyContent: 'center' }} onClick={() => setMobileOpen(false)}>Start a project</button>
+          <button className="btn btn-primary" style={{ width: '100%', justifyContent: 'center' }} onClick={() => { setMobileOpen(false); setProjectModalOpen(true) }}>Start a project</button>
           <button className="btn btn-join" style={{ width: '100%', justifyContent: 'center' }} onClick={() => { setMobileOpen(false); setTalentModalOpen(true) }}>Join the cooperative</button>
         </div>
       </div>
@@ -68,7 +70,7 @@ export default function App() {
               Build a handpicked team from our network of experienced STEM, Creative Media, and Professional Services contributors.
             </p>
             <div className="hero-cta">
-              <button className="btn btn-primary">Start a project</button>
+              <button className="btn btn-primary" onClick={() => setProjectModalOpen(true)}>Start a project</button>
               <button className="btn btn-join" onClick={() => setTalentModalOpen(true)}>Join the cooperative</button>
             </div>
             <p className="hero-text-link"><a href="#">Prefer to talk first? Schedule a call →</a></p>
@@ -366,6 +368,7 @@ export default function App() {
       </footer>
 
       <TalentModal isOpen={talentModalOpen} onClose={() => setTalentModalOpen(false)} />
+      <ProjectModal isOpen={projectModalOpen} onClose={() => setProjectModalOpen(false)} />
     </div>
   )
 }

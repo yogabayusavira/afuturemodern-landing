@@ -101,6 +101,123 @@ app.post('/api/talent-applications', upload.array('files', 5), async (req, res) 
   }
 })
 
+app.post('/api/project-submissions', upload.array('files', 5), async (req, res) => {
+  try {
+    const {
+      path: projectPath,
+      firstName, lastName, email, company, workArrangement, location,
+      relevantLink, termsAccepted, laborValueOptIn, honeypot,
+      rolesNeeded, pillars, requestSummary, budgetRange,
+      projectName, projectSummary, teamCapabilities,
+      engagementLength, additionalNotes
+    } = req.body
+
+    if (honeypot) {
+      return res.json({ success: true })
+    }
+
+    const files = req.files || []
+
+    if (files.length > 5) {
+      return res.status(400).json({ error: 'Maximum 5 files allowed.' })
+    }
+    const combinedSize = files.reduce((acc, f) => acc + f.size, 0)
+    if (combinedSize > 25 * 1024 * 1024) {
+      return res.status(400).json({ error: 'Combined size exceeds 25 MB.' })
+    }
+
+    const submittedAt = new Date().toISOString()
+    const attachments = files.map((f) => ({
+      filename: f.originalname,
+      content: f.buffer,
+      contentType: 'application/pdf',
+    }))
+
+    const isFindTalent = projectPath === 'find-talent'
+    const toEmail = isFindTalent ? process.env.FIND_TALENT_EMAIL : process.env.BUILD_TEAM_EMAIL
+    const subject = isFindTalent
+      ? `New Find Talent Request — ${company}`
+      : `New Build a Team Request — ${company}`
+
+    const parseArray = (val) => {
+      if (!val) return []
+      if (Array.isArray(val)) return val
+      return [val]
+    }
+
+    const pillarsArr = parseArray(pillars)
+    const rolesArr = parseArray(rolesNeeded)
+    const teamCapsArr = parseArray(teamCapabilities)
+
+    const tableRows = [
+      ['First Name', firstName],
+      ['Last Name', lastName],
+      ['Email', email],
+      ['Company / Organization', company],
+      ['Work Arrangement', workArrangement],
+      ['Location', location || '—'],
+      ['Relevant Link', relevantLink || '—'],
+      ['Terms Accepted', termsAccepted],
+      ['Labor Value Opt-In', laborValueOptIn || '—'],
+      ['Submitted At', submittedAt],
+    ]
+
+    if (isFindTalent) {
+      tableRows.push(
+        ['Roles / Capabilities Needed', rolesArr.join(', ')],
+        ['Pillars', pillarsArr.join(', ')],
+        ['Request Summary', requestSummary],
+        ['Budget Range', budgetRange || '—']
+      )
+    } else {
+      tableRows.push(
+        ['Project Name', projectName || '—'],
+        ['Project Summary', projectSummary],
+        ['Pillars', pillarsArr.join(', ')],
+        ['Team Capabilities Needed', teamCapsArr.join(', ')],
+        ['Engagement Length', engagementLength || '—'],
+        ['Budget Range', budgetRange || '—'],
+        ['Additional Notes', additionalNotes || '—']
+      )
+    }
+
+    const html = `
+      <h2>New Project Request (${isFindTalent ? 'Find Talent' : 'Build a Team'})</h2>
+      <table style="border-collapse:collapse;width:100%">
+        ${tableRows.map(([label, value]) => `
+          <tr style="border-bottom:1px solid #ddd">
+            <td style="padding:8px 12px;font-weight:600;vertical-align:top;white-space:nowrap">${label}</td>
+            <td style="padding:8px 12px">${value}</td>
+          </tr>
+        `).join('')}
+      </table>
+      ${files.length ? `
+        <h3>Attached PDFs (${files.length})</h3>
+        <ul>${files.map(f => `<li>${f.originalname} (${(f.size / 1024 / 1024).toFixed(2)} MB)</li>`).join('')}</ul>
+      ` : ''}
+    `
+
+    const { data: resData, error } = await resend.emails.send({
+      from: process.env.RESEND_FROM_EMAIL,
+      to: toEmail,
+      replyTo: email,
+      subject,
+      html,
+      attachments: attachments.length > 0 ? attachments : undefined,
+    })
+
+    if (error) {
+      console.error('Resend error:', error)
+      return res.status(500).json({ error: 'Failed to send request. Please try again.' })
+    }
+
+    res.json({ success: true, id: resData?.id })
+  } catch (err) {
+    console.error('Server error:', err)
+    res.status(500).json({ error: err.message || 'Failed to send request. Please try again.' })
+  }
+})
+
 if (process.env.NODE_ENV === 'production') {
   const distPath = path.join(__dirname, '..', 'dist')
   app.use(express.static(distPath))

@@ -631,8 +631,124 @@ h1, h2, h3, h4 { text-wrap: balance; margin: 0; }
   .chip { padding: 8px 14px; font-size: 13px; }
   .modal-footer .btn { flex: 1; justify-content: center; }
   .modal-success { padding: var(--gap-md) 0; }
+  .project-paths { grid-template-columns: 1fr; gap: 12px; }
 }
 
 @media (min-width: 921px) {
   .mobile-overlay { display: none !important; }
 }
+
+/* Project path selection */
+.project-paths {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap-md);
+  margin-top: var(--gap-md);
+}
+.path-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--gap-md);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: border-color 0.2s, background 0.2s;
+  cursor: pointer;
+  width: 100%;
+  color: inherit;
+}
+.path-card:hover {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+.path-card h3 {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--fg);
+}
+.path-card p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.5;
+  margin-bottom: var(--gap-md);
+}
+.path-card-action {
+  margin-top: auto;
+  width: 100%;
+}
+.path-card-action .btn {
+  font-size: 13px;
+  padding: 8px 16px;
+  width: 100%;
+  justify-content: center;
+}
+
+/* Tag input interaction */
+.tag-input-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 6px 10px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  min-height: 42px;
+  align-items: center;
+  transition: border-color 0.15s;
+}
+.tag-input-container.has-error {
+  border-color: var(--magenta);
+}
+.tag-input-container:focus-within {
+  border-color: var(--accent);
+}
+.tag-input-field {
+  flex: 1;
+  min-width: 120px;
+  border: none;
+  background: transparent;
+  color: var(--fg);
+  font-size: 15px;
+  outline: none;
+  padding: 4px;
+}
+.tag-input-field::placeholder {
+  color: color-mix(in oklch, var(--muted) 60%, transparent);
+}
+.tag-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.tag-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  background: var(--surface);
+  color: var(--fg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 13px;
+}
+.tag-chip-remove {
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 12px;
+  cursor: pointer;
+  padding: 0 2px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  transition: color 0.15s;
+}
+.tag-chip-remove:hover {
+  color: var(--magenta);
+}
+
