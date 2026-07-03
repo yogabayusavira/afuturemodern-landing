@@ -1,8 +1,10 @@
 import { useState } from 'react'
 import './style.css'
+import TalentModal from './components/TalentModal'
 
 export default function App() {
   const [mobileOpen, setMobileOpen] = useState(false)
+  const [talentModalOpen, setTalentModalOpen] = useState(false)
 
   const scrollTo = (id) => {
     const el = document.getElementById(id)
@@ -26,7 +28,7 @@ export default function App() {
             </div>
           </div>
           <div className="nav-actions" style={{ gap: 'var(--gap-md)', paddingRight: '4px' }}>
-            <button className="btn btn-join">Join the cooperative</button>
+            <button className="btn btn-join" onClick={() => setTalentModalOpen(true)}>Join the cooperative</button>
             <button className="btn btn-primary">Start a project</button>
           </div>
           <button className="nav-toggle" aria-label="Menu" onClick={() => setMobileOpen(true)}>☰</button>
@@ -47,7 +49,7 @@ export default function App() {
         </div>
         <div style={{ marginTop: 'var(--gap-xl)', display: 'flex', flexDirection: 'column', gap: 'var(--gap-sm)' }}>
           <button className="btn btn-primary" style={{ width: '100%', justifyContent: 'center' }} onClick={() => setMobileOpen(false)}>Start a project</button>
-          <button className="btn btn-join" style={{ width: '100%', justifyContent: 'center' }} onClick={() => setMobileOpen(false)}>Join the cooperative</button>
+          <button className="btn btn-join" style={{ width: '100%', justifyContent: 'center' }} onClick={() => { setMobileOpen(false); setTalentModalOpen(true) }}>Join the cooperative</button>
         </div>
       </div>
 
@@ -67,7 +69,7 @@ export default function App() {
             </p>
             <div className="hero-cta">
               <button className="btn btn-primary">Start a project</button>
-              <button className="btn btn-join">Join the cooperative</button>
+              <button className="btn btn-join" onClick={() => setTalentModalOpen(true)}>Join the cooperative</button>
             </div>
             <p className="hero-text-link"><a href="#">Prefer to talk first? Schedule a call →</a></p>
             <div className="cred-strip">
@@ -335,7 +337,7 @@ export default function App() {
             <h2 style={{ marginBottom: 'var(--gap-md)' }}>A creator at heart — artist, engineer, builder.</h2>
             <p className="lead" style={{ margin: '0 auto var(--gap-lg)' }}>We have specialists, plenty of them. But the people who shape this cooperative are renaissance figures: comfortable directing a shoot in the morning, shipping a smart contract in the afternoon, sitting in a policy room that night.</p>
             <div className="hero-cta" style={{ justifyContent: 'center' }}>
-              <button className="btn btn-primary">Apply to join</button>
+              <button className="btn btn-primary" onClick={() => setTalentModalOpen(true)}>Apply to join</button>
               <button className="btn btn-secondary">Explore membership</button>
             </div>
           </div>
@@ -362,6 +364,8 @@ export default function App() {
           <span style={{ fontSize: '12px' }}>© Future Modern Builderberg LLC</span>
         </div>
       </footer>
+
+      <TalentModal isOpen={talentModalOpen} onClose={() => setTalentModalOpen(false)} />
     </div>
   )
 }

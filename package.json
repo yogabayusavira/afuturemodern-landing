@@ -4,10 +4,13 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "concurrently \"vite\" \"node server/index.js\"",
+    "dev:server": "node server/index.js",
+    "dev:client": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "start": "vite preview --host 0.0.0.0 --port $PORT"
+    "start": "node server/index.js",
+    "start:prod": "NODE_ENV=production node server/index.js"
   },
   "devDependencies": {
     "@types/react": "^19.2.17",
@@ -17,7 +20,13 @@
     "vite": "^5.3.1"
   },
   "dependencies": {
+    "concurrently": "^10.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "multer": "^2.2.0",
     "react": "^19.2.7",
-    "react-dom": "^19.2.7"
+    "react-dom": "^19.2.7",
+    "resend": "^6.16.0"
   }
 }
