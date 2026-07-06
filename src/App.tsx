@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import './style.css'
 import TalentModal from './components/TalentModal'
 import ProjectModal from './components/ProjectModal'
@@ -7,6 +7,55 @@ export default function App() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [talentModalOpen, setTalentModalOpen] = useState(false)
   const [projectModalOpen, setProjectModalOpen] = useState(false)
+
+  // Wave lines connecting People section → three Pillar cards
+  const waveWrapperRef = useRef<HTMLDivElement>(null)
+  const stemCardRef    = useRef<HTMLDivElement>(null)
+  const creativeCardRef = useRef<HTMLDivElement>(null)
+  const proCardRef     = useRef<HTMLDivElement>(null)
+  const [waveData, setWaveData] = useState<{ vb: string; s: string; c: string; p: string } | null>(null)
+
+  useEffect(() => {
+    function measure() {
+      const wrapper = waveWrapperRef.current
+      const stemEl  = stemCardRef.current
+      const cEl     = creativeCardRef.current
+      const pEl     = proCardRef.current
+      if (!wrapper || !stemEl || !cEl || !pEl) return
+
+      const wR = wrapper.getBoundingClientRect()
+      const W = wR.width
+      const H = wR.height
+
+      // Return card top-center position relative to wrapper
+      function pt(el: HTMLElement) {
+        const r = el.getBoundingClientRect()
+        return { x: r.left - wR.left + r.width / 2, y: r.top - wR.top }
+      }
+
+      const s = pt(stemEl), c = pt(cEl), p = pt(pEl)
+
+      // Build S-curve: starts at left edge (x=0), ends at card top-center
+      function mkPath(ex: number, ey: number, startYFrac: number) {
+        const sy = H * startYFrac
+        const swing = W * 0.12
+        const cp1 = { x: -swing, y: sy + (ey - sy) * 0.25 }
+        const cp2 = { x: ex + swing * 0.5, y: sy + (ey - sy) * 0.7 }
+        return `M 0 ${sy.toFixed(1)} C ${cp1.x.toFixed(1)} ${cp1.y.toFixed(1)}, ${cp2.x.toFixed(1)} ${cp2.y.toFixed(1)}, ${ex.toFixed(1)} ${ey.toFixed(1)}`
+      }
+
+      setWaveData({
+        vb: `0 0 ${W.toFixed(0)} ${H.toFixed(0)}`,
+        s: mkPath(s.x, s.y, 0.08),
+        c: mkPath(c.x, c.y, 0.10),
+        p: mkPath(p.x, p.y, 0.12),
+      })
+    }
+
+    measure()
+    window.addEventListener('resize', measure)
+    return () => window.removeEventListener('resize', measure)
+  }, [])
 
   return (
     <div className="landing-page">
@@ -191,8 +240,30 @@ export default function App() {
           </section>
         </div>
 
-        {/* ── People ── */}
-        <section className="section" data-od-id="people">
+        {/* ── People & Pillars Wave Wrapper ── */}
+        <div ref={waveWrapperRef} style={{ position: 'relative', overflow: 'hidden' }}>
+          {/* Measured wave lines from left edge → each pillar card top-center */}
+          {waveData && (
+            <svg
+              viewBox={waveData.vb}
+              fill="none"
+              aria-hidden="true"
+              style={{
+                position: 'absolute', left: 0, top: 0,
+                width: '100%', height: '100%',
+                zIndex: 0, pointerEvents: 'none', opacity: 0.4,
+                maskImage: 'linear-gradient(to bottom, transparent, black 10%)',
+                WebkitMaskImage: 'linear-gradient(to bottom, transparent, black 10%)',
+              }}
+            >
+              <path d={waveData.s} stroke="var(--accent)"  strokeWidth="2" fill="none" vectorEffect="non-scaling-stroke" />
+              <path d={waveData.c} stroke="var(--magenta)" strokeWidth="2" fill="none" vectorEffect="non-scaling-stroke" />
+              <path d={waveData.p} stroke="var(--green)"   strokeWidth="2" fill="none" vectorEffect="non-scaling-stroke" />
+            </svg>
+          )}
+
+          {/* ── People ── */}
+          <section className="section" data-od-id="people" style={{ position: 'relative', zIndex: 1 }}>
           <div className="container">
             <p className="section-label">People-powered, exclusively</p>
             <h2 style={{ marginBottom: 'var(--gap-md)', maxWidth: '36ch' }}>The resumes speak for themselves.</h2>
@@ -202,7 +273,7 @@ export default function App() {
         </section>
 
         {/* ── Pillars ── */}
-        <section className="section" data-od-id="pillars" id="pillars">
+        <section className="section" data-od-id="pillars" id="pillars" style={{ position: 'relative', zIndex: 1 }}>
           <div className="container">
             <div style={{ textAlign: 'center', maxWidth: '52ch', margin: '0 auto var(--gap-xl)' }}>
               <p className="section-label">How we're organized</p>
@@ -210,21 +281,21 @@ export default function App() {
               <p className="lead" style={{ marginTop: 'var(--gap-sm)', maxWidth: '100%' }}>Every member sits in at least one pillar. Many sit across two. A handful move freely through all three. The pillar framing is how opportunities are routed and how teams are built for serious briefs.</p>
             </div>
             <div className="grid-3">
-              <div className="pillar-card">
+              <div className="pillar-card" ref={stemCardRef}>
                 <div className="pillar-icon">
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><rect x="4" y="4" width="16" height="16" rx="2" /><path d="M9 8v8M15 8v8M12 8v8" /></svg>
                 </div>
                 <h3>STEM</h3>
                 <p>Full-stack engineering, AI/ML, blockchain, security, data, research.</p>
               </div>
-              <div className="pillar-card">
+              <div className="pillar-card" ref={creativeCardRef}>
                 <div className="pillar-icon">
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><circle cx="12" cy="12" r="3" /><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" /></svg>
                 </div>
                 <h3>Creative Media</h3>
                 <p>Music, film, editorial, design, direction, post-production.</p>
               </div>
-              <div className="pillar-card">
+              <div className="pillar-card" ref={proCardRef}>
                 <div className="pillar-icon">
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M22 12h-4l-3 9L9 3l-3 9H2" /></svg>
                 </div>
@@ -232,7 +303,14 @@ export default function App() {
                 <p>Strategy, legal, finance, operations, management consulting.</p>
               </div>
             </div>
-            <div style={{ marginTop: 'var(--gap-2xl)' }}>
+          </div>
+        </section>
+        </div>
+
+        {/* ── Core Competencies ── */}
+        <section className="section" data-od-id="competencies" id="competencies">
+          <div className="container">
+            <div>
               <p className="section-label">Core Competencies</p>
               <p className="lead" style={{ maxWidth: '100%', marginBottom: 'var(--gap-lg)' }}>Future Modern assembles across disciplines when a brief calls for it. These are the capabilities represented across the cooperative and its service partners.</p>
               <div className="comp-grid">

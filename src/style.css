@@ -1013,4 +1013,49 @@ h1, h2, h3, h4 { text-wrap: balance; margin: 0; }
   color: #10b981;
 }
 
+/* ── Fanning Waves to Card Pillars ─────────────────── */
+.wave-svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.38;
+}
+
+/* Hide on mobile — cards stack, lines make no sense */
+.wave-svg.line-1,
+.wave-svg.line-2,
+.wave-svg.line-3 {
+  display: none;
+}
+
+/*
+  920px – 1120px: container fills the viewport (max-width not yet hit).
+  Card centers (with gutter=32px, gap=32px):
+    col-width = (vw - 64px - 64px) / 3
+    STEM center   = 32 + col-width/2       ≈ 16.67vw + 10.67px
+    Creative      = 32 + col-width + 32 + col-width/2 ≈ 50vw - 10.67px
+    Professional  = 32 + 2*(col-width+32) + col-width/2 ≈ 83.33vw - 10.67px
+*/
+@media (min-width: 920px) {
+  .wave-svg.line-1 { display: block; width: calc(16.67vw + 11px); }
+  .wave-svg.line-2 { display: block; width: calc(50vw);           }
+  .wave-svg.line-3 { display: block; width: calc(83.33vw - 11px); }
+}
+
+/*
+  ≥ 1120px: container is max-width 1120px, centered.
+  Container left edge = (vw - 1120px) / 2.
+  Card centers from viewport left:
+    STEM center   = (vw-1120)/2 + 32 + 165  = 50vw - 363px
+    Creative      = (vw-1120)/2 + 32 + 528  = 50vw + 0px  (≈ 50vw)
+    Professional  = (vw-1120)/2 + 32 + 891  = 50vw + 363px
+*/
+@media (min-width: 1120px) {
+  .wave-svg.line-1 { width: calc(50vw - 363px); }
+  .wave-svg.line-2 { width: calc(50vw);         }
+  .wave-svg.line-3 { width: calc(50vw + 363px); }
+}
 
