@@ -106,8 +106,35 @@ export default function App() {
           </div>
         </section>
 
-        {/* ── Purpose & Vision ── */}
-        <section className="section" data-od-id="purpose-vision">
+        {/* ── Purpose & How It Works Wave Wrapper ── */}
+        <div style={{ position: 'relative', overflow: 'hidden' }}>
+          {/* Subtle Decorative Wave spanning from right side of screen to left side */}
+          <svg 
+            className="section-wave"
+            viewBox="0 0 1200 800" 
+            preserveAspectRatio="none" 
+            fill="none" 
+            aria-hidden="true" 
+            style={{ 
+              position: 'absolute', 
+              left: '0', 
+              top: '0', 
+              height: '100%', 
+              width: '100%', 
+              zIndex: 0, 
+              opacity: 0.45,
+              pointerEvents: 'none',
+              maskImage: 'linear-gradient(to bottom, transparent, black 10%, black 90%, transparent)',
+              WebkitMaskImage: 'linear-gradient(to bottom, transparent, black 10%, black 90%, transparent)'
+            }}
+          >
+            <path d="M 1200 80 C -200 230, 1400 530, 0 680" stroke="var(--accent)" strokeWidth="2.5" vectorEffect="non-scaling-stroke" />
+            <path d="M 1200 110 C -200 260, 1400 560, 0 710" stroke="var(--magenta)" strokeWidth="2.5" vectorEffect="non-scaling-stroke" />
+            <path d="M 1200 140 C -200 290, 1400 590, 0 740" stroke="var(--green)" strokeWidth="2.5" vectorEffect="non-scaling-stroke" />
+          </svg>
+
+          {/* ── Purpose & Vision ── */}
+          <section className="section" data-od-id="purpose-vision" style={{ position: 'relative', zIndex: 1 }}>
           <div className="container">
             <div className="grid-2">
               <div>
@@ -136,7 +163,7 @@ export default function App() {
         </section>
 
         {/* ── How It Works ── */}
-        <section className="section" data-od-id="how-it-works" id="how-it-works">
+        <section className="section" data-od-id="how-it-works" id="how-it-works" style={{ position: 'relative', zIndex: 1 }}>
           <div className="container">
             <div className="process-intro">
               <p className="section-label">$BUILD with the best.</p>
@@ -162,6 +189,7 @@ export default function App() {
             </div>
           </div>
         </section>
+        </div>
 
         {/* ── People ── */}
         <section className="section" data-od-id="people">

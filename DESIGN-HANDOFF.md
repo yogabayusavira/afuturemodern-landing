@@ -87,3 +87,15 @@ For responsive web exports, treat these as a modern breakpoint system for one ad
 8. Confirm the production result visually matches the exported design before refactoring internals.
 9. Reject implementation shortcuts that flatten the design into generic cards, generic gradients, placeholder stats, or framework-default typography.
 10. If a detail is ambiguous, keep the exported HTML/CSS/JS behavior rather than inventing a new pattern.
+
+## Brand Colors
+
+Three primary colors define the A Future Modern brand:
+
+| Color | Hex | Usage |
+|---|---|---|
+| **Blue** | `#3A4FAA` | Primary accent — buttons, links, borders, highlights |
+| **Magenta** | `#951B70` | Secondary accent — gradients, emphasis, decorative elements |
+| **Green** | `#017249` | Tertiary accent — supporting elements, secondary highlights |
+
+> **Current page state:** `#3A4FAA` and `#951B70` are already wired as `--accent` and `--magenta`. Green (`#017249`) is not yet in the palette. Add as CSS custom property (`--green`) and apply: green for tertiary highlights, check/confirmation states.

@@ -7,6 +7,7 @@
   --border:       #2a2825;
   --accent:       #3A4FAA;
   --magenta:      #951B70;
+  --green:        #017249;
   --white:        #ffffff;
 
   --accent-soft:  color-mix(in oklch, var(--accent) 18%, transparent);
