@@ -329,8 +329,7 @@ export default function App() {
                 </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
         {/* ── Venture Labor ── */}
         <section className="section" data-od-id="venture-labor">
