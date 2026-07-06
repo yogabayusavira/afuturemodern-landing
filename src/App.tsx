@@ -10,17 +10,17 @@ export default function App() {
 
   // Wave lines connecting People section → three Pillar cards
   const waveWrapperRef = useRef<HTMLDivElement>(null)
-  const stemCardRef    = useRef<HTMLDivElement>(null)
+  const stemCardRef = useRef<HTMLDivElement>(null)
   const creativeCardRef = useRef<HTMLDivElement>(null)
-  const proCardRef     = useRef<HTMLDivElement>(null)
+  const proCardRef = useRef<HTMLDivElement>(null)
   const [waveData, setWaveData] = useState<{ vb: string; s: string; c: string; p: string } | null>(null)
 
   useEffect(() => {
     function measure() {
       const wrapper = waveWrapperRef.current
-      const stemEl  = stemCardRef.current
-      const cEl     = creativeCardRef.current
-      const pEl     = proCardRef.current
+      const stemEl = stemCardRef.current
+      const cEl = creativeCardRef.current
+      const pEl = proCardRef.current
       if (!wrapper || !stemEl || !cEl || !pEl) return
 
       const wR = wrapper.getBoundingClientRect()
@@ -113,7 +113,7 @@ export default function App() {
               <button className="btn btn-primary" onClick={() => setProjectModalOpen(true)}>Start a project</button>
               <button className="btn btn-join" onClick={() => setTalentModalOpen(true)}>Join the cooperative</button>
             </div>
-            <p className="hero-text-link"><a href="#" onClick={(e) => { e.preventDefault(); (window as any).Calendly?.initPopupWidget({ url: 'https://calendly.com/a-future-modern/' }) }}>Prefer to talk first? Schedule a call →</a></p>
+            <p className="hero-text-link"><a href="#" onClick={(e) => { e.preventDefault(); (window as any).Calendly?.initPopupWidget({ url: 'https://calendly.com/properpreparationism' }) }}>Prefer to talk first? Schedule a call →</a></p>
             <div className="cred-strip">
               <p>Contributors have shipped work at</p>
               <div className="cred-logos">
@@ -256,50 +256,50 @@ export default function App() {
                 WebkitMaskImage: 'linear-gradient(to bottom, transparent, black 10%)',
               }}
             >
-              <path d={waveData.s} stroke="var(--accent)"  strokeWidth="2" fill="none" vectorEffect="non-scaling-stroke" />
+              <path d={waveData.s} stroke="var(--accent)" strokeWidth="2" fill="none" vectorEffect="non-scaling-stroke" />
               <path d={waveData.c} stroke="var(--magenta)" strokeWidth="2" fill="none" vectorEffect="non-scaling-stroke" />
-              <path d={waveData.p} stroke="var(--green)"   strokeWidth="2" fill="none" vectorEffect="non-scaling-stroke" />
+              <path d={waveData.p} stroke="var(--green)" strokeWidth="2" fill="none" vectorEffect="non-scaling-stroke" />
             </svg>
           )}
 
           {/* ── People ── */}
           <section className="section" data-od-id="people" style={{ position: 'relative', zIndex: 1 }}>
-          <div className="container">
-            <p className="section-label">People-powered, exclusively</p>
-            <h2 style={{ marginBottom: 'var(--gap-md)', maxWidth: '36ch' }}>The resumes speak for themselves.</h2>
-            <p className="lead" style={{ maxWidth: '100%' }}>The people who built this are already reputed in their fields. Top performers at the companies they passed through. Founding hires at platforms that went on to IPO. Engineers at Caltech, Berkeley, and the Smithsonian. Designers and writers at Columbia Records, Bad Boy, Mad Decent, Complex. Operators at Microsoft, Amazon, Lenovo, Bird, WebMD, and the LADWP.</p>
-            <div className="disclaimer-fine">Contributor affiliations are listed for context only and do not imply endorsement of Future Modern Builderberg LLC or $BUILD.Store.</div>
-          </div>
-        </section>
+            <div className="container">
+              <p className="section-label">People-powered, exclusively</p>
+              <h2 style={{ marginBottom: 'var(--gap-md)', maxWidth: '36ch' }}>The resumes speak for themselves.</h2>
+              <p className="lead" style={{ maxWidth: '100%' }}>The people who built this are already reputed in their fields. Top performers at the companies they passed through. Founding hires at platforms that went on to IPO. Engineers at Caltech, Berkeley, and the Smithsonian. Designers and writers at Columbia Records, Bad Boy, Mad Decent, Complex. Operators at Microsoft, Amazon, Lenovo, Bird, WebMD, and the LADWP.</p>
+              <div className="disclaimer-fine">Contributor affiliations are listed for context only and do not imply endorsement of Future Modern Builderberg LLC or $BUILD.Store.</div>
+            </div>
+          </section>
 
-        {/* ── Pillars ── */}
-        <section className="section" data-od-id="pillars" id="pillars" style={{ position: 'relative', zIndex: 1 }}>
-          <div className="container">
-            <div style={{ textAlign: 'center', maxWidth: '52ch', margin: '0 auto var(--gap-xl)' }}>
-              <p className="section-label">How we're organized</p>
-              <h2 style={{ marginBottom: 'var(--gap-md)' }}>Three pillars, one cooperative</h2>
-              <p className="lead" style={{ marginTop: 'var(--gap-sm)', maxWidth: '100%' }}>Every member sits in at least one pillar. Many sit across two. A handful move freely through all three. The pillar framing is how opportunities are routed and how teams are built for serious briefs.</p>
-            </div>
-            <div className="grid-3">
-              <div className="pillar-card card-stem" ref={stemCardRef}>
-                <div className="pillar-card-content">
-                  <h3>STEM</h3>
-                  <p>Full-stack engineering, AI/ML, blockchain, security, data, research.</p>
+          {/* ── Pillars ── */}
+          <section className="section" data-od-id="pillars" id="pillars" style={{ position: 'relative', zIndex: 1 }}>
+            <div className="container">
+              <div style={{ textAlign: 'center', maxWidth: '52ch', margin: '0 auto var(--gap-xl)' }}>
+                <p className="section-label">How we're organized</p>
+                <h2 style={{ marginBottom: 'var(--gap-md)' }}>Three pillars, one cooperative</h2>
+                <p className="lead" style={{ marginTop: 'var(--gap-sm)', maxWidth: '100%' }}>Every member sits in at least one pillar. Many sit across two. A handful move freely through all three. The pillar framing is how opportunities are routed and how teams are built for serious briefs.</p>
+              </div>
+              <div className="grid-3">
+                <div className="pillar-card card-stem" ref={stemCardRef}>
+                  <div className="pillar-card-content">
+                    <h3>STEM</h3>
+                    <p>Full-stack engineering, AI/ML, blockchain, security, data, research.</p>
+                  </div>
+                </div>
+                <div className="pillar-card card-creative" ref={creativeCardRef}>
+                  <div className="pillar-card-content">
+                    <h3>Creative Media</h3>
+                    <p>Music, film, editorial, design, direction, post-production.</p>
+                  </div>
+                </div>
+                <div className="pillar-card card-pro" ref={proCardRef}>
+                  <div className="pillar-card-content">
+                    <h3>Professional Services</h3>
+                    <p>Strategy, legal, finance, operations, management consulting.</p>
+                  </div>
                 </div>
               </div>
-              <div className="pillar-card card-creative" ref={creativeCardRef}>
-                <div className="pillar-card-content">
-                  <h3>Creative Media</h3>
-                  <p>Music, film, editorial, design, direction, post-production.</p>
-                </div>
-              </div>
-              <div className="pillar-card card-pro" ref={proCardRef}>
-                <div className="pillar-card-content">
-                  <h3>Professional Services</h3>
-                  <p>Strategy, legal, finance, operations, management consulting.</p>
-                </div>
-              </div>
-            </div>
             </div>
           </section>
         </div>
@@ -312,32 +312,32 @@ export default function App() {
               <p className="lead">Future Modern assembles across disciplines when a brief calls for it. These are the capabilities represented across the cooperative and its service partners.</p>
             </div>
             <div className="comp-grid">
-                <div className="comp-col col-stem">
-                  <h3 className="comp-heading">STEM</h3>
-                  <div className="comp-divider" />
-                  <p className="comp-text">Web Design · Web Development · Blockchain Development · Data Science &amp; Machine Learning · Mechanical Engineering · Robotics · Electrical Engineering · Network Administration &amp; Cybersecurity · Scientific Liaison · Technical Writing</p>
-                </div>
-                <div className="comp-col col-creative">
-                  <h3 className="comp-heading">Creative Media</h3>
-                  <div className="comp-divider" />
-                  <p className="comp-text">Content Marketing · Advertising · Music · Product Design · Graphic Design · Game Design · Fashion Design · Film Direction · Event Planning</p>
-                </div>
-                <div className="comp-col col-pro">
-                  <h3 className="comp-heading">Professional Services</h3>
-                  <div className="comp-divider" />
-                  <p className="comp-text">Managed Services · Product Management · Consulting · Strategy · Psychiatry &amp; Psychology · Family Medicine · Health Law · Employment Law · Pharmaceuticals · Medical Writing</p>
-                </div>
+              <div className="comp-col col-stem">
+                <h3 className="comp-heading">STEM</h3>
+                <div className="comp-divider" />
+                <p className="comp-text">Web Design · Web Development · Blockchain Development · Data Science &amp; Machine Learning · Mechanical Engineering · Robotics · Electrical Engineering · Network Administration &amp; Cybersecurity · Scientific Liaison · Technical Writing</p>
+              </div>
+              <div className="comp-col col-creative">
+                <h3 className="comp-heading">Creative Media</h3>
+                <div className="comp-divider" />
+                <p className="comp-text">Content Marketing · Advertising · Music · Product Design · Graphic Design · Game Design · Fashion Design · Film Direction · Event Planning</p>
+              </div>
+              <div className="comp-col col-pro">
+                <h3 className="comp-heading">Professional Services</h3>
+                <div className="comp-divider" />
+                <p className="comp-text">Managed Services · Product Management · Consulting · Strategy · Psychiatry &amp; Psychology · Family Medicine · Health Law · Employment Law · Pharmaceuticals · Medical Writing</p>
               </div>
             </div>
-          </section>
-          <div className="competencies-wave">
-            <svg viewBox="0 0 1440 120" preserveAspectRatio="none" fill="none">
-              <path d="M0 60 Q180 0 360 60 Q540 120 720 60 Q900 0 1080 60 Q1260 120 1440 60" stroke="var(--accent)" strokeWidth="1.5" opacity="0.35" fill="none" />
-              <path d="M0 80 Q240 20 480 80 Q720 140 960 80 Q1200 20 1440 80" stroke="var(--magenta)" strokeWidth="1" opacity="0.25" fill="none" />
-              <path d="M0 40 Q300 100 600 40 Q900 -20 1200 40 Q1350 70 1440 40" stroke="var(--magenta)" strokeWidth="2" opacity="0.15" fill="none" />
-              <path d="M0 120 Q200 40 400 80 Q600 120 800 60 Q1000 0 1200 40 Q1320 60 1440 70" stroke="var(--accent)" strokeWidth="0.8" opacity="0.2" fill="none" />
-            </svg>
           </div>
+        </section>
+        <div className="competencies-wave">
+          <svg viewBox="0 0 1440 120" preserveAspectRatio="none" fill="none">
+            <path d="M0 60 Q180 0 360 60 Q540 120 720 60 Q900 0 1080 60 Q1260 120 1440 60" stroke="var(--accent)" strokeWidth="1.5" opacity="0.35" fill="none" />
+            <path d="M0 80 Q240 20 480 80 Q720 140 960 80 Q1200 20 1440 80" stroke="var(--magenta)" strokeWidth="1" opacity="0.25" fill="none" />
+            <path d="M0 40 Q300 100 600 40 Q900 -20 1200 40 Q1350 70 1440 40" stroke="var(--magenta)" strokeWidth="2" opacity="0.15" fill="none" />
+            <path d="M0 120 Q200 40 400 80 Q600 120 800 60 Q1000 0 1200 40 Q1320 60 1440 70" stroke="var(--accent)" strokeWidth="0.8" opacity="0.2" fill="none" />
+          </svg>
+        </div>
 
         {/* ── Venture Labor ── */}
         <section className="section" data-od-id="venture-labor" style={{ position: 'relative', overflow: 'hidden' }}>
@@ -347,21 +347,21 @@ export default function App() {
             <p className="lead" style={{ marginBottom: 'var(--gap-lg)', maxWidth: '100%' }}>Venture Capital pools money and goes looking for labor to multiply it. Venture Labor is the inversion. People who can do the work pool their skill and time, and the upside on what gets shipped belongs to the people who shipped it.</p>
             <p className="lead" style={{ marginBottom: 'var(--gap-lg)', maxWidth: '100%', color: 'var(--fg)' }}>The cooperative is the structure. The people are the proof.</p>
             <div className="compare-wrap">
-            <div className="compare-grid">
-              <div className="compare-card vc">
-                <h3>Venture Capital</h3>
-                <p style={{ color: 'var(--muted)' }}>Capital seeks labor.</p>
+              <div className="compare-grid">
+                <div className="compare-card vc">
+                  <h3>Venture Capital</h3>
+                  <p style={{ color: 'var(--muted)' }}>Capital seeks labor.</p>
+                </div>
+                <div className="compare-card vl">
+                  <h3 style={{ color: 'var(--accent)' }}>Venture Labor</h3>
+                  <p style={{ color: 'var(--muted)' }}>Labor creates ownership.</p>
+                </div>
               </div>
-              <div className="compare-card vl">
-                <h3 style={{ color: 'var(--accent)' }}>Venture Labor</h3>
-                <p style={{ color: 'var(--muted)' }}>Labor creates ownership.</p>
-              </div>
-            </div>
-            <svg className="compare-arrow" viewBox="0 0 100 40" fill="none" aria-hidden="true">
-              <path d="M8 20 Q25 4 50 20 Q75 36 92 20" stroke="var(--accent)" strokeWidth="1.5" opacity="0.6" />
-              <path d="M8 22 Q28 8 50 22 Q72 36 92 22" stroke="var(--magenta)" strokeWidth="1" opacity="0.4" />
-              <path d="M82 16l10 4-10 6" stroke="var(--accent)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" opacity="0.6" />
-            </svg>
+              <svg className="compare-arrow" viewBox="0 0 100 40" fill="none" aria-hidden="true">
+                <path d="M8 20 Q25 4 50 20 Q75 36 92 20" stroke="var(--accent)" strokeWidth="1.5" opacity="0.6" />
+                <path d="M8 22 Q28 8 50 22 Q72 36 92 22" stroke="var(--magenta)" strokeWidth="1" opacity="0.4" />
+                <path d="M82 16l10 4-10 6" stroke="var(--accent)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" opacity="0.6" />
+              </svg>
             </div>
           </div>
         </section>
@@ -469,7 +469,7 @@ export default function App() {
                 <div className="values-card">
                   <p className="section-label">Provenance · Discernment · Equity</p>
                   <h2 style={{ marginBottom: 'var(--gap-lg)' }}>Core values</h2>
-                  
+
                   <div className="values-list">
                     <div className="value-list-item">
                       <h3>Provenance</h3>
@@ -500,46 +500,46 @@ export default function App() {
                 <p className="section-label">Cooperative Standing</p>
                 <h3 style={{ marginBottom: 'var(--gap-sm)' }}>Members shipping the work</h3>
                 <p className="lead" style={{ marginBottom: 'var(--gap-lg)' }}>
-                  Each contributor holds a standing tier within the cooperative's player-card system: Champion's Court gold, Future Modernist magenta, promotion-eligible blue, and good standing green.
+                  Each contributor holds a standing tier within the cooperative's player-card system: Champion's Court gold, Future Modernist magenta, promotion-eligible blue, good standing green, and probation grey.
                 </p>
 
                 <div className="standing-grid-2col">
-                  <InteractiveStandingCard 
-                    photo="/Jamar McCarthy.jpg" 
-                    tier="tier-champion" 
-                    hasSheen 
-                    name="Jamar McCarthy" 
-                    role="Cooperative Builder • Strategist" 
+                  <InteractiveStandingCard
+                    photo="/Jamar McCarthy.jpg"
+                    tier="tier-champion"
+                    hasSheen
+                    name="Jamar McCarthy"
+                    role="Cooperative Builder • Strategist"
                   />
-                  <InteractiveStandingCard 
-                    photo="/Big Baby Gandhi.jpg" 
-                    tier="tier-future-modernist" 
-                    name="Big Baby Gandhi" 
-                    role="Rapper • Producer" 
+                  <InteractiveStandingCard
+                    photo="/Big Baby Gandhi.jpg"
+                    tier="tier-future-modernist"
+                    name="Big Baby Gandhi"
+                    role="Rapper • Producer"
                   />
-                  <InteractiveStandingCard 
+                  <InteractiveStandingCard
                     photo="/Chibu O..jpg"
-                    tier="tier-future-modernist" 
-                    name="Chibu O." 
-                    role="Fullstack Engineer • Data" 
+                    tier="tier-future-modernist"
+                    name="Chibu O."
+                    role="Fullstack Engineer • Data"
                   />
-                  <InteractiveStandingCard 
-                    photo="/Sunny Su.jpg" 
-                    tier="tier-promotion" 
-                    name="Sunny Su" 
-                    role="Brand • UI/UX • Product Designer" 
+                  <InteractiveStandingCard
+                    photo="/Sunny Su.jpg"
+                    tier="tier-promotion"
+                    name="Sunny Su"
+                    role="Brand • UI/UX • Product Designer"
                   />
-                  <InteractiveStandingCard 
+                  <InteractiveStandingCard
                     photo="/Sahtyre.jpg"
-                    tier="tier-promotion" 
-                    name="Sahtyre" 
-                    role="Rapper" 
+                    tier="tier-promotion"
+                    name="Sahtyre"
+                    role="Rapper"
                   />
-                  <InteractiveStandingCard 
+                  <InteractiveStandingCard
                     photo="/Bayu.jpg"
-                    tier="tier-good-standing" 
-                    name="Bayu Savira" 
-                    role="UI/UX • Marketing Funnel • Lead Gen" 
+                    tier="tier-good-standing"
+                    name="Bayu Savira"
+                    role="UI/UX • Marketing Funnel • Lead Gen"
                   />
                 </div>
               </div>
