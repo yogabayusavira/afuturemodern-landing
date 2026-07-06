@@ -307,22 +307,23 @@ export default function App() {
         {/* ── Core Competencies ── */}
         <section className="section" data-od-id="competencies" id="competencies">
           <div className="container">
-            <div>
+            <div className="comp-intro">
               <p className="section-label">Core Competencies</p>
-              <p className="lead" style={{ maxWidth: '100%', marginBottom: 'var(--gap-lg)' }}>Future Modern assembles across disciplines when a brief calls for it. These are the capabilities represented across the cooperative and its service partners.</p>
-              <div className="comp-grid">
-                <div className="comp-col">
-                  <h3 className="comp-heading" style={{ color: 'var(--accent)' }}>STEM</h3>
+              <p className="lead">Future Modern assembles across disciplines when a brief calls for it. These are the capabilities represented across the cooperative and its service partners.</p>
+            </div>
+            <div className="comp-grid">
+                <div className="comp-col col-stem">
+                  <h3 className="comp-heading">STEM</h3>
                   <div className="comp-divider" />
                   <p className="comp-text">Web Design · Web Development · Blockchain Development · Data Science &amp; Machine Learning · Mechanical Engineering · Robotics · Electrical Engineering · Network Administration &amp; Cybersecurity · Scientific Liaison · Technical Writing</p>
                 </div>
-                <div className="comp-col">
-                  <h3 className="comp-heading" style={{ color: 'var(--magenta)' }}>Creative Media</h3>
+                <div className="comp-col col-creative">
+                  <h3 className="comp-heading">Creative Media</h3>
                   <div className="comp-divider" />
                   <p className="comp-text">Content Marketing · Advertising · Music · Product Design · Graphic Design · Game Design · Fashion Design · Film Direction · Event Planning</p>
                 </div>
-                <div className="comp-col">
-                  <h3 className="comp-heading" style={{ color: 'var(--green)' }}>Professional Services</h3>
+                <div className="comp-col col-pro">
+                  <h3 className="comp-heading">Professional Services</h3>
                   <div className="comp-divider" />
                   <p className="comp-text">Managed Services · Product Management · Consulting · Strategy · Psychiatry &amp; Psychology · Family Medicine · Health Law · Employment Law · Pharmaceuticals · Medical Writing</p>
                 </div>
