@@ -300,8 +300,8 @@ export default function App() {
                 </div>
               </div>
             </div>
-          </div>
-        </section>
+            </div>
+          </section>
         </div>
 
         {/* ── Core Competencies ── */}
@@ -330,14 +330,23 @@ export default function App() {
               </div>
             </div>
           </section>
+          <div className="competencies-wave">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none" fill="none">
+              <path d="M0 60 Q180 0 360 60 Q540 120 720 60 Q900 0 1080 60 Q1260 120 1440 60" stroke="var(--accent)" strokeWidth="1.5" opacity="0.35" fill="none" />
+              <path d="M0 80 Q240 20 480 80 Q720 140 960 80 Q1200 20 1440 80" stroke="var(--magenta)" strokeWidth="1" opacity="0.25" fill="none" />
+              <path d="M0 40 Q300 100 600 40 Q900 -20 1200 40 Q1350 70 1440 40" stroke="var(--magenta)" strokeWidth="2" opacity="0.15" fill="none" />
+              <path d="M0 120 Q200 40 400 80 Q600 120 800 60 Q1000 0 1200 40 Q1320 60 1440 70" stroke="var(--accent)" strokeWidth="0.8" opacity="0.2" fill="none" />
+            </svg>
+          </div>
 
         {/* ── Venture Labor ── */}
-        <section className="section" data-od-id="venture-labor">
+        <section className="section" data-od-id="venture-labor" style={{ position: 'relative', overflow: 'hidden' }}>
           <div className="container">
             <p className="section-label">The contract</p>
             <h2 style={{ marginBottom: 'var(--gap-md)' }}>Venture Labor.</h2>
             <p className="lead" style={{ marginBottom: 'var(--gap-lg)', maxWidth: '100%' }}>Venture Capital pools money and goes looking for labor to multiply it. Venture Labor is the inversion. People who can do the work pool their skill and time, and the upside on what gets shipped belongs to the people who shipped it.</p>
             <p className="lead" style={{ marginBottom: 'var(--gap-lg)', maxWidth: '100%', color: 'var(--fg)' }}>The cooperative is the structure. The people are the proof.</p>
+            <div className="compare-wrap">
             <div className="compare-grid">
               <div className="compare-card vc">
                 <h3>Venture Capital</h3>
@@ -347,6 +356,12 @@ export default function App() {
                 <h3 style={{ color: 'var(--accent)' }}>Venture Labor</h3>
                 <p style={{ color: 'var(--muted)' }}>Labor creates ownership.</p>
               </div>
+            </div>
+            <svg className="compare-arrow" viewBox="0 0 100 40" fill="none" aria-hidden="true">
+              <path d="M8 20 Q25 4 50 20 Q75 36 92 20" stroke="var(--accent)" strokeWidth="1.5" opacity="0.6" />
+              <path d="M8 22 Q28 8 50 22 Q72 36 92 22" stroke="var(--magenta)" strokeWidth="1" opacity="0.4" />
+              <path d="M82 16l10 4-10 6" stroke="var(--accent)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" opacity="0.6" />
+            </svg>
             </div>
           </div>
         </section>
