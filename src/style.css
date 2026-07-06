@@ -677,6 +677,10 @@ h1, h2, h3, h4 { text-wrap: balance; margin: 0; }
 .radio-row {
   display: flex; gap: 10px;
 }
+@media (max-width: 600px) {
+  .radio-row { flex-direction: column; gap: 6px; }
+  .radio-row .radio-label { width: 100%; }
+}
 .radio-label {
   display: inline-flex; align-items: center; gap: 6px;
   padding: 7px 16px;
