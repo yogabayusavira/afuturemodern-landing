@@ -550,7 +550,7 @@ h1, h2, h3, h4 { text-wrap: balance; margin: 0; }
 
 @media (max-width: 480px) {
   .standing-grid-2col {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 

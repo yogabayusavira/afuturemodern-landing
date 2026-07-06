@@ -590,49 +590,77 @@ export default function App() {
 
 function InteractiveStandingCard({ photo, tier, hasSheen, name, role }: { photo: string; tier: string; hasSheen?: boolean; name: string; role: string }) {
   const cardRef = useRef<HTMLDivElement>(null);
-  
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+  const isMobile = /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent);
+
+  const applyTilt = (tiltX: number, tiltY: number, instant = false) => {
     const card = cardRef.current;
     if (!card) return;
-    const rect = card.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    
-    // Normalize coordinates around center (from -0.5 to 0.5)
-    const px = (x / rect.width) - 0.5;
-    const py = (y / rect.height) - 0.5;
-    
-    // Tilt intensity (max rotation degrees)
-    const maxTilt = 12;
-    const tiltX = -py * maxTilt;
-    const tiltY = px * maxTilt;
-    
-    // Apply transform and transition
     card.style.transform = `perspective(800px) rotateX(${tiltX.toFixed(2)}deg) rotateY(${tiltY.toFixed(2)}deg) scale3d(1.02, 1.02, 1.02)`;
-    card.style.transition = 'transform 0.05s linear';
+    card.style.transition = instant ? 'transform 0.05s linear' : 'transform 0.5s cubic-bezier(0.25, 1, 0.5, 1)';
   };
-  
-  const handleMouseLeave = () => {
+
+  const resetTilt = () => {
     const card = cardRef.current;
     if (!card) return;
     card.style.transform = `perspective(800px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
     card.style.transition = 'transform 0.5s cubic-bezier(0.25, 1, 0.5, 1)';
   };
-  
+
+  // Mouse handlers (desktop)
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (isMobile) return;
+    const card = cardRef.current;
+    if (!card) return;
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const px = (x / rect.width) - 0.5;
+    const py = (y / rect.height) - 0.5;
+    applyTilt(-py * 12, px * 12, true);
+  };
+
+  // Gyroscope handler (mobile)
+  useEffect(() => {
+    if (!isMobile) return;
+    let listening = true;
+    const handleOrientation = (e: DeviceOrientationEvent) => {
+      if (!listening) return;
+      const gamma = e.gamma ?? 0;  // left/right   ±90
+      const beta  = e.beta ?? 0;   // front/back   ±180
+      const tiltY = Math.max(-12, Math.min(12, gamma * 0.12));
+      const tiltX = Math.max(-12, Math.min(12, (beta - 45) * -0.08));
+      applyTilt(tiltX, tiltY);
+    };
+
+    const requestPermission = async () => {
+      // iOS 13+ requires permission request
+      if (typeof (DeviceOrientationEvent as any).requestPermission === 'function') {
+        try {
+          const perm = await (DeviceOrientationEvent as any).requestPermission();
+          if (perm !== 'granted') return;
+        } catch { return; }
+      }
+      window.addEventListener('deviceorientation', handleOrientation);
+    };
+    requestPermission();
+
+    return () => { listening = false; window.removeEventListener('deviceorientation', handleOrientation); };
+  }, [isMobile]);
+
   return (
     <div className="standing-item">
-      <div 
+      <div
         ref={cardRef}
         className={`standing-card ${tier}`}
         onMouseMove={handleMouseMove}
-        onMouseLeave={handleMouseLeave}
+        onMouseLeave={resetTilt}
         style={{
           transformStyle: 'preserve-3d',
           transform: 'perspective(800px) rotateX(0deg) rotateY(0deg)',
           transition: 'transform 0.5s cubic-bezier(0.25, 1, 0.5, 1)'
         }}
       >
-        <img src={photo} alt={name} className="standing-photo" style={{ transform: 'translateZ(-10px) scale(1.15)', transformStyle: 'preserve-3d' }} />
+        <img src={photo} alt={`${name} — ${role} — Future Modern cooperative member`} className="standing-photo" style={{ transform: 'translateZ(-10px) scale(1.15)', transformStyle: 'preserve-3d' }} />
         <div className="standing-overlay" style={{ transform: 'translateZ(1px)' }} />
         <div className="standing-watermark" style={{ transform: 'translateZ(15px)' }}>Future Modern</div>
         {hasSheen && <div className="standing-sheen" style={{ transform: 'translateZ(20px)' }} aria-hidden="true" />}
