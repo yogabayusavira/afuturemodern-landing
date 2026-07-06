@@ -168,6 +168,7 @@ h1, h2, h3, h4 { text-wrap: balance; margin: 0; }
   padding-block: 12px; gap: var(--gap-md);
 }
 .logo { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+.logo img { color-scheme: only light; }
 .logo-text { line-height: 1.2; }
 .logo-title {
   font-family: var(--font-display); font-size: 17px; font-weight: 600;
