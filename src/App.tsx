@@ -281,20 +281,91 @@ export default function App() {
         {/* ── People-Powered ── */}
         <section className="section" data-od-id="people-powered">
           <div className="container">
-            <p className="section-label">What "people-powered" means</p>
-            <h2 style={{ marginBottom: 'var(--gap-xl)' }}>Four commitments that define the model.</h2>
-            <div className="module-grid">
-              {[
-                { title: 'Earned, not bought', body: "Access is earned through invitation, application and vetting, or contribution to the cooperative's infrastructure. The whitelist is not for sale." },
-                { title: 'Admin-authored framing', body: 'Members submit objective fields — price, timeline, work samples. The cooperative authors positioning so the work speaks for itself, not the cold-pitch voice.' },
-                { title: '85% to the people who shipped', body: 'One 15% house cut funds shared infrastructure. No agency middleman. No stacked platform tax.' },
-                { title: 'Attribution is permanent', body: 'The ledger compounds across years. Contributions do not reset to zero when a contract closes.' },
-              ].map(({ title, body }) => (
-                <div className="module-item" key={title}>
-                  <h3 style={{ color: 'var(--accent)', marginBottom: '6px' }}>{title}</h3>
-                  <p style={{ color: 'var(--muted)', fontSize: '14px' }}>{body}</p>
+            <div className="grid-2" style={{ alignItems: 'center' }}>
+              <div>
+                <p className="section-label">What "people-powered" means</p>
+                <h2 style={{ marginBottom: 'var(--gap-sm)' }}>Four commitments that define the model.</h2>
+                <p className="lead" style={{ fontSize: '15px', color: 'var(--muted)', marginBottom: 'var(--gap-lg)', maxWidth: '100%', lineHeight: '1.6' }}>
+                  Future Modern is a worker-owned cooperative designed to reverse wealth extraction from labor. By combining managed services with software-driven coordination, we run on a lean 15% house cut that funds shared operations, routing 85% of revenue straight to the contributors.
+                </p>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--gap-md)' }}>
+                  {[
+                    { title: 'Earned, not bought', body: "Access is earned through invitation, application and vetting, or contribution to the cooperative's infrastructure. The whitelist is not for sale." },
+                    { title: 'Admin-authored framing', body: 'Members submit objective fields — price, timeline, work samples. The cooperative authors positioning so the work speaks for itself, not the cold-pitch voice.' },
+                    { title: '85% to the people who shipped', body: 'Eighty-five percent of all client revenue goes directly to the member teams who delivered the work.' },
+                    { title: 'Attribution is permanent', body: 'The ledger compounds across years. Contributions do not reset to zero when a contract closes.' },
+                  ].map(({ title, body }) => (
+                    <div key={title} style={{ borderLeft: '2px solid var(--accent)', paddingLeft: 'var(--gap-md)' }}>
+                      <h3 style={{ color: 'var(--fg)', fontSize: '16px', marginBottom: '4px' }}>{title}</h3>
+                      <p style={{ color: 'var(--muted)', fontSize: '14px', lineHeight: '1.5' }}>{body}</p>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
+              
+              <div className="waterfall-card">
+                <div className="waterfall-header">
+                  <span className="waterfall-tagline">“Workers built it. Capital kept it.”</span>
+                  <h3>The Revenue Waterfall</h3>
+                </div>
+                
+                <div className="waterfall-bars">
+                  {/* 85% Bar */}
+                  <div className="waterfall-bar-group">
+                    <div className="waterfall-bar-header">
+                      <span className="waterfall-pct text-green">85%</span>
+                      <span className="waterfall-label">Direct to Labor (You)</span>
+                    </div>
+                    <div className="waterfall-progress-bg">
+                      <div className="waterfall-progress-fill accent-green" style={{ width: '85%' }}></div>
+                    </div>
+                    <p className="waterfall-subtext">No agency middlemen. No stacked platform taxes. Paid directly to the contributors who ship the code, design, and strategy.</p>
+                  </div>
+
+                  {/* 15% Bar */}
+                  <div className="waterfall-bar-group">
+                    <div className="waterfall-bar-header">
+                      <span className="waterfall-pct text-muted">15%</span>
+                      <span className="waterfall-label">Cooperative Operations</span>
+                    </div>
+                    <div className="waterfall-progress-bg">
+                      <div className="waterfall-progress-fill accent-muted" style={{ width: '15%' }}></div>
+                    </div>
+                    <div className="waterfall-details">
+                      <span>12% Active Administration</span>
+                      <span>3% Treasury &amp; Liquidity</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="waterfall-footer">
+                  <div style={{ fontWeight: '600', color: 'var(--white)', fontSize: '13px', marginBottom: '14px' }}>
+                    Platform comparison:
+                  </div>
+                  <div className="platform-comparison">
+                    <div className="platform-row">
+                      <span className="platform-status status-bad">✕</span>
+                      <span className="platform-name">Upwork</span>
+                      <span className="platform-fees">10% fee + pay-to-pitch connects ($1.20–$3.30+ per bid). Freelancers average 15–20 applications (~200–400 Connects / $30–$60+) just to land a single contract.</span>
+                    </div>
+                    <div className="platform-row">
+                      <span className="platform-status status-bad">✕</span>
+                      <span className="platform-name">Fiverr</span>
+                      <span className="platform-fees">20% seller transaction fee + 5.5% buyer service surcharge</span>
+                    </div>
+                    <div className="platform-row">
+                      <span className="platform-status status-bad">✕</span>
+                      <span className="platform-name">Toptal</span>
+                      <span className="platform-fees">Typical 40% to 50% client margin / markups with zero builder equity</span>
+                    </div>
+                    <div className="platform-row">
+                      <span className="platform-status status-good">✓</span>
+                      <span className="platform-name">FM Co-op</span>
+                      <span className="platform-fees" style={{ background: 'linear-gradient(90deg, #10b981, #ffffff)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', fontWeight: '600', display: 'inline-block' }}>15% flat operations fee · 85% to direct labor · Permanent equity</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>

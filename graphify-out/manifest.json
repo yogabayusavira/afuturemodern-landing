@@ -1,0 +1,132 @@
+{
+  "DESIGN-MANIFEST.json": {
+    "mtime": 4039347600.0,
+    "ast_hash": "e363164124af8c71448b5f628737acb6",
+    "semantic_hash": ""
+  },
+  "package.json": {
+    "mtime": 1783051841.3077462,
+    "ast_hash": "078b3f477bbbb7405780500972581405",
+    "semantic_hash": ""
+  },
+  "server/index.js": {
+    "mtime": 1783053579.764403,
+    "ast_hash": "ef8d3342e338d5f435d2e8533822a764",
+    "semantic_hash": ""
+  },
+  "src/App.tsx": {
+    "mtime": 1783331469.3641741,
+    "ast_hash": "46e2780646c2a31b8b103e0da5ca51c6",
+    "semantic_hash": ""
+  },
+  "src/components/ProjectModal.tsx": {
+    "mtime": 1783052711.3194325,
+    "ast_hash": "e8bce8fb38a75e87041ad375faafaaf6",
+    "semantic_hash": ""
+  },
+  "src/components/ScrollCue.tsx": {
+    "mtime": 1783051874.7507968,
+    "ast_hash": "b53c5aae645220abe1c742b26848d6a7",
+    "semantic_hash": ""
+  },
+  "src/components/TalentModal.tsx": {
+    "mtime": 1783051897.526848,
+    "ast_hash": "177107037eb7c0170b5550b363743d9b",
+    "semantic_hash": ""
+  },
+  "src/hooks/useProjectFormStore.ts": {
+    "mtime": 1783049867.9811108,
+    "ast_hash": "a2ab0115391508b806b3c8c9c2f169ea",
+    "semantic_hash": ""
+  },
+  "src/hooks/useTalentFormStore.ts": {
+    "mtime": 1783046085.3462338,
+    "ast_hash": "b35df2086d57c56463ffadab86890ed2",
+    "semantic_hash": ""
+  },
+  "src/main.tsx": {
+    "mtime": 1783033960.6335552,
+    "ast_hash": "782970e72e6372a389421d455825626a",
+    "semantic_hash": ""
+  },
+  "src/vite-env.d.ts": {
+    "mtime": 1783038496.9369576,
+    "ast_hash": "0352474ba2918efe13895edbc3780d94",
+    "semantic_hash": ""
+  },
+  "tsconfig.app.json": {
+    "mtime": 1783038467.292178,
+    "ast_hash": "3b4fbcc66c0ecbb5182ca167bf84ce4c",
+    "semantic_hash": ""
+  },
+  "tsconfig.json": {
+    "mtime": 1783038458.7125745,
+    "ast_hash": "a3d39fa780ebff65444de257f291ce6c",
+    "semantic_hash": ""
+  },
+  "tsconfig.node.json": {
+    "mtime": 1783038475.0447335,
+    "ast_hash": "b39b0c04c8b06a94fa53e598a344f2b4",
+    "semantic_hash": ""
+  },
+  "vite.config.ts": {
+    "mtime": 1783046070.009221,
+    "ast_hash": "c37058796cf7b54cd97b960bdd630682",
+    "semantic_hash": ""
+  },
+  ".agents/rules/graphify.md": {
+    "mtime": 1783287160.7426982,
+    "ast_hash": "a0e4d192b9e2e17256124dbfc8e24e6a",
+    "semantic_hash": ""
+  },
+  ".agents/skills/ponytail/SKILL.md": {
+    "mtime": 1783098683.1751409,
+    "ast_hash": "31ee4251674290fdaaecf05d487dcf46",
+    "semantic_hash": ""
+  },
+  ".agents/workflows/graphify.md": {
+    "mtime": 1783287160.7437463,
+    "ast_hash": "637776aa6f7496d069afe7520c845c8a",
+    "semantic_hash": ""
+  },
+  "AFuture Modern Knowledge Base - updated.md": {
+    "mtime": 1783294362.749184,
+    "ast_hash": "ecf8de8c27c6342afe7d854a5b1fe1cd",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1783329217.274382,
+    "ast_hash": "673ac09faa890af28e8d91e77c15799a",
+    "semantic_hash": ""
+  },
+  "design-handoff.md": {
+    "mtime": 1783330120.2818255,
+    "ast_hash": "91f4ac651072e30026a0612f44bcb90c",
+    "semantic_hash": ""
+  },
+  "future-modern-landing.html": {
+    "mtime": 1783033540.1013656,
+    "ast_hash": "c00b123cd141655871a6aa098e72a2fe",
+    "semantic_hash": ""
+  },
+  "index.html": {
+    "mtime": 1783050724.407482,
+    "ast_hash": "644a57bb10dc51fde7d755881e812e25",
+    "semantic_hash": ""
+  },
+  "launcher-overview.html": {
+    "mtime": 1783033512.7831419,
+    "ast_hash": "8ec25ea656bc9c465cc7a6b6882e6cc0",
+    "semantic_hash": ""
+  },
+  "public/mr2sbkcq-turtle.png": {
+    "mtime": 1782928034.0,
+    "ast_hash": "8216b6353158d954ae6618c2d05a8bf3",
+    "semantic_hash": ""
+  },
+  "public/mr2tkz2i-0702.mp4": {
+    "mtime": 1782930152.0,
+    "ast_hash": "327c4d6e33bc357bdf236c0d89cf9348",
+    "semantic_hash": ""
+  }
+}
