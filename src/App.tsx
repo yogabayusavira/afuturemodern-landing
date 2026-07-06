@@ -281,26 +281,23 @@ export default function App() {
               <p className="lead" style={{ marginTop: 'var(--gap-sm)', maxWidth: '100%' }}>Every member sits in at least one pillar. Many sit across two. A handful move freely through all three. The pillar framing is how opportunities are routed and how teams are built for serious briefs.</p>
             </div>
             <div className="grid-3">
-              <div className="pillar-card" ref={stemCardRef}>
-                <div className="pillar-icon">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><rect x="4" y="4" width="16" height="16" rx="2" /><path d="M9 8v8M15 8v8M12 8v8" /></svg>
+              <div className="pillar-card card-stem" ref={stemCardRef}>
+                <div className="pillar-card-content">
+                  <h3>STEM</h3>
+                  <p>Full-stack engineering, AI/ML, blockchain, security, data, research.</p>
                 </div>
-                <h3>STEM</h3>
-                <p>Full-stack engineering, AI/ML, blockchain, security, data, research.</p>
               </div>
-              <div className="pillar-card" ref={creativeCardRef}>
-                <div className="pillar-icon">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><circle cx="12" cy="12" r="3" /><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" /></svg>
+              <div className="pillar-card card-creative" ref={creativeCardRef}>
+                <div className="pillar-card-content">
+                  <h3>Creative Media</h3>
+                  <p>Music, film, editorial, design, direction, post-production.</p>
                 </div>
-                <h3>Creative Media</h3>
-                <p>Music, film, editorial, design, direction, post-production.</p>
               </div>
-              <div className="pillar-card" ref={proCardRef}>
-                <div className="pillar-icon">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M22 12h-4l-3 9L9 3l-3 9H2" /></svg>
+              <div className="pillar-card card-pro" ref={proCardRef}>
+                <div className="pillar-card-content">
+                  <h3>Professional Services</h3>
+                  <p>Strategy, legal, finance, operations, management consulting.</p>
                 </div>
-                <h3>Professional Services</h3>
-                <p>Strategy, legal, finance, operations, management consulting.</p>
               </div>
             </div>
           </div>
@@ -315,17 +312,17 @@ export default function App() {
               <p className="lead" style={{ maxWidth: '100%', marginBottom: 'var(--gap-lg)' }}>Future Modern assembles across disciplines when a brief calls for it. These are the capabilities represented across the cooperative and its service partners.</p>
               <div className="comp-grid">
                 <div className="comp-col">
-                  <h3 className="comp-heading">Technical</h3>
+                  <h3 className="comp-heading" style={{ color: 'var(--accent)' }}>STEM</h3>
                   <div className="comp-divider" />
                   <p className="comp-text">Web Design · Web Development · Blockchain Development · Data Science &amp; Machine Learning · Mechanical Engineering · Robotics · Electrical Engineering · Network Administration &amp; Cybersecurity · Scientific Liaison · Technical Writing</p>
                 </div>
                 <div className="comp-col">
-                  <h3 className="comp-heading">Creative</h3>
+                  <h3 className="comp-heading" style={{ color: 'var(--magenta)' }}>Creative Media</h3>
                   <div className="comp-divider" />
                   <p className="comp-text">Content Marketing · Advertising · Music · Product Design · Graphic Design · Game Design · Fashion Design · Film Direction · Event Planning</p>
                 </div>
                 <div className="comp-col">
-                  <h3 className="comp-heading">Business &amp; Professional</h3>
+                  <h3 className="comp-heading" style={{ color: 'var(--green)' }}>Professional Services</h3>
                   <div className="comp-divider" />
                   <p className="comp-text">Managed Services · Product Management · Consulting · Strategy · Psychiatry &amp; Psychology · Family Medicine · Health Law · Employment Law · Pharmaceuticals · Medical Writing</p>
                 </div>

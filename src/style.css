@@ -321,18 +321,77 @@ h1, h2, h3, h4 { text-wrap: balance; margin: 0; }
 
 /* ── Pillar cards ────────────────────────────────────── */
 .pillar-card {
-  padding: var(--gap-xl) var(--gap-lg);
-  border: 1px solid var(--border); border-radius: var(--radius-lg);
-  background: var(--surface); text-align: center; transition: border-color 0.2s;
+  position: relative;
+  overflow: hidden;
+  padding: var(--gap-xl) var(--gap-md) var(--gap-lg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  transition: border-color 0.3s, transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 340px;
 }
-.pillar-card:hover { border-color: var(--accent); }
-.pillar-card .pillar-icon {
-  width: 48px; height: 48px; margin: 0 auto var(--gap-md);
-  border-radius: var(--radius); background: var(--accent-soft);
-  display: grid; place-items: center; color: var(--accent);
+.pillar-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s ease;
+  z-index: 0;
 }
-.pillar-card h3 { margin-bottom: var(--gap-sm); }
-.pillar-card p { color: var(--muted); font-size: 14px; }
+.pillar-card.card-stem::before {
+  background-image: url("/STEM.jpg");
+}
+.pillar-card.card-creative::before {
+  background-image: url("/Artist.jpg");
+}
+.pillar-card.card-pro::before {
+  background-image: url("/Professional Services.jpg");
+}
+/* Overlay for readability */
+.pillar-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(13, 13, 13, 0.4) 0%, rgba(13, 13, 13, 0.88) 100%);
+  z-index: 1;
+  transition: background 0.3s ease;
+}
+.pillar-card:hover::before {
+  transform: scale(1.06);
+}
+.pillar-card:hover {
+  border-color: var(--accent);
+}
+.pillar-card:hover.card-creative {
+  border-color: var(--magenta);
+}
+.pillar-card:hover.card-pro {
+  border-color: var(--green);
+}
+.pillar-card-content {
+  position: relative;
+  z-index: 2;
+  padding-inline: var(--gap-sm);
+}
+.pillar-card h3 {
+  margin-bottom: var(--gap-sm);
+  color: var(--white);
+  font-size: 20px;
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+}
+.pillar-card p {
+  color: color-mix(in oklch, var(--fg) 80%, var(--white));
+  font-size: 14px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+  margin: 0;
+  line-height: 1.5;
+}
 
 /* ── Competencies ────────────────────────────────────── */
 .comp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--gap-xl); }
