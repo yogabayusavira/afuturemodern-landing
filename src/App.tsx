@@ -445,31 +445,88 @@ export default function App() {
           </div>
         </section>
 
-        {/* ── Values ── */}
-        <section className="section" data-od-id="values">
+        {/* ── Values & Standing ── */}
+        <section className="section" data-od-id="values-standing" id="values">
           <div className="container">
-            <p className="section-label">Provenance · Discernment · Equity</p>
-            <h2 style={{ marginBottom: 'var(--gap-xl)' }}>Core values</h2>
-            <div className="values-grid">
-              <div className="value-item">
-                <h3>Provenance</h3>
-                <p>Resources and acknowledgement flow back to original ideas and the labor that moves culture forward. Attribution is permanent.</p>
+            <div className="values-standing-split">
+              {/* Left Column: Core Values */}
+              <div className="values-column">
+                <div className="values-card">
+                  <p className="section-label">Provenance · Discernment · Equity</p>
+                  <h2 style={{ marginBottom: 'var(--gap-lg)' }}>Core values</h2>
+                  
+                  <div className="values-list">
+                    <div className="value-list-item">
+                      <h3>Provenance</h3>
+                      <p>Resources and acknowledgement flow back to original ideas and the labor that moves culture forward. Attribution is permanent.</p>
+                    </div>
+                    <div className="value-list-item">
+                      <h3>Discernment</h3>
+                      <p>Future Modern curates contributors, vets incoming RFPs, and assembles cross-pillar teams the way a strong agency partner would.</p>
+                    </div>
+                    <div className="value-list-item">
+                      <h3>Equity</h3>
+                      <p>Eighty-five percent of contract revenue flows to the people who shipped. $BUILD tokens accrue with contribution. The platform is owned by the people building it.</p>
+                    </div>
+                    <div className="value-list-item">
+                      <h3>Truth and inquiry</h3>
+                      <p>Where we are unsure, we say so. Where we are certain, we ship.</p>
+                    </div>
+                    <div className="value-list-item">
+                      <h3>Tried and true × cutting edge</h3>
+                      <p>Future Modern combines proven operations with new technology and strategy. The engineering follows the operations, not the other way around.</p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="value-item">
-                <h3>Discernment</h3>
-                <p>Future Modern curates contributors, vets incoming RFPs, and assembles cross-pillar teams the way a strong agency partner would.</p>
-              </div>
-              <div className="value-item">
-                <h3>Equity</h3>
-                <p>Eighty-five percent of contract revenue flows to the people who shipped. $BUILD tokens accrue with contribution. The platform is owned by the people building it.</p>
-              </div>
-              <div className="value-item">
-                <h3>Truth and inquiry</h3>
-                <p>Where we are unsure, we say so. Where we are certain, we ship.</p>
-              </div>
-              <div className="value-item" style={{ gridColumn: '1/-1' }}>
-                <h3>Tried and true × cutting edge</h3>
-                <p>Future Modern combines proven operations with new technology and strategy. The engineering follows the operations, not the other way around.</p>
+
+              {/* Right Column: Member Cards */}
+              <div className="standing-column">
+                <p className="section-label">Cooperative Standing</p>
+                <h3 style={{ marginBottom: 'var(--gap-sm)' }}>Members shipping the work</h3>
+                <p className="lead" style={{ marginBottom: 'var(--gap-lg)' }}>
+                  Each contributor holds a standing tier within the cooperative's player-card system: Champion's Court gold, Future Modernist magenta, promotion-eligible blue, and good standing green.
+                </p>
+
+                <div className="standing-grid-2col">
+                  <InteractiveStandingCard 
+                    photo="/Jamar McCarthy.jpg" 
+                    tier="tier-champion" 
+                    hasSheen 
+                    name="Jamar McCarthy" 
+                    role="Cooperative Builder • Strategist" 
+                  />
+                  <InteractiveStandingCard 
+                    photo="/Big Baby Gandhi.jpg" 
+                    tier="tier-future-modernist" 
+                    name="Big Baby Gandhi" 
+                    role="Rapper • Producer" 
+                  />
+                  <InteractiveStandingCard 
+                    photo="/Chibu O..jpg"
+                    tier="tier-future-modernist" 
+                    name="Chibu O." 
+                    role="Fullstack Engineer • Data" 
+                  />
+                  <InteractiveStandingCard 
+                    photo="/Sunny Su.jpg" 
+                    tier="tier-promotion" 
+                    name="Sunny Su" 
+                    role="Brand • UI/UX • Product Designer" 
+                  />
+                  <InteractiveStandingCard 
+                    photo="/Sahtyre.jpg"
+                    tier="tier-promotion" 
+                    name="Sahtyre" 
+                    role="Rapper" 
+                  />
+                  <InteractiveStandingCard 
+                    photo="/Bayu.jpg"
+                    tier="tier-good-standing" 
+                    name="Bayu Savira" 
+                    role="UI/UX • Marketing Funnel • Lead Gen" 
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -514,4 +571,61 @@ export default function App() {
       <ProjectModal isOpen={projectModalOpen} onClose={() => setProjectModalOpen(false)} />
     </div>
   )
+}
+
+function InteractiveStandingCard({ photo, tier, hasSheen, name, role }: { photo: string; tier: string; hasSheen?: boolean; name: string; role: string }) {
+  const cardRef = useRef<HTMLDivElement>(null);
+  
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const card = cardRef.current;
+    if (!card) return;
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    
+    // Normalize coordinates around center (from -0.5 to 0.5)
+    const px = (x / rect.width) - 0.5;
+    const py = (y / rect.height) - 0.5;
+    
+    // Tilt intensity (max rotation degrees)
+    const maxTilt = 12;
+    const tiltX = -py * maxTilt;
+    const tiltY = px * maxTilt;
+    
+    // Apply transform and transition
+    card.style.transform = `perspective(800px) rotateX(${tiltX.toFixed(2)}deg) rotateY(${tiltY.toFixed(2)}deg) scale3d(1.02, 1.02, 1.02)`;
+    card.style.transition = 'transform 0.05s linear';
+  };
+  
+  const handleMouseLeave = () => {
+    const card = cardRef.current;
+    if (!card) return;
+    card.style.transform = `perspective(800px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+    card.style.transition = 'transform 0.5s cubic-bezier(0.25, 1, 0.5, 1)';
+  };
+  
+  return (
+    <div className="standing-item">
+      <div 
+        ref={cardRef}
+        className={`standing-card ${tier}`}
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
+        style={{
+          transformStyle: 'preserve-3d',
+          transform: 'perspective(800px) rotateX(0deg) rotateY(0deg)',
+          transition: 'transform 0.5s cubic-bezier(0.25, 1, 0.5, 1)'
+        }}
+      >
+        <img src={photo} alt={name} className="standing-photo" style={{ transform: 'translateZ(-10px) scale(1.15)', transformStyle: 'preserve-3d' }} />
+        <div className="standing-overlay" style={{ transform: 'translateZ(1px)' }} />
+        <div className="standing-watermark" style={{ transform: 'translateZ(15px)' }}>Future Modern</div>
+        {hasSheen && <div className="standing-sheen" style={{ transform: 'translateZ(20px)' }} aria-hidden="true" />}
+      </div>
+      <div className="standing-info">
+        <div className="standing-name">{name}</div>
+        <div className="standing-role">{role}</div>
+      </div>
+    </div>
+  );
 }

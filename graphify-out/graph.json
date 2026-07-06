@@ -374,6 +374,16 @@
       "norm_label": "app()"
     },
     {
+      "label": "InteractiveStandingCard()",
+      "file_type": "code",
+      "source_file": "src/App.tsx",
+      "source_location": "L576",
+      "_origin": "ast",
+      "id": "src_app_interactivestandingcard",
+      "community": 2,
+      "norm_label": "interactivestandingcard()"
+    },
+    {
       "label": "ProjectModal.tsx",
       "file_type": "code",
       "source_file": "src/components/ProjectModal.tsx",
@@ -500,7 +510,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_scrollcue",
-      "community": 2,
+      "community": 4,
       "norm_label": "scrollcue.tsx"
     },
     {
@@ -510,7 +520,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "src_components_scrollcue_scrollcueprops",
-      "community": 2,
+      "community": 4,
       "norm_label": "scrollcueprops"
     },
     {
@@ -520,7 +530,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "src_components_scrollcue_scrollcue",
-      "community": 2,
+      "community": 4,
       "norm_label": "scrollcue()"
     },
     {
@@ -2146,6 +2156,16 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.tsx",
+      "source_location": "L576",
+      "weight": 1.0,
+      "source": "src_app",
+      "target": "src_app_interactivestandingcard",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
@@ -3572,5 +3592,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "efcb05c234a8c67ea37985efa0f41d66b99b7cbc"
+  "built_at_commit": "23b8e446a0c35b6ea1f627683c3126468f069ba1"
 }

@@ -15,8 +15,8 @@
     "semantic_hash": ""
   },
   "src/App.tsx": {
-    "mtime": 1783331469.3641741,
-    "ast_hash": "46e2780646c2a31b8b103e0da5ca51c6",
+    "mtime": 1783339442.298962,
+    "ast_hash": "446eef7ba33c7eeeabf73643d823f005",
     "semantic_hash": ""
   },
   "src/components/ProjectModal.tsx": {
@@ -127,6 +127,61 @@
   "public/mr2tkz2i-0702.mp4": {
     "mtime": 1782930152.0,
     "ast_hash": "327c4d6e33bc357bdf236c0d89cf9348",
+    "semantic_hash": ""
+  },
+  "public/Artist.jpg": {
+    "mtime": 1783333399.1112492,
+    "ast_hash": "8aef1243993b9d47ba9b28df745402c5",
+    "semantic_hash": ""
+  },
+  "public/Bayu.jpg": {
+    "mtime": 1743177229.7293162,
+    "ast_hash": "0ba9a5a2e94ffe6791bb92ddf742cc3a",
+    "semantic_hash": ""
+  },
+  "public/Big Baby Gandhi.jpg": {
+    "mtime": 1783336915.368289,
+    "ast_hash": "7d0621b6efd8e9f8774637845116315b",
+    "semantic_hash": ""
+  },
+  "public/Big Baby Gandhi1.jpg": {
+    "mtime": 1783336644.551191,
+    "ast_hash": "789f792f40bd540d7255ceecf094c775",
+    "semantic_hash": ""
+  },
+  "public/Chibu O..jpg": {
+    "mtime": 1783339180.948064,
+    "ast_hash": "d16f2ee44b03e1d8fd4bea5c31f25525",
+    "semantic_hash": ""
+  },
+  "public/Jamar McCarthy.jpg": {
+    "mtime": 1783336686.0805683,
+    "ast_hash": "b6676c037496d0e6e8c408743e76d80a",
+    "semantic_hash": ""
+  },
+  "public/Professional Services.jpg": {
+    "mtime": 1783333752.96464,
+    "ast_hash": "1000e6dd2db7904fada515764f9210eb",
+    "semantic_hash": ""
+  },
+  "public/STEM.jpg": {
+    "mtime": 1783333380.8208296,
+    "ast_hash": "cadbc59e90e1552a0854b6998f1f626f",
+    "semantic_hash": ""
+  },
+  "public/Sahtyre.jpg": {
+    "mtime": 1783339215.3652325,
+    "ast_hash": "86dacf856889a7204fe99e39cb649350",
+    "semantic_hash": ""
+  },
+  "public/Sunny Su.jpg": {
+    "mtime": 1783336683.7486863,
+    "ast_hash": "802d3762663bf4ba96694cc54b802fbd",
+    "semantic_hash": ""
+  },
+  "public/Final CTA bg.png": {
+    "mtime": 1783339544.1962159,
+    "ast_hash": "05885b2e7bad398b6658f4bf91ef44af",
     "semantic_hash": ""
   }
 }

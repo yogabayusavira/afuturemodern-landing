@@ -1,16 +1,16 @@
 # Graph Report - afuturemodern-landing  (2026-07-06)
 
 ## Corpus Check
-- 21 files · ~28,313 words
+- 21 files · ~560,014 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 180 nodes · 175 edges · 16 communities (13 shown, 3 thin omitted)
+- 181 nodes · 176 edges · 16 communities (13 shown, 3 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `efcb05c2`
+- Built from commit: `23b8e446`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -62,16 +62,16 @@ Cohesion: 0.10
 Nodes (20): dependencies, concurrently, cors, dotenv, express, gsap, multer, react (+12 more)
 
 ### Community 2 - "Community 2"
-Cohesion: 0.12
-Nodes (10): ScrollCueProps, PILLARS, TalentModal(), TalentModalProps, wordCount(), defaultData, storedData, TalentFormData (+2 more)
+Cohesion: 0.14
+Nodes (9): PILLARS, TalentModal(), TalentModalProps, wordCount(), defaultData, storedData, TalentFormData, UploadedFile (+1 more)
 
 ### Community 3 - "Community 3"
 Cohesion: 0.10
 Nodes (19): compilerOptions, allowImportingTsExtensions, isolatedModules, jsx, lib, module, moduleDetection, moduleResolution (+11 more)
 
 ### Community 4 - "Community 4"
-Cohesion: 0.14
-Nodes (12): ENGAGEMENT_LENGTHS, PILLARS, ProjectModal(), ProjectModalProps, TagInputProps, wordCount(), WORK_ARRANGEMENTS, defaultData (+4 more)
+Cohesion: 0.11
+Nodes (13): ENGAGEMENT_LENGTHS, PILLARS, ProjectModal(), ProjectModalProps, TagInputProps, wordCount(), WORK_ARRANGEMENTS, ScrollCueProps (+5 more)
 
 ### Community 5 - "Community 5"
 Cohesion: 0.11
@@ -112,10 +112,10 @@ _Questions this graph is uniquely positioned to answer:_
 - **Should `Community 1` be split into smaller, more focused modules?**
   _Cohesion score 0.09523809523809523 - nodes in this community are weakly interconnected._
 - **Should `Community 2` be split into smaller, more focused modules?**
-  _Cohesion score 0.12105263157894737 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.13725490196078433 - nodes in this community are weakly interconnected._
 - **Should `Community 3` be split into smaller, more focused modules?**
   _Cohesion score 0.1 - nodes in this community are weakly interconnected._
 - **Should `Community 4` be split into smaller, more focused modules?**
-  _Cohesion score 0.13725490196078433 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.11428571428571428 - nodes in this community are weakly interconnected._
 - **Should `Community 5` be split into smaller, more focused modules?**
   _Cohesion score 0.1111111111111111 - nodes in this community are weakly interconnected._
