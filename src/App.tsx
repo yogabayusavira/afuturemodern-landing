@@ -68,12 +68,12 @@ export default function App() {
             <div className="cred-strip">
               <p>Contributors have shipped work at</p>
               <div className="cred-logos">
-                <svg viewBox="0 0 115 24" fill="none"><rect x="0" y="0" width="10" height="10" fill="currentColor" opacity="0.9"/><rect x="12" y="0" width="10" height="10" fill="currentColor" opacity="0.7"/><rect x="0" y="12" width="10" height="10" fill="currentColor" opacity="0.5"/><rect x="12" y="12" width="10" height="10" fill="currentColor" opacity="0.6"/><text x="30" y="16" fontSize="15" fontWeight="600" fill="currentColor" fontFamily="system-ui,sans-serif">Microsoft</text></svg>
-                <svg viewBox="0 0 88 24" fill="none"><text x="0" y="17" fontSize="17" fontWeight="700" fill="currentColor" fontFamily="system-ui,sans-serif">amazon</text><path d="M4 20 Q28 26 72 20" stroke="currentColor" strokeWidth="1.8" fill="none"/></svg>
+                <svg viewBox="0 0 115 24" fill="none"><rect x="0" y="0" width="10" height="10" fill="currentColor" opacity="0.9" /><rect x="12" y="0" width="10" height="10" fill="currentColor" opacity="0.7" /><rect x="0" y="12" width="10" height="10" fill="currentColor" opacity="0.5" /><rect x="12" y="12" width="10" height="10" fill="currentColor" opacity="0.6" /><text x="30" y="16" fontSize="15" fontWeight="600" fill="currentColor" fontFamily="system-ui,sans-serif">Microsoft</text></svg>
+                <svg viewBox="0 0 88 24" fill="none"><text x="0" y="17" fontSize="17" fontWeight="700" fill="currentColor" fontFamily="system-ui,sans-serif">amazon</text><path d="M4 20 Q28 26 72 20" stroke="currentColor" strokeWidth="1.8" fill="none" /></svg>
                 <svg viewBox="0 0 90 24" fill="none"><text x="0" y="17" fontSize="16" fontWeight="600" fill="currentColor" fontFamily="system-ui,sans-serif" letterSpacing="2">CALTECH</text></svg>
                 <svg viewBox="0 0 105 24" fill="none"><text x="0" y="18" fontSize="20" fontWeight="800" fill="currentColor" fontFamily="Georgia,serif" fontStyle="italic">Cal</text><text x="38" y="17" fontSize="11" fill="currentColor" opacity="0.7" fontFamily="system-ui,sans-serif" letterSpacing="1">BERKELEY</text></svg>
-                <svg viewBox="0 0 148 24" fill="none"><circle cx="10" cy="14" r="8" stroke="currentColor" strokeWidth="1.5" opacity="0.6"/><circle cx="10" cy="14" r="4" stroke="currentColor" strokeWidth="1" opacity="0.4"/><text x="24" y="17" fontSize="14" fontWeight="500" fill="currentColor" fontFamily="system-ui,sans-serif" letterSpacing="2">SMITHSONIAN</text></svg>
-                <svg viewBox="0 0 130 24" fill="none"><rect x="0" y="7" width="2" height="10" rx="1" fill="currentColor" opacity="0.6"/><circle cx="13" cy="14" r="8" stroke="currentColor" strokeWidth="1.2" opacity="0.5"/><circle cx="13" cy="14" r="3" fill="currentColor" opacity="0.3"/><text x="28" y="17" fontSize="14" fontWeight="600" fill="currentColor" fontFamily="Georgia,serif">Columbia</text><text x="82" y="17" fontSize="10" fill="currentColor" opacity="0.6" fontFamily="system-ui,sans-serif">RECORDS</text></svg>
+                <svg viewBox="0 0 148 24" fill="none"><circle cx="10" cy="14" r="8" stroke="currentColor" strokeWidth="1.5" opacity="0.6" /><circle cx="10" cy="14" r="4" stroke="currentColor" strokeWidth="1" opacity="0.4" /><text x="24" y="17" fontSize="14" fontWeight="500" fill="currentColor" fontFamily="system-ui,sans-serif" letterSpacing="2">SMITHSONIAN</text></svg>
+                <svg viewBox="0 0 130 24" fill="none"><rect x="0" y="7" width="2" height="10" rx="1" fill="currentColor" opacity="0.6" /><circle cx="13" cy="14" r="8" stroke="currentColor" strokeWidth="1.2" opacity="0.5" /><circle cx="13" cy="14" r="3" fill="currentColor" opacity="0.3" /><text x="28" y="17" fontSize="14" fontWeight="600" fill="currentColor" fontFamily="Georgia,serif">Columbia</text><text x="82" y="17" fontSize="10" fill="currentColor" opacity="0.6" fontFamily="system-ui,sans-serif">RECORDS</text></svg>
                 <svg viewBox="0 0 80 24" fill="none"><text x="0" y="17" fontSize="17" fontWeight="600" fill="currentColor" fontFamily="system-ui,sans-serif">WebMD</text></svg>
                 <svg viewBox="0 0 96 24" fill="none"><text x="0" y="17" fontSize="17" fontWeight="700" fill="currentColor" fontFamily="system-ui,sans-serif" letterSpacing="3">COMPLEX</text></svg>
               </div>
@@ -109,19 +109,19 @@ export default function App() {
         {/* ── Purpose & How It Works Wave Wrapper ── */}
         <div style={{ position: 'relative', overflow: 'hidden' }}>
           {/* Subtle Decorative Wave spanning from right side of screen to left side */}
-          <svg 
+          <svg
             className="section-wave"
-            viewBox="0 0 1200 800" 
-            preserveAspectRatio="none" 
-            fill="none" 
-            aria-hidden="true" 
-            style={{ 
-              position: 'absolute', 
-              left: '0', 
-              top: '0', 
-              height: '100%', 
-              width: '100%', 
-              zIndex: 0, 
+            viewBox="0 0 1200 800"
+            preserveAspectRatio="none"
+            fill="none"
+            aria-hidden="true"
+            style={{
+              position: 'absolute',
+              left: '0',
+              top: '0',
+              height: '100%',
+              width: '100%',
+              zIndex: 0,
               opacity: 0.45,
               pointerEvents: 'none',
               maskImage: 'linear-gradient(to bottom, transparent, black 10%, black 90%, transparent)',
@@ -135,60 +135,60 @@ export default function App() {
 
           {/* ── Purpose & Vision ── */}
           <section className="section" data-od-id="purpose-vision" style={{ position: 'relative', zIndex: 1 }}>
-          <div className="container">
-            <div className="grid-2">
-              <div>
-                <p className="section-label">Purpose</p>
-                <h2 style={{ marginBottom: 'var(--gap-md)' }}>The wave others ride.</h2>
-                <p className="lead" style={{ maxWidth: '100%' }}>We exist to acknowledge and compensate the expression of original ideas and labor that move culture forward. Provenance first — then everything else.</p>
-                <p className="lead" style={{ maxWidth: '100%', marginTop: 'var(--gap-md)', fontSize: '15px', color: 'var(--fg)' }}>In one sentence: the radical curation network unifying art and technology to distribute equity.</p>
-              </div>
-              <div>
-                <p className="section-label">Vision</p>
-                <h2 style={{ marginBottom: 'var(--gap-md)' }}>Capital, redistributed.</h2>
-                <p className="lead" style={{ maxWidth: '100%' }}>To redistribute human and financial capital from concentrated powers to dynamic grassroots communities. To construct a world where community integrates with life, art, appreciation, and passion.</p>
-                <p className="lead" style={{ maxWidth: '100%', marginTop: 'var(--gap-md)', fontSize: '15px', color: 'var(--fg)' }}>Driven and debonair. Strong, aggressive, absurd, weird — self-assured and dynamic, creative and perceptive. We tackle missions with diligence, grit, and daring.</p>
-              </div>
-            </div>
-            <div className="rare-block">
-              <div className="rare-left">
-                <p className="section-label">Tagline</p>
-                <div className="rare-display">Rare∞</div>
-              </div>
-              <div className="rare-right">
-                <p className="rare-copy">For savvy seekers and independent creators who share a deep value for cultural contribution. We provide content, services, and resources counter to those currently found in legacy media and traditional industry, which fail to cater to their appetites.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ── How It Works ── */}
-        <section className="section" data-od-id="how-it-works" id="how-it-works" style={{ position: 'relative', zIndex: 1 }}>
-          <div className="container">
-            <div className="process-intro">
-              <p className="section-label">$BUILD with the best.</p>
-              <h2 style={{ marginBottom: 'var(--gap-md)' }}>How Future<br />Modern works</h2>
-              <p className="lead process-lead">Future Modern assembles handpicked teams around your project instead of flooding you with resumes. Submit your RFP and budget, review a curated set of qualified options, choose your lead, and track delivery in real time.</p>
-            </div>
-            <div className="stack" style={{ gap: 'var(--gap-md)' }}>
-              {[
-                { n: '01', title: 'Tell us your project', body: 'Submit your RFP and budget. Our automated matcher narrows the field within the zone of possible agreement.' },
-                { n: '02', title: 'Choose from 3–5 options', body: 'Not a flood of resumes. A curated set of qualified member teams, skill-filtered to your project.' },
-                { n: '03', title: 'Pick your lead, stay in the loop', body: 'Once awarded, the team runs delivery independently while you stay aligned through milestones and updates.' },
-                { n: '04', title: 'Closeout and distribution', body: 'Once work is delivered and payment is collected, revenue is distributed automatically to the contributors who shipped it. Attribution and contribution records remain with the cooperative.' },
-              ].map(({ n, title, body }) => (
-                <div className="step-card" key={n}>
-                  <span className="step-deco" aria-hidden="true">{n}</span>
-                  <div className="step-content">
-                    <p className="step-label">{n}</p>
-                    <h3 style={{ marginBottom: '4px' }}>{title}</h3>
-                    <p style={{ color: 'var(--muted)', fontSize: '14px' }}>{body}</p>
-                  </div>
+            <div className="container">
+              <div className="grid-2">
+                <div>
+                  <p className="section-label">Purpose</p>
+                  <h2 style={{ marginBottom: 'var(--gap-md)' }}>The wave others ride.</h2>
+                  <p className="lead" style={{ maxWidth: '100%' }}>We exist to acknowledge and compensate the expression of original ideas and labor that move culture forward. Provenance first — then everything else.</p>
+                  <p className="lead" style={{ maxWidth: '100%', marginTop: 'var(--gap-md)', fontSize: '15px', color: 'var(--fg)' }}>In one sentence: the radical curation network unifying art and technology to distribute equity.</p>
                 </div>
-              ))}
+                <div>
+                  <p className="section-label">Vision</p>
+                  <h2 style={{ marginBottom: 'var(--gap-md)' }}>Capital, redistributed.</h2>
+                  <p className="lead" style={{ maxWidth: '100%' }}>To redistribute human and financial capital from concentrated powers to dynamic grassroots communities. To construct a world where community integrates with life, art, appreciation, and passion.</p>
+                  <p className="lead" style={{ maxWidth: '100%', marginTop: 'var(--gap-md)', fontSize: '15px', color: 'var(--fg)' }}>Driven and debonair. Strong, aggressive, absurd, weird — self-assured and dynamic, creative and perceptive. We tackle missions with diligence, grit, and daring.</p>
+                </div>
+              </div>
+              <div className="rare-block">
+                <div className="rare-left">
+                  <p className="section-label">Tagline</p>
+                  <div className="rare-display">Rare∞</div>
+                </div>
+                <div className="rare-right">
+                  <p className="rare-copy">For savvy seekers and independent creators who share a deep value for cultural contribution. We provide content, services, and resources counter to those currently found in legacy media and traditional industry, which fail to cater to their appetites.</p>
+                </div>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+
+          {/* ── How It Works ── */}
+          <section className="section" data-od-id="how-it-works" id="how-it-works" style={{ position: 'relative', zIndex: 1 }}>
+            <div className="container">
+              <div className="process-intro">
+                <p className="section-label">$BUILD with the best.</p>
+                <h2 style={{ marginBottom: 'var(--gap-md)' }}>How Future<br />Modern works</h2>
+                <p className="lead process-lead">Future Modern assembles handpicked teams around your project instead of flooding you with resumes. Submit your RFP and budget, review a curated set of qualified options, choose your lead, and track delivery in real time.</p>
+              </div>
+              <div className="stack" style={{ gap: 'var(--gap-md)' }}>
+                {[
+                  { n: '01', title: 'Tell us your project', body: 'Submit your RFP and budget. Our automated matcher narrows the field within the zone of possible agreement.' },
+                  { n: '02', title: 'Choose from 3–5 options', body: 'Not a flood of resumes. A curated set of qualified member teams, skill-filtered to your project.' },
+                  { n: '03', title: 'Pick your lead, stay in the loop', body: 'Once awarded, the team runs delivery independently while you stay aligned through milestones and updates.' },
+                  { n: '04', title: 'Closeout and distribution', body: 'Once work is delivered and payment is collected, revenue is distributed automatically to the contributors who shipped it. Attribution and contribution records remain with the cooperative.' },
+                ].map(({ n, title, body }) => (
+                  <div className="step-card" key={n}>
+                    <span className="step-deco" aria-hidden="true">{n}</span>
+                    <div className="step-content">
+                      <p className="step-label">{n}</p>
+                      <h3 style={{ marginBottom: '4px' }}>{title}</h3>
+                      <p style={{ color: 'var(--muted)', fontSize: '14px' }}>{body}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
         </div>
 
         {/* ── People ── */}
@@ -212,21 +212,21 @@ export default function App() {
             <div className="grid-3">
               <div className="pillar-card">
                 <div className="pillar-icon">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 8v8M15 8v8M12 8v8"/></svg>
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><rect x="4" y="4" width="16" height="16" rx="2" /><path d="M9 8v8M15 8v8M12 8v8" /></svg>
                 </div>
                 <h3>STEM</h3>
                 <p>Full-stack engineering, AI/ML, blockchain, security, data, research.</p>
               </div>
               <div className="pillar-card">
                 <div className="pillar-icon">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><circle cx="12" cy="12" r="3" /><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" /></svg>
                 </div>
                 <h3>Creative Media</h3>
                 <p>Music, film, editorial, design, direction, post-production.</p>
               </div>
               <div className="pillar-card">
                 <div className="pillar-icon">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M22 12h-4l-3 9L9 3l-3 9H2" /></svg>
                 </div>
                 <h3>Professional Services</h3>
                 <p>Strategy, legal, finance, operations, management consulting.</p>
@@ -302,13 +302,13 @@ export default function App() {
                   ))}
                 </div>
               </div>
-              
+
               <div className="waterfall-card">
                 <div className="waterfall-header">
                   <span className="waterfall-tagline">“Workers built it. Capital kept it.”</span>
                   <h3>The Revenue Waterfall</h3>
                 </div>
-                
+
                 <div className="waterfall-bars">
                   {/* 85% Bar */}
                   <div className="waterfall-bar-group">
@@ -319,7 +319,7 @@ export default function App() {
                     <div className="waterfall-progress-bg">
                       <div className="waterfall-progress-fill accent-green" style={{ width: '85%' }}></div>
                     </div>
-                    <p className="waterfall-subtext">No agency middlemen. No stacked platform taxes. Paid directly to the contributors who ship the code, design, and strategy.</p>
+                    <p className="waterfall-subtext">No agency middlemen. No stacked platform taxes. Paid directly to the contributors who ship the code, design, and services.</p>
                   </div>
 
                   {/* 15% Bar */}
@@ -337,7 +337,7 @@ export default function App() {
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="waterfall-footer">
                   <div style={{ fontWeight: '600', color: 'var(--white)', fontSize: '13px', marginBottom: '14px' }}>
                     Platform comparison:
@@ -346,7 +346,7 @@ export default function App() {
                     <div className="platform-row">
                       <span className="platform-status status-bad">✕</span>
                       <span className="platform-name">Upwork</span>
-                      <span className="platform-fees">10% fee + pay-to-pitch connects ($1.20–$3.30+ per bid). Freelancers average 15–20 applications (~200–400 Connects / $30–$60+) just to land a single contract.</span>
+                      <span className="platform-fees">10% fee + pay-to-pitch connects ($1.20–$3.30+ per bid). Freelancers average 20–30 applications (~200–400 Connects / $30–$60+) just to land a single commoditized contract.</span>
                     </div>
                     <div className="platform-row">
                       <span className="platform-status status-bad">✕</span>
