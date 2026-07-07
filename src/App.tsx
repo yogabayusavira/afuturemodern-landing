@@ -219,7 +219,7 @@ export default function App() {
               </div>
               <div className="stack" style={{ gap: 'var(--gap-md)' }}>
                 {[
-                  { n: '01', title: 'Tell us your project', body: 'Submit your RFP and budget. Our automated matcher narrows the field within the zone of possible agreement.' },
+                  { n: '01', title: 'Tell us about your project', body: 'Submit your RFP and budget. Our automated matcher narrows the field within the zone of possible agreement.' },
                   { n: '02', title: 'Choose from 3–5 options', body: 'Not a flood of resumes. A curated set of qualified member teams, skill-filtered to your project.' },
                   { n: '03', title: 'Pick your lead, stay in the loop', body: 'Once awarded, the team runs delivery independently while you stay aligned through milestones and updates.' },
                   { n: '04', title: 'Closeout and distribution', body: 'Once work is delivered and payment is collected, revenue is distributed automatically to the contributors who shipped it. Attribution and contribution records remain with the cooperative.' },
@@ -275,26 +275,26 @@ export default function App() {
             <div className="container">
               <div style={{ textAlign: 'center', maxWidth: '52ch', margin: '0 auto var(--gap-xl)' }}>
                 <p className="section-label">How we're organized</p>
-                <h2 style={{ marginBottom: 'var(--gap-md)', textDecoration: 'underline', textUnderlineOffset: '6px', textDecorationThickness: '2px', textDecorationColor: 'var(--accent)' }}>Three pillars</h2>
+                <h2 style={{ marginBottom: 'var(--gap-md)', textDecoration: 'underline', textUnderlineOffset: '6px', textDecorationThickness: '2px', textDecorationColor: 'var(--accent)' }}>The Three Pillars</h2>
                 <p className="lead" style={{ marginTop: 'var(--gap-sm)', maxWidth: '100%' }}>Every member sits in at least one pillar. Many sit across two. A handful move freely through all three. The pillar framing is how opportunities are routed and how teams are built for serious briefs.</p>
               </div>
               <div className="grid-3">
                 <div className="pillar-card card-stem" ref={stemCardRef}>
                   <div className="pillar-card-content">
                     <h3>STEM</h3>
-                    <p>Full-stack engineering, AI/ML, blockchain, security, data, research.</p>
+                    <p>Full-stack engineering, AI/ML, blockchain, security, data, research, and more.</p>
                   </div>
                 </div>
                 <div className="pillar-card card-creative" ref={creativeCardRef}>
                   <div className="pillar-card-content">
                     <h3>Creative Media</h3>
-                    <p>Music, film, editorial, design, direction, post-production.</p>
+                    <p>Music, film, editorial, design, direction, post-production, and more.</p>
                   </div>
                 </div>
                 <div className="pillar-card card-pro" ref={proCardRef}>
                   <div className="pillar-card-content">
                     <h3>Professional Services</h3>
-                    <p>Strategy, legal, finance, operations, management consulting.</p>
+                    <p>Strategy, legal, finance, operations, management consulting, and more.</p>
                   </div>
                 </div>
               </div>
@@ -302,40 +302,6 @@ export default function App() {
           </section>
         </div>
 
-        {/* ── Core Competencies ── */}
-        <section className="section" data-od-id="competencies" id="competencies">
-          <div className="container">
-            <div className="comp-intro">
-              <p className="section-label">Core Competencies</p>
-              <p className="lead">Future Modern assembles across disciplines when a brief calls for it. These are the capabilities represented across the cooperative and its service partners.</p>
-            </div>
-            <div className="comp-grid">
-              <div className="comp-col col-stem">
-                <h3 className="comp-heading">STEM</h3>
-                <div className="comp-divider" />
-                <p className="comp-text">Web Design · Web Development · Blockchain Development · Data Science &amp; Machine Learning · Mechanical Engineering · Robotics · Electrical Engineering · Network Administration &amp; Cybersecurity · Scientific Liaison · Technical Writing</p>
-              </div>
-              <div className="comp-col col-creative">
-                <h3 className="comp-heading">Creative Media</h3>
-                <div className="comp-divider" />
-                <p className="comp-text">Content Marketing · Advertising · Music · Product Design · Graphic Design · Game Design · Fashion Design · Film Direction · Event Planning</p>
-              </div>
-              <div className="comp-col col-pro">
-                <h3 className="comp-heading">Professional Services</h3>
-                <div className="comp-divider" />
-                <p className="comp-text">Managed Services · Product Management · Consulting · Strategy · Psychiatry &amp; Psychology · Family Medicine · Health Law · Employment Law · Pharmaceuticals · Medical Writing</p>
-              </div>
-            </div>
-          </div>
-        </section>
-        <div className="competencies-wave">
-          <svg viewBox="0 0 1440 120" preserveAspectRatio="none" fill="none">
-            <path d="M0 60 Q180 0 360 60 Q540 120 720 60 Q900 0 1080 60 Q1260 120 1440 60" stroke="var(--accent)" strokeWidth="1.5" fill="none" />
-            <path d="M0 80 Q240 20 480 80 Q720 140 960 80 Q1200 20 1440 80" stroke="var(--magenta)" strokeWidth="1" fill="none" />
-            <path d="M0 40 Q300 100 600 40 Q900 -20 1200 40 Q1350 70 1440 40" stroke="var(--magenta)" strokeWidth="2" fill="none" />
-            <path d="M0 120 Q200 40 400 80 Q600 120 800 60 Q1000 0 1200 40 Q1320 60 1440 70" stroke="var(--accent)" strokeWidth="0.8" fill="none" />
-          </svg>
-        </div>
 
         {/* ── Venture Labor ── */}
         <section className="section" data-od-id="venture-labor" style={{ position: 'relative', overflow: 'hidden' }}>
