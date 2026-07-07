@@ -261,8 +261,14 @@ h1, h2, h3, h4 { text-wrap: balance; margin: 0; }
 .cred-logos svg { height: 22px; width: auto; color: var(--white); flex-shrink: 0; }
 
 /* ── Principle cards ─────────────────────────────────── */
-.principle-card { border-left: 3px solid var(--accent); padding-left: var(--gap-lg); }
-.principle-card h3 { color: var(--accent); margin-bottom: 8px; }
+.principle-card { padding-left: var(--gap-lg); }
+.principle-card:nth-child(1) { border-left: 3px solid var(--accent); }
+.principle-card:nth-child(2) { border-left: 3px solid var(--magenta); }
+.principle-card:nth-child(3) { border-left: 3px solid var(--green); }
+.principle-card h3 { margin-bottom: 8px; }
+.principle-card:nth-child(1) h3 { color: var(--accent); }
+.principle-card:nth-child(2) h3 { color: var(--magenta); }
+.principle-card:nth-child(3) h3 { color: var(--green); }
 
 /* ── Rare block (tagline) ────────────────────────────── */
 .rare-block {
@@ -274,8 +280,9 @@ h1, h2, h3, h4 { text-wrap: balance; margin: 0; }
 }
 .rare-display {
   font-family: var(--font-display); font-size: 48px; font-weight: 700;
-  color: var(--accent); line-height: 1; letter-spacing: -0.03em;
+  color: var(--fg); line-height: 1; letter-spacing: -0.03em;
 }
+.infinity-sup { color: var(--magenta); font-size: 0.55em; vertical-align: super; line-height: 0; }
 .rare-left .section-label { margin-bottom: var(--gap-sm); }
 .rare-copy { color: var(--muted); font-size: 15px; line-height: 1.6; }
 
@@ -346,7 +353,8 @@ h1, h2, h3, h4 { text-wrap: balance; margin: 0; }
   z-index: 2;
 }
 .section[data-od-id="competencies"] {
-  padding-bottom: clamp(80px, 12vw, 160px);
+  padding-block: 0 clamp(120px, 16vw, 200px);
+  margin-top: -48px;
 }
 
 /* ── Partner cards ───────────────────────────────────── */
@@ -403,15 +411,12 @@ h1, h2, h3, h4 { text-wrap: balance; margin: 0; }
 .pillar-card:hover::before {
   transform: scale(1.06);
 }
-.pillar-card:hover {
-  border-color: var(--accent);
-}
-.pillar-card:hover.card-creative {
-  border-color: var(--magenta);
-}
-.pillar-card:hover.card-pro {
-  border-color: var(--green);
-}
+.pillar-card.card-stem { border-color: var(--accent); }
+.pillar-card.card-creative { border-color: var(--magenta); }
+.pillar-card.card-pro { border-color: var(--green); }
+.pillar-card:hover { border-color: var(--accent); }
+.pillar-card:hover.card-creative { border-color: var(--magenta); }
+.pillar-card:hover.card-pro { border-color: var(--green); }
 .pillar-card-content {
   position: relative;
   z-index: 2;

@@ -27,7 +27,6 @@ export default function App() {
       const W = wR.width
       const H = wR.height
 
-      // Return card top-center position relative to wrapper
       function pt(el: HTMLElement) {
         const r = el.getBoundingClientRect()
         return { x: r.left - wR.left + r.width / 2, y: r.top - wR.top }
@@ -35,7 +34,6 @@ export default function App() {
 
       const s = pt(stemEl), c = pt(cEl), p = pt(pEl)
 
-      // Build S-curve: starts at left edge (x=0), ends at card top-center
       function mkPath(ex: number, ey: number, startYFrac: number) {
         const sy = H * startYFrac
         const swing = W * 0.12
@@ -202,7 +200,7 @@ export default function App() {
               <div className="rare-block">
                 <div className="rare-left">
                   <p className="section-label">Tagline</p>
-                  <div className="rare-display">Rare∞</div>
+                  <div className="rare-display">Rare<sup className="infinity-sup">∞</sup></div>
                 </div>
                 <div className="rare-right">
                   <p className="rare-copy">For savvy seekers and independent creators who share a deep value for cultural contribution. We provide content, services, and resources counter to those currently found in legacy media and traditional industry, which fail to cater to their appetites.</p>
@@ -277,7 +275,7 @@ export default function App() {
             <div className="container">
               <div style={{ textAlign: 'center', maxWidth: '52ch', margin: '0 auto var(--gap-xl)' }}>
                 <p className="section-label">How we're organized</p>
-                <h2 style={{ marginBottom: 'var(--gap-md)' }}>Three pillars, one cooperative</h2>
+                <h2 style={{ marginBottom: 'var(--gap-md)', textDecoration: 'underline', textUnderlineOffset: '6px', textDecorationThickness: '2px', textDecorationColor: 'var(--accent)' }}>Three pillars</h2>
                 <p className="lead" style={{ marginTop: 'var(--gap-sm)', maxWidth: '100%' }}>Every member sits in at least one pillar. Many sit across two. A handful move freely through all three. The pillar framing is how opportunities are routed and how teams are built for serious briefs.</p>
               </div>
               <div className="grid-3">
@@ -332,10 +330,10 @@ export default function App() {
         </section>
         <div className="competencies-wave">
           <svg viewBox="0 0 1440 120" preserveAspectRatio="none" fill="none">
-            <path d="M0 60 Q180 0 360 60 Q540 120 720 60 Q900 0 1080 60 Q1260 120 1440 60" stroke="var(--accent)" strokeWidth="1.5" opacity="0.35" fill="none" />
-            <path d="M0 80 Q240 20 480 80 Q720 140 960 80 Q1200 20 1440 80" stroke="var(--magenta)" strokeWidth="1" opacity="0.25" fill="none" />
-            <path d="M0 40 Q300 100 600 40 Q900 -20 1200 40 Q1350 70 1440 40" stroke="var(--magenta)" strokeWidth="2" opacity="0.15" fill="none" />
-            <path d="M0 120 Q200 40 400 80 Q600 120 800 60 Q1000 0 1200 40 Q1320 60 1440 70" stroke="var(--accent)" strokeWidth="0.8" opacity="0.2" fill="none" />
+            <path d="M0 60 Q180 0 360 60 Q540 120 720 60 Q900 0 1080 60 Q1260 120 1440 60" stroke="var(--accent)" strokeWidth="1.5" fill="none" />
+            <path d="M0 80 Q240 20 480 80 Q720 140 960 80 Q1200 20 1440 80" stroke="var(--magenta)" strokeWidth="1" fill="none" />
+            <path d="M0 40 Q300 100 600 40 Q900 -20 1200 40 Q1350 70 1440 40" stroke="var(--magenta)" strokeWidth="2" fill="none" />
+            <path d="M0 120 Q200 40 400 80 Q600 120 800 60 Q1000 0 1200 40 Q1320 60 1440 70" stroke="var(--accent)" strokeWidth="0.8" fill="none" />
           </svg>
         </div>
 
