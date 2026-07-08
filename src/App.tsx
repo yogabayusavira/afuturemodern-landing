@@ -15,6 +15,41 @@ export default function App() {
   const proCardRef = useRef<HTMLDivElement>(null)
   const [waveData, setWaveData] = useState<{ vb: string; s: string; c: string; p: string } | null>(null)
 
+  // Mouse-follow leaning dollar sign
+  const dollarRef = useRef<HTMLSpanElement>(null)
+
+  useEffect(() => {
+    const el = dollarRef.current
+    const wrap = document.getElementById('hero-heading')
+    if (!el || !wrap) return
+
+    const maxLean = 10
+    let current = 0, vel = 0, target = 0, rafId = 0
+
+    function tick() {
+      vel += (target - current) * 0.06
+      vel *= 0.82
+      current += vel
+      if (Math.abs(current) > maxLean) current = Math.sign(current) * maxLean
+      el!.style.transform = `rotate(${current}deg)`
+      rafId = requestAnimationFrame(tick)
+    }
+    rafId = requestAnimationFrame(tick)
+
+    function onMove(e: MouseEvent) {
+      const r = wrap!.getBoundingClientRect()
+      const pct = (e.clientX - r.left) / r.width
+      target = (pct - 0.5) * 2 * maxLean
+    }
+
+    window.addEventListener('mousemove', onMove, { passive: true })
+
+    return () => {
+      cancelAnimationFrame(rafId)
+      window.removeEventListener('mousemove', onMove)
+    }
+  }, [])
+
   useEffect(() => {
     function measure() {
       const wrapper = waveWrapperRef.current
@@ -103,7 +138,9 @@ export default function App() {
           <div className="hero-overlay" />
           <div className="container hero-center">
             <p className="eyebrow">Future Modern cooperative</p>
-            <h1>$BUILD<br />A TEAM</h1>
+            <div className="hero-heading-wrap" id="hero-heading">
+              <h1><span ref={dollarRef} className="hero-dollar" aria-hidden="true">$</span>BUILD<br />A TEAM</h1>
+            </div>
             <p className="lead" style={{ marginInline: 'auto', maxWidth: '62ch' }}>
               Build a handpicked team from our network of experienced STEM, Creative Media, and Professional Services contributors.
             </p>

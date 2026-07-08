@@ -6,7 +6,7 @@
   --muted:        #8a8780;
   --border:       #2a2825;
   --accent:       #3A4FAA;
-  --magenta:      #951B70;
+  --magenta:      #c7228a;
   --green:        #017249;
   --white:        #ffffff;
 
@@ -14,13 +14,13 @@
   --magenta-soft: color-mix(in oklch, var(--magenta) 14%, transparent);
   --fg-soft:      color-mix(in oklch, var(--fg) 6%, transparent);
 
-  --font-display: 'Inter', system-ui, -apple-system, 'Segoe UI', Helvetica Neue, Arial, sans-serif;
+  --font-display: 'Abel', 'Inter', system-ui, -apple-system, 'Segoe UI', Helvetica Neue, Arial, sans-serif;
   --font-body:    'Inter', system-ui, -apple-system, 'Segoe UI', Helvetica Neue, Arial, sans-serif;
   --font-mono:    'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
 
-  --fs-h1:   clamp(36px, 5vw, 64px);
-  --fs-h2:   clamp(28px, 3.6vw, 44px);
-  --fs-h3:   20px;
+  --fs-h1:   clamp(56px, 10vw, 88px);
+  --fs-h2:   clamp(30px, 4vw, 48px);
+  --fs-h3:   clamp(18px, 2.2vw, 22px);
   --fs-lead: 18px;
   --fs-body: 16px;
   --fs-meta: 13px;
@@ -100,9 +100,9 @@ h1, h2, h3, h4 { text-wrap: balance; margin: 0; }
 }
 
 /* ── Typography ──────────────────────────────────────── */
-.h1, h1 { font-family: var(--font-display); font-size: var(--fs-h1); line-height: 1.04; letter-spacing: -0.025em; font-weight: 700; }
-.h2, h2 { font-family: var(--font-display); font-size: var(--fs-h2); line-height: 1.1;  letter-spacing: -0.02em;  font-weight: 600; }
-.h3, h3 { font-family: var(--font-display); font-size: var(--fs-h3); font-weight: 600;  line-height: 1.3;  letter-spacing: -0.01em; }
+.h1, h1 { font-family: var(--font-display); font-size: var(--fs-h1); line-height: 1.04; letter-spacing: 0.04em; font-weight: 700; }
+.h2, h2 { font-family: var(--font-display); font-size: var(--fs-h2); line-height: 1.1;  letter-spacing: 0.03em;  font-weight: 700; }
+.h3, h3 { font-family: var(--font-display); font-size: var(--fs-h3); font-weight: 700;  line-height: 1.3;  letter-spacing: 0.02em; }
 
 .lead {
   font-size: var(--fs-lead);
@@ -137,8 +137,8 @@ h1, h2, h3, h4 { text-wrap: balance; margin: 0; }
   border-radius: var(--radius);
   border: 1px solid transparent;
   font-size: 15px;
-  font-weight: 500;
-  letter-spacing: -0.005em;
+  font-weight: 400;
+  letter-spacing: 0.02em;
   transition: transform 0.05s ease, background 0.2s ease, border-color 0.2s ease;
 }
 .btn:active { transform: translateY(1px); }
@@ -206,7 +206,7 @@ h1, h2, h3, h4 { text-wrap: balance; margin: 0; }
 .logo-text { line-height: 1.2; }
 .logo-title {
   font-family: var(--font-display); font-size: 17px; font-weight: 600;
-  letter-spacing: -0.01em; color: var(--fg); display: block;
+  letter-spacing: 0.02em; color: var(--fg); display: block;
 }
 .logo-title span { color: var(--accent); }
 .logo-sub {
@@ -259,7 +259,35 @@ h1, h2, h3, h4 { text-wrap: balance; margin: 0; }
 }
 .hero > .container { position: relative; z-index: 2; }
 .hero-center { text-align: center; max-width: 62ch; margin-inline: auto; }
-.hero h1 { margin-bottom: var(--gap-md); color: var(--white); }
+.hero-heading-wrap {
+  position: relative;
+  margin-bottom: var(--gap-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-heading-wrap h1 {
+  position: relative;
+  z-index: 1;
+}
+.hero-heading-wrap h1 {
+  margin-bottom: 0;
+  color: var(--white);
+}
+.hero-dollar {
+  color: var(--magenta);
+  display: inline-block;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: clamp(32px, 5vw, 72px);
+  font-weight: 600;
+  pointer-events: none;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  vertical-align: middle;
+  margin-right: 0.02em;
+  transform-origin: bottom center;
+  position: relative;
+}
 .hero .lead { margin-bottom: 16px; color: color-mix(in oklch, var(--fg) 88%, var(--white)); }
 .hero-cta { display: inline-flex; gap: 20px; flex-wrap: wrap; }
 .hero-center .hero-cta { justify-content: center; }
@@ -314,7 +342,7 @@ h1, h2, h3, h4 { text-wrap: balance; margin: 0; }
 }
 .rare-display {
   font-family: var(--font-display); font-size: 48px; font-weight: 700;
-  color: var(--fg); line-height: 1; letter-spacing: -0.03em;
+  color: var(--fg); line-height: 1; letter-spacing: 0.03em;
 }
 .infinity-sup { color: var(--magenta); font-size: 0.55em; vertical-align: super; line-height: 0; }
 .rare-left .section-label { margin-bottom: var(--gap-sm); }
