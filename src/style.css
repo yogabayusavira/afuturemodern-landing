@@ -639,6 +639,9 @@ h1, h2, h3, h4 { text-wrap: balance; margin: 0; }
   box-shadow: 0 0 0 1px rgba(58, 79, 170, 0.08), 0 24px 64px rgba(0,0,0,0.6);
   animation: modalSlideUp 0.3s cubic-bezier(0.25, 1, 0.5, 1) both;
 }
+@media (min-width: 640px) {
+  .modal { max-width: 640px; padding: var(--gap-xl); }
+}
 @keyframes modalSlideUp {
   from { opacity: 0; transform: translateY(24px) scale(0.97); }
   to   { opacity: 1; transform: translateY(0) scale(1); }
@@ -961,7 +964,7 @@ h1, h2, h3, h4 { text-wrap: balance; margin: 0; }
 
 /* Project path selection */
 .path-selection-step {
-  text-align: center;
+  text-align: left;
 }
 .path-intro {
   margin-bottom: var(--gap-lg);
@@ -976,7 +979,6 @@ h1, h2, h3, h4 { text-wrap: balance; margin: 0; }
   font-size: 14px;
   line-height: 1.55;
   max-width: 40ch;
-  margin-inline: auto;
 }
 .project-paths {
   display: grid;
@@ -987,22 +989,25 @@ h1, h2, h3, h4 { text-wrap: balance; margin: 0; }
   .project-paths { grid-template-columns: 1fr 1fr; }
 }
 .path-card {
-  background: var(--bg);
+  background: transparent;
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: var(--gap-lg);
   text-align: center;
   display: flex;
   flex-direction: column;
-  gap: var(--gap-md);
+  gap: var(--gap-sm);
   justify-content: flex-end;
   transition: border-color 0.2s, background 0.2s, transform 0.15s, box-shadow 0.2s;
   cursor: pointer;
   width: 100%;
   color: inherit;
   position: relative;
-  aspect-ratio: 1 / 0.75;
   overflow: hidden;
+  aspect-ratio: 1 / 0.75;
+}
+@media (min-width: 640px) {
+  .path-card { aspect-ratio: 1 / 1; padding: var(--gap-md); }
 }
 .path-card::before {
   content: '';
@@ -1024,16 +1029,15 @@ h1, h2, h3, h4 { text-wrap: balance; margin: 0; }
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(180deg, rgba(13,13,13,0.5) 0%, rgba(13,13,13,0.92) 100%);
+  background: linear-gradient(180deg, rgba(13,13,13,0.65) 0%, rgba(13,13,13,0.95) 100%);
 }
 .path-card:hover::before {
   transform: scale(1.06);
 }
 .path-card:hover {
   border-color: var(--accent);
-  background: linear-gradient(135deg, var(--accent-soft) 0%, color-mix(in oklch, var(--accent-soft) 60%, transparent) 100%);
   transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3), inset 0 0 0 1px rgba(58, 79, 170, 0.2);
 }
 .path-card-body, .path-card-action {
   position: relative;
@@ -1041,13 +1045,13 @@ h1, h2, h3, h4 { text-wrap: balance; margin: 0; }
 }
 .path-card-body h3 {
   font-family: var(--font-display);
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 600;
   margin-bottom: 4px;
   color: var(--fg);
 }
 .path-card-body p {
-  font-size: 14px;
+  font-size: 13px;
   color: var(--muted);
   line-height: 1.5;
   margin: 0;
@@ -1055,14 +1059,14 @@ h1, h2, h3, h4 { text-wrap: balance; margin: 0; }
 .path-card-action {
   flex-shrink: 0;
 }
-@media (min-width: 640px) {
-  .path-card-action { margin-top: var(--gap-md); width: 100%; }
-}
 .btn-path {
-  font-size: 14px !important;
-  padding: 11px 24px !important;
+  font-size: 13px !important;
+  padding: 9px 20px !important;
   width: 100% !important;
   justify-content: center !important;
+}
+@media (min-width: 640px) {
+  .btn-path { max-width: 180px; margin-inline: auto; }
 }
 
 /* Tag input interaction */

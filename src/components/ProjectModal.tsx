@@ -437,7 +437,7 @@ export default function ProjectModal({ isOpen, onClose }: ProjectModalProps) {
               <button type="button" className="path-card find-talent" onClick={() => setPath('find-talent')}>
                 <div className="path-card-body">
                   <h3>Find talent</h3>
-                  <p>You need a specific role or capability and want help finding the right contributor.</p>
+                  <p>Hire a single contributor for a specific role or capability.</p>
                 </div>
                 <div className="path-card-action">
                   <span className="btn btn-primary btn-path">Find talent →</span>
@@ -447,7 +447,7 @@ export default function ProjectModal({ isOpen, onClose }: ProjectModalProps) {
               <button type="button" className="path-card build-team" onClick={() => setPath('build-team')}>
                 <div className="path-card-body">
                   <h3>Build a team</h3>
-                  <p>You have a project or initiative that needs multiple capabilities working together.</p>
+                  <p>Assemble a multi-disciplinary team to ship a project.</p>
                 </div>
                 <div className="path-card-action">
                   <span className="btn btn-primary btn-path">Build a team →</span>
