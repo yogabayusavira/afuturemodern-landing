@@ -198,6 +198,9 @@ export default function TalentModal({ isOpen, onClose }: TalentModalProps) {
         <div className="modal" onClick={(e) => e.stopPropagation()}>
           <button className="modal-close" onClick={handleClose}>✕</button>
           <div className="modal-success">
+            <div className="check-circle">
+              <svg viewBox="0 0 28 28"><polyline points="6 14 12 20 22 8" /></svg>
+            </div>
             <h2>Application received</h2>
             <p className="modal-success-body">Thanks for sharing your work. We'll review your application and be in touch if there's a fit.</p>
             <div className="modal-success-actions">

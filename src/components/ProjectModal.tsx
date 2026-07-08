@@ -131,6 +131,17 @@ export default function ProjectModal({ isOpen, onClose }: ProjectModalProps) {
   const [fileValidationErrors, setFileValidationErrors] = useState<string[]>([])
   const modalRef = useRef<HTMLDivElement>(null)
 
+  // Reset to selection screen every time modal opens
+  useEffect(() => {
+    if (isOpen) {
+      reset()
+      setErrors({})
+      setSubmitState('idle')
+      setSubmitError('')
+      setFileValidationErrors([])
+    }
+  }, [isOpen, reset])
+
   // Focus trap for accessibility
   useEffect(() => {
     if (!isOpen) return
@@ -382,6 +393,9 @@ export default function ProjectModal({ isOpen, onClose }: ProjectModalProps) {
         <div className="modal" onClick={(e) => e.stopPropagation()} ref={modalRef} role="dialog" aria-modal="true">
           <button className="modal-close" onClick={handleClose} aria-label="Close modal">✕</button>
           <div className="modal-success">
+            <div className="check-circle">
+              <svg viewBox="0 0 28 28"><polyline points="6 14 12 20 22 8" /></svg>
+            </div>
             <h2>Request received</h2>
             <p className="modal-success-body">
               {data.path === 'find-talent'
@@ -413,30 +427,30 @@ export default function ProjectModal({ isOpen, onClose }: ProjectModalProps) {
 
         {/* ── Selection Screen ── */}
         {data.path === 'selection' && (
-          <div className="modal-step">
-            <h2 style={{ fontSize: 'var(--fs-h3)', fontWeight: 600, marginBottom: 'var(--gap-sm)' }}>What do you need?</h2>
-            <p style={{ color: 'var(--muted)', fontSize: '14px', lineHeight: 1.55, marginBottom: 'var(--gap-lg)' }}>
-              Tell us what you’re looking for. We’ll help you find the right contributor or assemble the right team.
-            </p>
+          <div key="selection" className="modal-step path-selection-step modal-step-anim">
+            <div className="path-intro">
+              <h2>What do you need?</h2>
+              <p>We'll match you with the right people — whether you need one expert or a full crew.</p>
+            </div>
 
             <div className="project-paths">
-              <button type="button" className="path-card" onClick={() => setPath('find-talent')}>
-                <div>
+              <button type="button" className="path-card find-talent" onClick={() => setPath('find-talent')}>
+                <div className="path-card-body">
                   <h3>Find talent</h3>
-                  <p>You know the role or capability you need and want help finding the right contributor.</p>
+                  <p>You need a specific role or capability and want help finding the right contributor.</p>
                 </div>
                 <div className="path-card-action">
-                  <span className="btn btn-primary">Find talent</span>
+                  <span className="btn btn-primary btn-path">Find talent →</span>
                 </div>
               </button>
 
-              <button type="button" className="path-card" onClick={() => setPath('build-team')}>
-                <div>
+              <button type="button" className="path-card build-team" onClick={() => setPath('build-team')}>
+                <div className="path-card-body">
                   <h3>Build a team</h3>
                   <p>You have a project or initiative that needs multiple capabilities working together.</p>
                 </div>
                 <div className="path-card-action">
-                  <span className="btn btn-primary">Build a team</span>
+                  <span className="btn btn-primary btn-path">Build a team →</span>
                 </div>
               </button>
             </div>
@@ -445,7 +459,7 @@ export default function ProjectModal({ isOpen, onClose }: ProjectModalProps) {
 
         {/* ── Find Talent Form ── */}
         {data.path === 'find-talent' && (
-          <div className="modal-step">
+          <div key="find-talent" className="modal-step modal-step-anim">
             {data.step === 1 ? (
               <>
                 <p className="step-title">Your request</p>
@@ -698,7 +712,7 @@ export default function ProjectModal({ isOpen, onClose }: ProjectModalProps) {
 
         {/* ── Build a Team Form ── */}
         {data.path === 'build-team' && (
-          <div className="modal-step">
+          <div key="build-team" className="modal-step modal-step-anim">
             {data.step === 1 ? (
               <>
                 <p className="step-title">Your project</p>
