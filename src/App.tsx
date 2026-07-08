@@ -451,7 +451,7 @@ export default function App() {
                     <div className="platform-row">
                       <span className="platform-status status-bad">✕</span>
                       <span className="platform-name">Upwork</span>
-                      <span className="platform-fees">10% fee + pay-to-pitch connects ($1.20–$3.30+ per bid). Freelancers average 20–30 applications (~200–400 Connects / $30–$60+) just to land a single commoditized contract.</span>
+                      <span className="platform-fees">5%–10% client service fee + $0.99–$14.99 initiation. Freelancers pay ~10% variable fee + $0.60–$2.40/application in Connects. Double-sided extraction.</span>
                     </div>
                     <div className="platform-row">
                       <span className="platform-status status-bad">✕</span>
