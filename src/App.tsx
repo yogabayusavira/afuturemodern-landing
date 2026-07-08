@@ -304,7 +304,30 @@ export default function App() {
 
 
         {/* ── Venture Labor ── */}
-        <section className="section" data-od-id="venture-labor" style={{ position: 'relative', overflow: 'hidden' }}>
+        <div className="contract-section-bg">
+          {/* Top-right abstract decoration */}
+          <svg className="contract-decor decor-top-right" viewBox="0 0 400 400" fill="none" aria-hidden="true">
+            <circle cx="260" cy="60" r="3" fill="var(--accent)" opacity="0.5" />
+            <circle cx="340" cy="20" r="2" fill="var(--accent)" opacity="0.4" />
+            <circle cx="300" cy="140" r="3" fill="var(--accent)" opacity="0.35" />
+            <circle cx="370" cy="100" r="2" fill="var(--accent)" opacity="0.3" />
+            <circle cx="220" cy="180" r="1.5" fill="var(--accent)" opacity="0.25" />
+            <path d="M180 200 Q240 140 290 180 Q340 220 400 160" stroke="var(--accent)" strokeWidth="1.2" opacity="0.35" />
+            <path d="M190 240 Q260 180 320 230 Q370 270 420 200" stroke="var(--accent)" strokeWidth="0.8" opacity="0.25" />
+            <path d="M200 280 Q270 230 340 280" stroke="var(--accent)" strokeWidth="0.8" opacity="0.2" />
+          </svg>
+          {/* Bottom-left abstract decoration */}
+          <svg className="contract-decor decor-bottom-left" viewBox="0 0 400 400" fill="none" aria-hidden="true">
+            <circle cx="60" cy="260" r="3" fill="var(--magenta)" opacity="0.45" />
+            <circle cx="20" cy="340" r="2" fill="var(--magenta)" opacity="0.35" />
+            <circle cx="140" cy="300" r="3" fill="var(--magenta)" opacity="0.3" />
+            <circle cx="80" cy="380" r="2" fill="var(--magenta)" opacity="0.25" />
+            <circle cx="180" cy="220" r="1.5" fill="var(--magenta)" opacity="0.2" />
+            <path d="M0 180 Q60 240 40 300 Q20 360 80 400" stroke="var(--magenta)" strokeWidth="1.2" opacity="0.3" />
+            <path d="M40 160 Q120 220 100 300 Q80 360 140 400" stroke="var(--magenta)" strokeWidth="0.8" opacity="0.25" />
+            <path d="M80 200 Q160 270 140 350" stroke="var(--magenta)" strokeWidth="0.8" opacity="0.2" />
+          </svg>
+        <section className="section" data-od-id="venture-labor" style={{ position: 'relative' }}>
           <div className="container">
             <p className="section-label">The contract</p>
             <h2 style={{ marginBottom: 'var(--gap-md)' }}>Venture Labor.</h2>
@@ -510,6 +533,7 @@ export default function App() {
             </div>
           </div>
         </section>
+        </div>
 
         {/* ── Membership ── */}
         <section className="section" data-od-id="membership" id="membership" style={{ textAlign: 'center' }}>

@@ -311,6 +311,33 @@ h1, h2, h3, h4 { text-wrap: balance; margin: 0; }
   opacity: 0.12;
 }
 
+/* Solid SVG decorations spanning contract sections */
+.contract-section-bg {
+  position: relative;
+  overflow: hidden;
+}
+.contract-section-bg .container {
+  position: relative;
+  z-index: 1;
+}
+.contract-decor {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+}
+.contract-decor.decor-top-right {
+  top: -80px;
+  right: -60px;
+  width: clamp(320px, 35vw, 520px);
+  height: auto;
+}
+.contract-decor.decor-bottom-left {
+  bottom: -100px;
+  left: -80px;
+  width: clamp(280px, 30vw, 460px);
+  height: auto;
+}
+
 /* ── Compare grid ────────────────────────────────────── */
 .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--gap-lg); }
 .compare-card {
