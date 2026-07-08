@@ -23,7 +23,7 @@ export default function App() {
     const wrap = document.getElementById('hero-heading')
     if (!el || !wrap) return
 
-    const maxLean = 10
+    const maxLean = 5
     let current = 0, vel = 0, target = 0, rafId = 0
 
     function tick() {
