@@ -305,28 +305,40 @@ export default function App() {
 
         {/* ── Venture Labor ── */}
         <div className="contract-section-bg">
-          {/* Top-right abstract decoration */}
-          <svg className="contract-decor decor-top-right" viewBox="0 0 400 400" fill="none" aria-hidden="true">
-            <circle cx="260" cy="60" r="3" fill="var(--accent)" opacity="0.5" />
-            <circle cx="340" cy="20" r="2" fill="var(--accent)" opacity="0.4" />
-            <circle cx="300" cy="140" r="3" fill="var(--accent)" opacity="0.35" />
-            <circle cx="370" cy="100" r="2" fill="var(--accent)" opacity="0.3" />
-            <circle cx="220" cy="180" r="1.5" fill="var(--accent)" opacity="0.25" />
-            <path d="M180 200 Q240 140 290 180 Q340 220 400 160" stroke="var(--accent)" strokeWidth="1.2" opacity="0.35" />
-            <path d="M190 240 Q260 180 320 230 Q370 270 420 200" stroke="var(--accent)" strokeWidth="0.8" opacity="0.25" />
-            <path d="M200 280 Q270 230 340 280" stroke="var(--accent)" strokeWidth="0.8" opacity="0.2" />
-          </svg>
-          {/* Bottom-left abstract decoration */}
-          <svg className="contract-decor decor-bottom-left" viewBox="0 0 400 400" fill="none" aria-hidden="true">
-            <circle cx="60" cy="260" r="3" fill="var(--magenta)" opacity="0.45" />
-            <circle cx="20" cy="340" r="2" fill="var(--magenta)" opacity="0.35" />
-            <circle cx="140" cy="300" r="3" fill="var(--magenta)" opacity="0.3" />
-            <circle cx="80" cy="380" r="2" fill="var(--magenta)" opacity="0.25" />
-            <circle cx="180" cy="220" r="1.5" fill="var(--magenta)" opacity="0.2" />
-            <path d="M0 180 Q60 240 40 300 Q20 360 80 400" stroke="var(--magenta)" strokeWidth="1.2" opacity="0.3" />
-            <path d="M40 160 Q120 220 100 300 Q80 360 140 400" stroke="var(--magenta)" strokeWidth="0.8" opacity="0.25" />
-            <path d="M80 200 Q160 270 140 350" stroke="var(--magenta)" strokeWidth="0.8" opacity="0.2" />
-          </svg>
+          {/* 4a. Contract-wide decor: vertical currents framing both sides */}
+          <div className="decor-layer decor-contract" aria-hidden="true">
+            <svg viewBox="0 0 1440 1600" preserveAspectRatio="xMidYMid slice" fill="none">
+              <path d="M200 0 Q100 200 200 400 Q300 600 150 800 Q0 1000 200 1200 Q300 1400 200 1600" stroke="var(--accent)" strokeWidth="1.2" opacity="0.07" />
+              <path d="M280 0 Q180 200 280 400 Q380 600 230 800 Q80 1000 280 1200 Q380 1400 280 1600" stroke="var(--magenta)" strokeWidth="0.8" opacity="0.05" />
+              <path d="M1200 0 Q1300 200 1200 400 Q1100 600 1250 800 Q1400 1000 1200 1200 Q1100 1400 1200 1600" stroke="var(--accent)" strokeWidth="1" opacity="0.06" />
+              <path d="M1120 0 Q1020 200 1120 400 Q1220 600 1070 800 Q920 1000 1120 1200 Q1220 1400 1120 1600" stroke="var(--green)" strokeWidth="0.6" opacity="0.04" />
+              <circle cx="210" cy="150" r="2.5" fill="var(--accent)" opacity="0.35" />
+              <circle cx="160" cy="380" r="2" fill="var(--accent)" opacity="0.25" />
+              <circle cx="230" cy="620" r="2.5" fill="var(--accent)" opacity="0.2" />
+              <circle cx="140" cy="850" r="1.5" fill="var(--accent)" opacity="0.15" />
+              <circle cx="260" cy="1100" r="2" fill="var(--magenta)" opacity="0.2" />
+              <circle cx="180" cy="1350" r="1.5" fill="var(--magenta)" opacity="0.15" />
+              <circle cx="1180" cy="200" r="2" fill="var(--accent)" opacity="0.3" />
+              <circle cx="1120" cy="450" r="2.5" fill="var(--green)" opacity="0.25" />
+              <circle cx="1210" cy="700" r="2" fill="var(--green)" opacity="0.2" />
+              <circle cx="1100" cy="950" r="1.5" fill="var(--accent)" opacity="0.15" />
+              <circle cx="1220" cy="1250" r="2" fill="var(--magenta)" opacity="0.2" />
+              <circle cx="1140" cy="1500" r="1.5" fill="var(--magenta)" opacity="0.12" />
+            </svg>
+          </div>
+          {/* 4b. Venture Labor subsection: arrow-like sweep from left */}
+          <div className="decor-layer decor-contract" aria-hidden="true" style={{ maskImage: 'linear-gradient(to bottom, black 0%, black 60%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to bottom, black 0%, black 60%, transparent 100%)' }}>
+            <svg viewBox="0 0 1440 600" preserveAspectRatio="xMidYMid slice" fill="none">
+              <path d="M-100 200 Q300 100 600 250 Q900 400 1200 200 Q1400 80 1540 150" stroke="var(--accent)" strokeWidth="1.5" opacity="0.08" />
+              <path d="M-100 260 Q350 150 650 300 Q950 450 1250 240 Q1450 120 1540 190" stroke="var(--magenta)" strokeWidth="1" opacity="0.06" />
+              <path d="M-100 320 Q400 200 700 350 Q1000 500 1300 280 Q1500 160 1540 230" stroke="var(--green)" strokeWidth="0.7" opacity="0.04" />
+              <circle cx="400" cy="180" r="2" fill="var(--accent)" opacity="0.3" />
+              <circle cx="750" cy="300" r="2.5" fill="var(--accent)" opacity="0.25" />
+              <circle cx="1100" cy="220" r="2" fill="var(--magenta)" opacity="0.2" />
+              <circle cx="600" cy="400" r="1.5" fill="var(--green)" opacity="0.15" />
+              <circle cx="1300" cy="280" r="2" fill="var(--accent)" opacity="0.2" />
+            </svg>
+          </div>
         <section className="section" data-od-id="venture-labor" style={{ position: 'relative' }}>
           <div className="container">
             <p className="section-label">The contract</p>
@@ -356,7 +368,23 @@ export default function App() {
 
 
         {/* ── People-Powered ── */}
-        <section className="section" data-od-id="people-powered">
+        <section className="section" data-od-id="people-powered" style={{ position: 'relative' }}>
+          {/* 4c. People-Powered decor: ascending flow from bottom-right */}
+          <div className="decor-layer" aria-hidden="true" style={{
+            maskImage: 'linear-gradient(to bottom, transparent 0%, black 25%, black 90%, transparent 100%)',
+            WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 25%, black 90%, transparent 100%)'
+          }}>
+            <svg viewBox="0 0 1440 600" preserveAspectRatio="xMidYMid slice" fill="none">
+              <path d="M1540 400 Q1200 300 900 450 Q600 600 300 400 Q100 250 -100 350" stroke="var(--green)" strokeWidth="1" opacity="0.06" />
+              <path d="M1540 460 Q1250 350 950 500 Q650 650 350 450 Q150 300 -100 400" stroke="var(--accent)" strokeWidth="0.7" opacity="0.04" />
+              <circle cx="1200" cy="350" r="2" fill="var(--green)" opacity="0.25" />
+              <circle cx="950" cy="480" r="2.5" fill="var(--green)" opacity="0.2" />
+              <circle cx="700" cy="520" r="2" fill="var(--accent)" opacity="0.2" />
+              <circle cx="500" cy="420" r="1.5" fill="var(--accent)" opacity="0.15" />
+              <circle cx="300" cy="350" r="2" fill="var(--magenta)" opacity="0.2" />
+              <circle cx="1100" cy="500" r="1.5" fill="var(--magenta)" opacity="0.15" />
+            </svg>
+          </div>
           <div className="container">
             <div className="grid-2" style={{ alignItems: 'center' }}>
               <div>
@@ -437,7 +465,7 @@ export default function App() {
                     </div>
                     <div className="platform-row">
                       <span className="platform-status status-good">✓</span>
-                      <span className="platform-name">FM Co-op</span>
+                      <span className="platform-name">$BUILD.Store</span>
                       <span className="platform-fees" style={{ background: 'linear-gradient(90deg, #10b981, #ffffff)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', fontWeight: '600', display: 'inline-block' }}>15% flat operations fee · 85% to direct labor · Permanent equity</span>
                     </div>
                   </div>
@@ -448,7 +476,26 @@ export default function App() {
         </section>
 
         {/* ── Values & Standing ── */}
-        <section className="section" data-od-id="values-standing" id="values">
+        <section className="section" data-od-id="values-standing" id="values" style={{ position: 'relative' }}>
+          {/* 4d. Values & Standing decor: bilateral convergence */}
+          <div className="decor-layer" aria-hidden="true" style={{
+            maskImage: 'linear-gradient(to bottom, transparent 0%, black 20%, black 85%, transparent 100%)',
+            WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 20%, black 85%, transparent 100%)'
+          }}>
+            <svg viewBox="0 0 1440 600" preserveAspectRatio="xMidYMid slice" fill="none">
+              <path d="M-100 100 Q200 200 400 150 Q600 100 720 200 Q840 300 1040 200 Q1240 100 1540 200" stroke="var(--accent)" strokeWidth="1" opacity="0.06" />
+              <path d="M-100 160 Q250 260 450 210 Q650 160 770 260 Q890 360 1090 260 Q1290 160 1540 260" stroke="var(--magenta)" strokeWidth="0.7" opacity="0.04" />
+              <path d="M-100 220 Q300 320 500 270 Q700 220 820 320 Q940 420 1140 320 Q1340 220 1540 340" stroke="var(--green)" strokeWidth="0.5" opacity="0.03" />
+              <circle cx="250" cy="180" r="2" fill="var(--accent)" opacity="0.25" />
+              <circle cx="550" cy="220" r="2.5" fill="var(--accent)" opacity="0.2" />
+              <circle cx="720" cy="280" r="2" fill="var(--magenta)" opacity="0.25" />
+              <circle cx="900" cy="240" r="2.5" fill="var(--green)" opacity="0.2" />
+              <circle cx="1100" cy="280" r="2" fill="var(--accent)" opacity="0.2" />
+              <circle cx="1300" cy="220" r="1.5" fill="var(--magenta)" opacity="0.15" />
+              <circle cx="450" cy="350" r="1.5" fill="var(--green)" opacity="0.15" />
+              <circle cx="1050" cy="400" r="2" fill="var(--accent)" opacity="0.15" />
+            </svg>
+          </div>
           <div className="container">
             <div className="values-standing-split">
               {/* Left Column: Core Values */}
@@ -495,37 +542,37 @@ export default function App() {
                     photo="/Jamar McCarthy.jpg"
                     tier="tier-champion"
                     hasSheen
-                    name="Jamar McCarthy"
+                    name="Jamar"
                     role="Cooperative Builder • Strategist"
                   />
                   <InteractiveStandingCard
                     photo="/Big Baby Gandhi.jpg"
                     tier="tier-future-modernist"
                     name="Big Baby Gandhi"
-                    role="Rapper • Producer"
+                    role="Musician • Producer • PharmD • Marketing"
                   />
                   <InteractiveStandingCard
                     photo="/Chibu O..jpg"
                     tier="tier-future-modernist"
-                    name="Chibu O."
-                    role="Fullstack Engineer • Data"
+                    name="Chibu"
+                    role="Data • Economist"
                   />
                   <InteractiveStandingCard
                     photo="/Sunny Su.jpg"
                     tier="tier-promotion"
-                    name="Sunny Su"
+                    name="Sunny"
                     role="Brand • UI/UX • Product Designer"
                   />
                   <InteractiveStandingCard
                     photo="/Sahtyre.jpg"
                     tier="tier-promotion"
                     name="Sahtyre"
-                    role="Rapper"
+                    role="Musician • VFX • Video Editing • 3D Design"
                   />
                   <InteractiveStandingCard
                     photo="/Bayu.jpg"
                     tier="tier-good-standing"
-                    name="Bayu Savira"
+                    name="Bayu"
                     role="UI/UX • Marketing Funnel • Lead Gen"
                   />
                 </div>
@@ -535,8 +582,47 @@ export default function App() {
         </section>
         </div>
 
+        {/* 4e. Membership + Footer decor: taper outward */}
+        <div style={{ position: 'relative', overflow: 'hidden' }}>
+          <div className="decor-layer decor-bottom" aria-hidden="true">
+            <svg viewBox="0 0 1440 500" preserveAspectRatio="xMidYMid slice" fill="none">
+              <path d="M400 0 Q200 100 300 250 Q400 400 200 500" stroke="var(--accent)" strokeWidth="1" opacity="0.06" />
+              <path d="M480 0 Q280 100 380 250 Q480 400 280 500" stroke="var(--magenta)" strokeWidth="0.7" opacity="0.04" />
+              <path d="M960 0 Q1160 100 1060 250 Q960 400 1160 500" stroke="var(--accent)" strokeWidth="1" opacity="0.06" />
+              <path d="M1040 0 Q1240 100 1140 250 Q1040 400 1240 500" stroke="var(--green)" strokeWidth="0.7" opacity="0.04" />
+              <circle cx="350" cy="150" r="2" fill="var(--accent)" opacity="0.2" />
+              <circle cx="280" cy="350" r="1.5" fill="var(--accent)" opacity="0.15" />
+              <circle cx="1050" cy="200" r="2" fill="var(--green)" opacity="0.25" />
+              <circle cx="1120" cy="380" r="1.5" fill="var(--green)" opacity="0.15" />
+              <circle cx="720" cy="120" r="2" fill="var(--magenta)" opacity="0.2" />
+              <circle cx="700" cy="300" r="1.5" fill="var(--magenta)" opacity="0.15" />
+            </svg>
+          </div>
+          {/* 4f. Final CTA halo + constellation */}
+          <div className="decor-layer" aria-hidden="true" style={{
+            maskImage: 'radial-gradient(ellipse at 50% 40%, black 0%, black 30%, transparent 65%)',
+            WebkitMaskImage: 'radial-gradient(ellipse at 50% 40%, black 0%, black 30%, transparent 65%)'
+          }}>
+            <svg viewBox="0 0 1440 500" preserveAspectRatio="xMidYMid slice" fill="none">
+              <ellipse cx="720" cy="220" rx="420" ry="200" stroke="var(--accent)" strokeWidth="0.8" opacity="0.2" fill="none" />
+              <ellipse cx="720" cy="220" rx="340" ry="160" stroke="var(--magenta)" strokeWidth="0.6" opacity="0.15" fill="none" />
+              <ellipse cx="720" cy="220" rx="260" ry="120" stroke="var(--green)" strokeWidth="0.5" opacity="0.12" fill="none" />
+              <ellipse cx="720" cy="220" rx="180" ry="80" stroke="var(--accent)" strokeWidth="0.4" opacity="0.08" fill="none" />
+              <circle cx="580" cy="140" r="2" fill="var(--accent)" opacity="0.35" />
+              <circle cx="860" cy="160" r="2.5" fill="var(--accent)" opacity="0.3" />
+              <circle cx="500" cy="220" r="1.5" fill="var(--accent)" opacity="0.25" />
+              <circle cx="940" cy="240" r="1.5" fill="var(--magenta)" opacity="0.25" />
+              <circle cx="660" cy="100" r="2" fill="var(--magenta)" opacity="0.3" />
+              <circle cx="780" cy="90" r="1.5" fill="var(--green)" opacity="0.25" />
+              <circle cx="450" cy="300" r="2" fill="var(--accent)" opacity="0.2" />
+              <circle cx="990" cy="320" r="2" fill="var(--green)" opacity="0.2" />
+              <circle cx="600" cy="350" r="1.5" fill="var(--magenta)" opacity="0.15" />
+              <circle cx="840" cy="360" r="1.5" fill="var(--accent)" opacity="0.15" />
+            </svg>
+          </div>
+
         {/* ── Membership ── */}
-        <section className="section" data-od-id="membership" id="membership" style={{ textAlign: 'center' }}>
+        <section className="section" data-od-id="membership" id="membership" style={{ textAlign: 'center', position: 'relative', zIndex: 1 }}>
           <div className="container membership-card">
             <p className="eyebrow">The Future Modernist</p>
             <h2 style={{ marginBottom: 'var(--gap-md)' }}>A creator at heart — artist, engineer, builder.</h2>
@@ -547,6 +633,7 @@ export default function App() {
             </div>
           </div>
         </section>
+        </div>
 
       </main>
 
