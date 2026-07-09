@@ -593,9 +593,8 @@ export default function App() {
 
 
         {/* ── Works ── */}
-        <section className="section" data-od-id="works" id="works" style={{ position: 'relative', zIndex: 1 }}>
-          <div className="container">
-            <div style={{ textAlign: 'center', maxWidth: '56ch', margin: '0 auto var(--gap-xl)' }}>
+        <section className="section" data-od-id="works" id="works" style={{ position: 'relative', zIndex: 1, paddingBottom: 0 }}>
+            <div style={{ textAlign: 'center', maxWidth: '56ch', margin: '0 auto var(--gap-xl)', paddingInline: 'var(--gutter)' }}>
               <p className="section-label">Selected Works</p>
               <h2 style={{ marginBottom: 'var(--gap-md)' }}>Work that moves culture.</h2>
               <p className="lead" style={{ maxWidth: '100%', marginTop: 'var(--gap-sm)' }}>
@@ -652,7 +651,6 @@ export default function App() {
                 </div>
               </a>
             </div>
-          </div>
         </section>
 
         {/* 4e. Membership + Footer decor: taper outward */}
@@ -695,15 +693,17 @@ export default function App() {
           </div>
 
         {/* ── Membership ── */}
-        <section className="section" data-od-id="membership" id="membership" style={{ textAlign: 'center', position: 'relative', zIndex: 1 }}>
-          <div className="container membership-card">
+        <section data-od-id="membership" id="membership" style={{ textAlign: 'center', position: 'relative', zIndex: 1 }}>
+          <div className="membership-card">
+          <div className="membership-card-inner">
             <p className="eyebrow">The Future Modernist</p>
-            <h2 style={{ marginBottom: 'var(--gap-md)' }}>A creator at heart — artist, engineer, builder.</h2>
+            <h2 style={{ marginBottom: 'var(--gap-md)' }}>A creator at heart —<br />artist, engineer, builder.</h2>
             <p className="lead" style={{ margin: '0 auto var(--gap-lg)' }}>We have specialists, plenty of them. But the people who shape this cooperative are renaissance figures: comfortable directing a shoot in the morning, shipping a smart contract in the afternoon, sitting in a policy room that night.</p>
             <div className="hero-cta" style={{ justifyContent: 'center' }}>
               <button className="btn btn-primary" onClick={() => setProjectModalOpen(true)}>Start a project</button>
               <button className="btn btn-join" onClick={() => setTalentModalOpen(true)}>Join the cooperative</button>
             </div>
+          </div>
           </div>
         </section>
         </div>

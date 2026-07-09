@@ -506,7 +506,6 @@ h1, h2, h3, h4 { text-wrap: balance; margin: 0; }
 .works-bento {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: var(--gap-md);
 }
 @media (max-width: 600px) {
   .works-bento { grid-template-columns: 1fr; }
@@ -515,7 +514,6 @@ h1, h2, h3, h4 { text-wrap: balance; margin: 0; }
 .works-bento-card {
   position: relative;
   overflow: hidden;
-  border-radius: var(--radius-lg);
   aspect-ratio: 4 / 3;
   display: flex;
   flex-direction: column;
@@ -536,7 +534,7 @@ h1, h2, h3, h4 { text-wrap: balance; margin: 0; }
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(180deg, rgba(13,13,13,0.05) 0%, rgba(13,13,13,0.88) 100%);
+  background: linear-gradient(180deg, rgba(13,13,13,0) 0%, rgba(13,13,13,0.95) 100%);
   transition: background 0.3s;
 }
 
@@ -570,18 +568,18 @@ h1, h2, h3, h4 { text-wrap: balance; margin: 0; }
   font-weight: 600;
 }
 .works-bento-body h3 {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
   color: var(--white);
-  margin: 0 0 3px;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+  margin: 0 0 4px;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.5);
 }
 .works-bento-desc {
-  font-size: 11px;
-  color: color-mix(in oklch, var(--fg) 70%, var(--white));
-  line-height: 1.4;
+  font-size: 14px;
+  color: color-mix(in oklch, var(--fg) 80%, var(--white));
+  line-height: 1.45;
   margin: 0;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  text-shadow: 0 1px 4px rgba(0,0,0,0.6);
 }
 
 /* ── Values Column & List ────────────────────────────── */
@@ -668,17 +666,24 @@ h1, h2, h3, h4 { text-wrap: balance; margin: 0; }
 
 /* ── Membership ──────────────────────────────────────── */
 .membership-card {
-  max-width: 960px;
-  margin: 0 auto;
+  width: 100%;
+  min-height: 720px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   padding: var(--gap-2xl) var(--gap-xl);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
+  border: none;
+  border-radius: 0;
   background-image: url("/Final CTA bg.png");
   background-size: cover;
   background-position: center;
   position: relative;
   overflow: hidden;
+}
+.membership-card-inner {
+  max-width: 960px;
+  margin: 0 auto;
 }
 
 .membership-card::before {
