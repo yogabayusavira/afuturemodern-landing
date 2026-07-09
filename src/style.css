@@ -582,6 +582,54 @@ h1, h2, h3, h4 { text-wrap: balance; margin: 0; }
   text-shadow: 0 1px 4px rgba(0,0,0,0.6);
 }
 
+/* ── Experiment Showcase (Marquee) ───────────────────── */
+.experiment-section {
+  overflow: hidden;
+  padding-block: 0;
+}
+.experiment-strip {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  width: 100%;
+  scrollbar-width: none;
+  scroll-behavior: auto;
+}
+.experiment-strip::-webkit-scrollbar { display: none; }
+.experiment-track {
+  display: flex;
+  width: fit-content;
+}
+
+.experiment-card {
+  flex: 0 0 50vw;
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-size: cover;
+  background-position: center;
+  text-decoration: none;
+}
+@media (max-width: 600px) {
+  .experiment-card { flex: 0 0 100vw; aspect-ratio: 4 / 3; }
+  .experiment-card > .works-bento-body { max-width: 100%; }
+  .experiment-card > .works-bento-body h3 { font-size: 17px; }
+  .works-bento-desc { font-size: 12px; }
+}
+.experiment-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(180deg, rgba(13,13,13,0) 0%, rgba(13,13,13,0.92) 100%);
+}
+.experiment-card > .works-bento-link-icon { z-index: 3; }
+.experiment-card > .works-bento-body { z-index: 2; }
+.experiment-card > .works-bento-body { max-width: 560px; }
+.experiment-card:hover { border-color: var(--accent); }
+
 /* ── Values Column & List ────────────────────────────── */
 .values-standing-split {
   display: grid;
