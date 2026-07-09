@@ -5,7 +5,8 @@
       "Bash(git add *)",
       "Bash(git commit -m 'feat: swap works images to webp assets *)",
       "Bash(python -c ' *)",
-      "Bash(python)"
+      "Bash(python)",
+      "Bash(git branch *)"
     ]
   }
 }
