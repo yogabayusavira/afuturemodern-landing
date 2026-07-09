@@ -3,7 +3,9 @@
     "allow": [
       "Bash(git push *)",
       "Bash(git add *)",
-      "Bash(git commit -m 'feat: swap works images to webp assets *)"
+      "Bash(git commit -m 'feat: swap works images to webp assets *)",
+      "Bash(python -c ' *)",
+      "Bash(python)"
     ]
   }
 }
