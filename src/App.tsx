@@ -112,7 +112,7 @@ export default function App() {
           </video>
           <div className="hero-overlay" />
           <div className="container hero-center">
-            <p className="eyebrow">Future Modern cooperative</p>
+            <p className="eyebrow" style={{ color: 'var(--green)' }}>Future Modern cooperative</p>
             <div className="hero-heading-wrap">
               <h1><span ref={dollarRef} className="hero-dollar" aria-hidden="true">$</span>BUILD<br />A TEAM</h1>
             </div>
