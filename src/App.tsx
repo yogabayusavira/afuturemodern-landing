@@ -413,37 +413,49 @@ export default function App() {
                 A look at projects shipped by our member teams across STEM, Creative Media, and Professional Services.
               </p>
             </div>
-            <div className="grid-3">
-              <div className="works-card card-stem">
-                <div className="works-card-bg" style={{ backgroundImage: 'url("/STEM.jpg")' }} />
-                <div className="works-card-overlay" />
-                <div className="works-card-body">
-                  <span className="works-category">STEM</span>
-                  <h3>Decentralized Platform Architecture</h3>
-                  <p>Full-stack smart contract infrastructure and dApp frontend for a tokenized creative-economy platform.</p>
+            <div className="works-bento">
+              <a href="https://tba-auctions-admin.vercel.app/" target="_blank" rel="noopener noreferrer" className="works-bento-card" style={{ backgroundImage: 'url("/Works TBA.jpg")' }}>
+                <span className="works-bento-link-icon" aria-hidden="true">↗</span>
+                <div className="works-bento-body">
+                  <span className="works-bento-cat">STEM</span>
+                  <h3>TBA Auctions</h3>
                 </div>
-              </div>
-              <div className="works-card card-creative">
-                <div className="works-card-bg" style={{ backgroundImage: 'url("/Artist.jpg")' }} />
-                <div className="works-card-overlay" />
-                <div className="works-card-body">
-                  <span className="works-category">Creative Media</span>
-                  <h3>Music Video &amp; Editorial Campaign</h3>
-                  <p>Direction, production, and post-processing for a multi-platform artist release with VFX and motion design.</p>
+              </a>
+              <a href="https://www.2050vision.org/" target="_blank" rel="noopener noreferrer" className="works-bento-card" style={{ backgroundImage: 'url("/Works 2050.jpg")' }}>
+                <span className="works-bento-link-icon" aria-hidden="true">↗</span>
+                <div className="works-bento-body">
+                  <span className="works-bento-cat">Strategy</span>
+                  <h3>2050 Vision</h3>
                 </div>
-              </div>
-              <div className="works-card card-pro">
-                <div className="works-card-bg" style={{ backgroundImage: 'url("/Professional Services.jpg")' }} />
-                <div className="works-card-overlay" />
-                <div className="works-card-body">
-                  <span className="works-category">Professional Services</span>
-                  <h3>Strategic Operations &amp; Grant Advisory</h3>
-                  <p>Operational due diligence and grant-writing support for an early-stage climate-tech nonprofit.</p>
+              </a>
+              <a href="https://fundthesouth.org/" target="_blank" rel="noopener noreferrer" className="works-bento-card" style={{ backgroundImage: 'url("/Works South.jpg")' }}>
+                <span className="works-bento-link-icon" aria-hidden="true">↗</span>
+                <div className="works-bento-body">
+                  <span className="works-bento-cat">Nonprofit</span>
+                  <h3>Fund the South</h3>
                 </div>
-              </div>
-            </div>
-            <div style={{ textAlign: 'center', marginTop: 'var(--gap-lg)' }}>
-              <button className="btn btn-primary btn-arrow">View all projects</button>
+              </a>
+              <a href="https://urlcollective.org/" target="_blank" rel="noopener noreferrer" className="works-bento-card" style={{ backgroundImage: 'url("/Works URL.jpg")' }}>
+                <span className="works-bento-link-icon" aria-hidden="true">↗</span>
+                <div className="works-bento-body">
+                  <span className="works-bento-cat">Creative Media</span>
+                  <h3>URL Collective</h3>
+                </div>
+              </a>
+              <a href="https://notes.catalog.works/posts/jerkin-imperiled-positive-conscious-rap-essay" target="_blank" rel="noopener noreferrer" className="works-bento-card" style={{ backgroundImage: 'url("/Works Essay.jpg")' }}>
+                <span className="works-bento-link-icon" aria-hidden="true">↗</span>
+                <div className="works-bento-body">
+                  <span className="works-bento-cat">Editorial</span>
+                  <h3>Catalog Essay</h3>
+                </div>
+              </a>
+              <a href="https://immigrantlypod.com/" target="_blank" rel="noopener noreferrer" className="works-bento-card" style={{ backgroundImage: 'url("/Works Immigrantly.jpg")' }}>
+                <span className="works-bento-link-icon" aria-hidden="true">↗</span>
+                <div className="works-bento-body">
+                  <span className="works-bento-cat">Media</span>
+                  <h3>Immigrantly Podcast</h3>
+                </div>
+              </a>
             </div>
           </div>
         </section>
