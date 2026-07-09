@@ -15,39 +15,12 @@ export default function App() {
   const proCardRef = useRef<HTMLDivElement>(null)
   const [waveData, setWaveData] = useState<{ vb: string; s: string; c: string; p: string } | null>(null)
 
-  // Mouse-follow leaning dollar sign
+  // Flat left-leaning dollar sign
   const dollarRef = useRef<HTMLSpanElement>(null)
 
   useEffect(() => {
     const el = dollarRef.current
-    const wrap = document.getElementById('hero-heading')
-    if (!el || !wrap) return
-
-    const maxLean = 5
-    let current = 0, vel = 0, target = 0, rafId = 0
-
-    function tick() {
-      vel += (target - current) * 0.06
-      vel *= 0.82
-      current += vel
-      if (Math.abs(current) > maxLean) current = Math.sign(current) * maxLean
-      el!.style.transform = `rotate(${current}deg)`
-      rafId = requestAnimationFrame(tick)
-    }
-    rafId = requestAnimationFrame(tick)
-
-    function onMove(e: MouseEvent) {
-      const r = wrap!.getBoundingClientRect()
-      const pct = (e.clientX - r.left) / r.width
-      target = (pct - 0.5) * 2 * maxLean
-    }
-
-    window.addEventListener('mousemove', onMove, { passive: true })
-
-    return () => {
-      cancelAnimationFrame(rafId)
-      window.removeEventListener('mousemove', onMove)
-    }
+    if (el) el.style.transform = 'rotate(-3deg)'
   }, [])
 
   useEffect(() => {
@@ -138,7 +111,7 @@ export default function App() {
           <div className="hero-overlay" />
           <div className="container hero-center">
             <p className="eyebrow">Future Modern cooperative</p>
-            <div className="hero-heading-wrap" id="hero-heading">
+            <div className="hero-heading-wrap">
               <h1><span ref={dollarRef} className="hero-dollar" aria-hidden="true">$</span>BUILD<br />A TEAM</h1>
             </div>
             <p className="lead" style={{ marginInline: 'auto', maxWidth: '62ch' }}>
@@ -403,70 +376,6 @@ export default function App() {
         </section>
 
 
-        {/* ── Works ── */}
-        <section className="section" data-od-id="works" id="works" style={{ position: 'relative', zIndex: 1 }}>
-          <div className="container">
-            <div style={{ textAlign: 'center', maxWidth: '56ch', margin: '0 auto var(--gap-xl)' }}>
-              <p className="section-label">Selected Works</p>
-              <h2 style={{ marginBottom: 'var(--gap-md)' }}>Work that moves culture.</h2>
-              <p className="lead" style={{ maxWidth: '100%', marginTop: 'var(--gap-sm)' }}>
-                A look at projects shipped by our member teams across STEM, Creative Media, and Professional Services.
-              </p>
-            </div>
-            <div className="works-bento">
-              <a href="https://tba-auctions-admin.vercel.app/" target="_blank" rel="noopener noreferrer" className="works-bento-card" style={{ backgroundImage: 'url("/dossiers.webp")' }}>
-                <span className="works-bento-link-icon" aria-hidden="true">↗</span>
-                <div className="works-bento-body">
-                  <span className="works-bento-cat">STEM</span>
-                  <h3>Dossiers</h3>
-                  <p className="works-bento-desc">The first NFT auction platform using the ERC-6551 Tokenbound wallet specification.</p>
-                </div>
-              </a>
-              <a href="https://www.2050vision.org/" target="_blank" rel="noopener noreferrer" className="works-bento-card" style={{ backgroundImage: 'url("/vision2050.webp")' }}>
-                <span className="works-bento-link-icon" aria-hidden="true">↗</span>
-                <div className="works-bento-body">
-                  <span className="works-bento-cat">Strategy</span>
-                  <h3>2050 Vision</h3>
-                  <p className="works-bento-desc">We designed and developed the interactive web version of The Rising Majority's 2050 manifesto.</p>
-                </div>
-              </a>
-              <a href="https://fundthesouth.org/" target="_blank" rel="noopener noreferrer" className="works-bento-card" style={{ backgroundImage: 'url("/southern-power-fund.webp")' }}>
-                <span className="works-bento-link-icon" aria-hidden="true">↗</span>
-                <div className="works-bento-body">
-                  <span className="works-bento-cat">Nonprofit</span>
-                  <h3>Southern Power Fund</h3>
-                  <p className="works-bento-desc">We designed and developed a modern, functional org website for Southern Power Fund.</p>
-                </div>
-              </a>
-              <a href="https://urlcollective.org/" target="_blank" rel="noopener noreferrer" className="works-bento-card" style={{ backgroundImage: 'url("/urlcollective.webp")' }}>
-                <span className="works-bento-link-icon" aria-hidden="true">↗</span>
-                <div className="works-bento-body">
-                  <span className="works-bento-cat">Creative Media</span>
-                  <h3>URL Collective</h3>
-                  <p className="works-bento-desc">We redesigned and rebuilt the website for the nonprofit arm of URL Media.</p>
-                </div>
-              </a>
-              <a href="https://notes.catalog.works/posts/jerkin-imperiled-positive-conscious-rap-essay" target="_blank" rel="noopener noreferrer" className="works-bento-card" style={{ backgroundImage: 'url("/catalog.webp")' }}>
-                <span className="works-bento-link-icon" aria-hidden="true">↗</span>
-                <div className="works-bento-body">
-                  <span className="works-bento-cat">Editorial</span>
-                  <h3>Catalog</h3>
-                  <p className="works-bento-desc">We wrote some words for the Catalog Editorial Program.</p>
-                </div>
-              </a>
-              <a href="https://immigrantlypod.com/" target="_blank" rel="noopener noreferrer" className="works-bento-card" style={{ backgroundImage: 'url("/immigrantly.webp")' }}>
-                <span className="works-bento-link-icon" aria-hidden="true">↗</span>
-                <div className="works-bento-body">
-                  <span className="works-bento-cat">Media</span>
-                  <h3>Immigrantly</h3>
-                  <p className="works-bento-desc">We redesigned and rebuilt the website for a multicultural podcast startup.</p>
-                </div>
-              </a>
-            </div>
-          </div>
-        </section>
-
-
         {/* ── People-Powered ── */}
         <section className="section" data-od-id="people-powered" style={{ position: 'relative' }}>
           {/* 4c. People-powered decor: ascending flow from bottom right */}
@@ -681,6 +590,70 @@ export default function App() {
           </div>
         </section>
         </div>
+
+
+        {/* ── Works ── */}
+        <section className="section" data-od-id="works" id="works" style={{ position: 'relative', zIndex: 1 }}>
+          <div className="container">
+            <div style={{ textAlign: 'center', maxWidth: '56ch', margin: '0 auto var(--gap-xl)' }}>
+              <p className="section-label">Selected Works</p>
+              <h2 style={{ marginBottom: 'var(--gap-md)' }}>Work that moves culture.</h2>
+              <p className="lead" style={{ maxWidth: '100%', marginTop: 'var(--gap-sm)' }}>
+                A look at projects shipped by our member teams across STEM, Creative Media, and Professional Services.
+              </p>
+            </div>
+            <div className="works-bento">
+              <a href="https://tba-auctions-admin.vercel.app/" target="_blank" rel="noopener noreferrer" className="works-bento-card" style={{ backgroundImage: 'url("/dossiers.webp")' }}>
+                <span className="works-bento-link-icon" aria-hidden="true">↗</span>
+                <div className="works-bento-body">
+                  <span className="works-bento-cat">STEM</span>
+                  <h3>Dossiers</h3>
+                  <p className="works-bento-desc">The first NFT auction platform using the ERC-6551 Tokenbound wallet specification.</p>
+                </div>
+              </a>
+              <a href="https://www.2050vision.org/" target="_blank" rel="noopener noreferrer" className="works-bento-card" style={{ backgroundImage: 'url("/vision2050.webp")' }}>
+                <span className="works-bento-link-icon" aria-hidden="true">↗</span>
+                <div className="works-bento-body">
+                  <span className="works-bento-cat">Strategy</span>
+                  <h3>2050 Vision</h3>
+                  <p className="works-bento-desc">We designed and developed the interactive web version of The Rising Majority's 2050 manifesto.</p>
+                </div>
+              </a>
+              <a href="https://fundthesouth.org/" target="_blank" rel="noopener noreferrer" className="works-bento-card" style={{ backgroundImage: 'url("/southern-power-fund.webp")' }}>
+                <span className="works-bento-link-icon" aria-hidden="true">↗</span>
+                <div className="works-bento-body">
+                  <span className="works-bento-cat">Nonprofit</span>
+                  <h3>Southern Power Fund</h3>
+                  <p className="works-bento-desc">We designed and developed a modern, functional org website for Southern Power Fund.</p>
+                </div>
+              </a>
+              <a href="https://urlcollective.org/" target="_blank" rel="noopener noreferrer" className="works-bento-card" style={{ backgroundImage: 'url("/urlcollective.webp")' }}>
+                <span className="works-bento-link-icon" aria-hidden="true">↗</span>
+                <div className="works-bento-body">
+                  <span className="works-bento-cat">Creative Media</span>
+                  <h3>URL Collective</h3>
+                  <p className="works-bento-desc">We redesigned and rebuilt the website for the nonprofit arm of URL Media.</p>
+                </div>
+              </a>
+              <a href="https://notes.catalog.works/posts/jerkin-imperiled-positive-conscious-rap-essay" target="_blank" rel="noopener noreferrer" className="works-bento-card" style={{ backgroundImage: 'url("/catalog.webp")' }}>
+                <span className="works-bento-link-icon" aria-hidden="true">↗</span>
+                <div className="works-bento-body">
+                  <span className="works-bento-cat">Editorial</span>
+                  <h3>Catalog</h3>
+                  <p className="works-bento-desc">We wrote some words for the Catalog Editorial Program.</p>
+                </div>
+              </a>
+              <a href="https://immigrantlypod.com/" target="_blank" rel="noopener noreferrer" className="works-bento-card" style={{ backgroundImage: 'url("/immigrantly.webp")' }}>
+                <span className="works-bento-link-icon" aria-hidden="true">↗</span>
+                <div className="works-bento-body">
+                  <span className="works-bento-cat">Media</span>
+                  <h3>Immigrantly</h3>
+                  <p className="works-bento-desc">We redesigned and rebuilt the website for a multicultural podcast startup.</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
 
         {/* 4e. Membership + Footer decor: taper outward */}
         <div style={{ position: 'relative', overflow: 'hidden' }}>
