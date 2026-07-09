@@ -403,10 +403,55 @@ export default function App() {
         </section>
 
 
+        {/* ── Works ── */}
+        <section className="section" data-od-id="works" id="works" style={{ position: 'relative', zIndex: 1 }}>
+          <div className="container">
+            <div style={{ textAlign: 'center', maxWidth: '56ch', margin: '0 auto var(--gap-xl)' }}>
+              <p className="section-label">Selected Works</p>
+              <h2 style={{ marginBottom: 'var(--gap-md)' }}>Work that moves culture.</h2>
+              <p className="lead" style={{ maxWidth: '100%', marginTop: 'var(--gap-sm)' }}>
+                A look at projects shipped by our member teams across STEM, Creative Media, and Professional Services.
+              </p>
+            </div>
+            <div className="grid-3">
+              <div className="works-card card-stem">
+                <div className="works-card-bg" style={{ backgroundImage: 'url("/STEM.jpg")' }} />
+                <div className="works-card-overlay" />
+                <div className="works-card-body">
+                  <span className="works-category">STEM</span>
+                  <h3>Decentralized Platform Architecture</h3>
+                  <p>Full-stack smart contract infrastructure and dApp frontend for a tokenized creative-economy platform.</p>
+                </div>
+              </div>
+              <div className="works-card card-creative">
+                <div className="works-card-bg" style={{ backgroundImage: 'url("/Artist.jpg")' }} />
+                <div className="works-card-overlay" />
+                <div className="works-card-body">
+                  <span className="works-category">Creative Media</span>
+                  <h3>Music Video &amp; Editorial Campaign</h3>
+                  <p>Direction, production, and post-processing for a multi-platform artist release with VFX and motion design.</p>
+                </div>
+              </div>
+              <div className="works-card card-pro">
+                <div className="works-card-bg" style={{ backgroundImage: 'url("/Professional Services.jpg")' }} />
+                <div className="works-card-overlay" />
+                <div className="works-card-body">
+                  <span className="works-category">Professional Services</span>
+                  <h3>Strategic Operations &amp; Grant Advisory</h3>
+                  <p>Operational due diligence and grant-writing support for an early-stage climate-tech nonprofit.</p>
+                </div>
+              </div>
+            </div>
+            <div style={{ textAlign: 'center', marginTop: 'var(--gap-lg)' }}>
+              <button className="btn btn-primary btn-arrow">View all projects</button>
+            </div>
+          </div>
+        </section>
+
 
         {/* ── People-Powered ── */}
         <section className="section" data-od-id="people-powered" style={{ position: 'relative' }}>
-          {/* 4c. People-Powered decor: ascending flow from bottom-right */}
+          {/* 4c. People-powered decor: ascending flow from bottom right */}
           <div className="decor-layer" aria-hidden="true" style={{
             maskImage: 'linear-gradient(to bottom, transparent 0%, black 25%, black 90%, transparent 100%)',
             WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 25%, black 90%, transparent 100%)'
