@@ -607,7 +607,7 @@ export default function App() {
                 <div className="works-bento-body">
                   <span className="works-bento-cat">STEM</span>
                   <h3>Dossiers</h3>
-                  <p className="works-bento-desc">The first NFT auction platform using the ERC-6551 Tokenbound wallet specification.</p>
+                  <p className="works-bento-desc">The first NFT auction platform built on the ERC-6551 Tokenbound wallet standard.</p>
                 </div>
               </a>
               <a href="https://www.2050vision.org/" target="_blank" rel="noopener noreferrer" className="works-bento-card" style={{ backgroundImage: 'url("/vision2050.webp")' }}>
@@ -615,7 +615,7 @@ export default function App() {
                 <div className="works-bento-body">
                   <span className="works-bento-cat">Strategy</span>
                   <h3>2050 Vision</h3>
-                  <p className="works-bento-desc">We designed and developed the interactive web version of The Rising Majority's 2050 manifesto.</p>
+                  <p className="works-bento-desc">Interactive web experience bringing The Rising Majority's 2050 manifesto to life.</p>
                 </div>
               </a>
               <a href="https://fundthesouth.org/" target="_blank" rel="noopener noreferrer" className="works-bento-card" style={{ backgroundImage: 'url("/southern-power-fund.webp")' }}>
@@ -623,7 +623,7 @@ export default function App() {
                 <div className="works-bento-body">
                   <span className="works-bento-cat">Nonprofit</span>
                   <h3>Southern Power Fund</h3>
-                  <p className="works-bento-desc">We designed and developed a modern, functional org website for Southern Power Fund.</p>
+                  <p className="works-bento-desc">Modern organizational website for the Southern Power Fund, built for clarity and impact.</p>
                 </div>
               </a>
               <a href="https://urlcollective.org/" target="_blank" rel="noopener noreferrer" className="works-bento-card" style={{ backgroundImage: 'url("/urlcollective.webp")' }}>
@@ -631,7 +631,7 @@ export default function App() {
                 <div className="works-bento-body">
                   <span className="works-bento-cat">Creative Media</span>
                   <h3>URL Collective</h3>
-                  <p className="works-bento-desc">We redesigned and rebuilt the website for the nonprofit arm of URL Media.</p>
+                  <p className="works-bento-desc">Full website redesign for the nonprofit arm of URL Media, a network of top Black and Brown media organizations.</p>
                 </div>
               </a>
               <a href="https://notes.catalog.works/posts/jerkin-imperiled-positive-conscious-rap-essay" target="_blank" rel="noopener noreferrer" className="works-bento-card" style={{ backgroundImage: 'url("/catalog.webp")' }}>
@@ -639,7 +639,7 @@ export default function App() {
                 <div className="works-bento-body">
                   <span className="works-bento-cat">Editorial</span>
                   <h3>Catalog</h3>
-                  <p className="works-bento-desc">We wrote some words for the Catalog Editorial Program.</p>
+                  <p className="works-bento-desc">Editorial contributions to the Catalog Writer Program covering music, culture, and the creative economy.</p>
                 </div>
               </a>
               <a href="https://immigrantlypod.com/" target="_blank" rel="noopener noreferrer" className="works-bento-card" style={{ backgroundImage: 'url("/immigrantly.webp")' }}>
@@ -647,7 +647,7 @@ export default function App() {
                 <div className="works-bento-body">
                   <span className="works-bento-cat">Media</span>
                   <h3>Immigrantly</h3>
-                  <p className="works-bento-desc">We redesigned and rebuilt the website for a multicultural podcast startup.</p>
+                  <p className="works-bento-desc">Website redesign and rebuild for Immigrantly, a podcast redefining the multicultural narrative.</p>
                 </div>
               </a>
             </div>
