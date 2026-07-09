@@ -73,7 +73,7 @@ export default function App() {
           <div className="logo">
             <img src="/mr2sbkcq-turtle.png" alt="" style={{ height: '32px', width: 'auto' }} />
             <div className="logo-text">
-              <span className="logo-title">$Build<span>.</span>Store</span>
+              <span className="logo-title">$BUILD<span>.</span>Store</span>
               <span className="logo-sub">FUTURE MODERN</span>
             </div>
           </div>
@@ -91,7 +91,7 @@ export default function App() {
           <div className="logo">
             <img src="/mr2sbkcq-turtle.png" alt="" style={{ height: '26px', width: 'auto' }} />
             <div className="logo-text">
-              <span className="logo-title">$Build<span>.</span>Store</span>
+              <span className="logo-title">$BUILD<span>.</span>Store</span>
               <span className="logo-sub">FUTURE MODERN</span>
             </div>
           </div>
@@ -658,7 +658,7 @@ export default function App() {
           <div className="logo">
             <img src="/mr2sbkcq-turtle.png" alt="" style={{ height: '24px', width: 'auto' }} />
             <div className="logo-text">
-              <span className="logo-title" style={{ fontSize: '14px' }}>$Build<span>.</span>Store</span>
+              <span className="logo-title" style={{ fontSize: '14px' }}>$BUILD<span>.</span>Store</span>
               <span className="logo-sub" style={{ fontSize: '10px' }}>FUTURE MODERN</span>
             </div>
           </div>
