@@ -107,7 +107,7 @@ export default function App() {
 
         {/* ── Hero ── */}
         <section className="section hero" data-od-id="hero">
-          <video className="hero-video-bg" autoPlay muted loop playsInline>
+          <video className="hero-video-bg" autoPlay muted loop playsInline preload="metadata" poster="/Hero Thumbnail.png">
             <source src="/mr2tkz2i-0702.mp4" type="video/mp4" />
           </video>
           <div className="hero-overlay" />
