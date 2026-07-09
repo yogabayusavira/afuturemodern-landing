@@ -579,8 +579,15 @@ h1, h2, h3, h4 { text-wrap: balance; margin: 0; }
   font-size: 16px;
   font-weight: 600;
   color: var(--white);
-  margin: 0;
+  margin: 0 0 3px;
   text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+}
+.works-bento-desc {
+  font-size: 11px;
+  color: color-mix(in oklch, var(--fg) 70%, var(--white));
+  line-height: 1.4;
+  margin: 0;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
 }
 
 /* ── Values Column & List ────────────────────────────── */
