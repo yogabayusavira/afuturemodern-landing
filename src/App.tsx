@@ -22,7 +22,7 @@ export default function App() {
 
   useEffect(() => {
     const el = dollarRef.current
-    if (el) el.style.transform = 'rotate(-3deg)'
+    if (el) el.style.transform = 'rotate(3deg)'
   }, [])
 
   useEffect(() => {
@@ -145,7 +145,7 @@ export default function App() {
           <div className="container">
             <p className="section-label">About Future Modern</p>
             <div style={{ marginBottom: 'var(--gap-xl)', maxWidth: '72ch' }}>
-              <h2 style={{ marginBottom: 'var(--gap-md)' }}>The radical curation network unifying art and technology to distribute equity.</h2>
+              <h2 style={{ marginBottom: 'var(--gap-md)' }}>The world's first <span style={{ background: 'linear-gradient(90deg, var(--accent), var(--magenta), var(--green))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Venture Labor Cooperative.</span></h2>
               <p className="lead" style={{ maxWidth: '100%' }}>Future Modern Builderberg LLC is people-powered, exclusively. A cooperative of creatives, professionals, scientists, and techies who are already reputed in their fields — and who built this because the economics owed to the people doing the work weren't getting paid out anywhere else.</p>
             </div>
             <div className="grid-3" style={{ marginTop: 'var(--gap-xl)' }}>
@@ -200,7 +200,7 @@ export default function App() {
                   <p className="section-label">Purpose</p>
                   <h2 style={{ marginBottom: 'var(--gap-md)' }}>The wave others ride.</h2>
                   <p className="lead" style={{ maxWidth: '100%' }}>We exist to acknowledge and compensate the expression of original ideas and labor that move culture forward. Provenance first — then everything else.</p>
-                  <p className="lead" style={{ maxWidth: '100%', marginTop: 'var(--gap-md)', fontSize: '15px', color: 'var(--fg)' }}>In one sentence: the radical curation network unifying art and technology to distribute equity.</p>
+                  <p className="lead" style={{ maxWidth: '100%', marginTop: 'var(--gap-md)', fontSize: '15px', color: 'var(--fg)' }}>In one sentence: the world's first <span style={{ background: 'linear-gradient(90deg, var(--accent), var(--magenta), var(--green))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', fontWeight: 600 }}>Venture Labor Cooperative.</span></p>
                 </div>
                 <div>
                   <p className="section-label">Vision</p>
