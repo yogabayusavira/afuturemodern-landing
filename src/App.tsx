@@ -200,7 +200,7 @@ export default function App() {
                   <p className="section-label">Purpose</p>
                   <h2 style={{ marginBottom: 'var(--gap-md)' }}>The wave others ride.</h2>
                   <p className="lead" style={{ maxWidth: '100%' }}>We exist to acknowledge and compensate the expression of original ideas and labor that move culture forward. Provenance first — then everything else.</p>
-                  <p className="lead" style={{ maxWidth: '100%', marginTop: 'var(--gap-md)', fontSize: '15px', color: 'var(--fg)' }}>In one sentence: the world's first <span style={{ background: 'linear-gradient(90deg, var(--accent), var(--magenta), var(--green))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', fontWeight: 600 }}>Venture Labor Cooperative.</span></p>
+                  <p className="lead" style={{ maxWidth: '100%', marginTop: 'var(--gap-md)', fontSize: '15px', color: 'var(--fg)' }}>In one sentence: the world's first Venture Labor Cooperative.</p>
                 </div>
                 <div>
                   <p className="section-label">Vision</p>

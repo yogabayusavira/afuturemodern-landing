@@ -60,7 +60,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "package_scripts",
-      "community": 9,
+      "community": 1,
       "norm_label": "scripts"
     },
     {
@@ -70,7 +70,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "package_scripts_dev",
-      "community": 9,
+      "community": 1,
       "norm_label": "dev"
     },
     {
@@ -80,7 +80,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "package_scripts_dev_server",
-      "community": 9,
+      "community": 1,
       "norm_label": "dev:server"
     },
     {
@@ -90,7 +90,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "package_scripts_dev_client",
-      "community": 9,
+      "community": 1,
       "norm_label": "dev:client"
     },
     {
@@ -100,7 +100,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "package_scripts_build",
-      "community": 9,
+      "community": 1,
       "norm_label": "build"
     },
     {
@@ -110,7 +110,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "package_scripts_preview",
-      "community": 9,
+      "community": 1,
       "norm_label": "preview"
     },
     {
@@ -120,7 +120,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "package_scripts_start",
-      "community": 9,
+      "community": 1,
       "norm_label": "start"
     },
     {
@@ -130,7 +130,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "package_scripts_start_prod",
-      "community": 9,
+      "community": 1,
       "norm_label": "start:prod"
     },
     {
@@ -200,7 +200,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "package_dependencies",
-      "community": 1,
+      "community": 16,
       "norm_label": "dependencies"
     },
     {
@@ -210,7 +210,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "package_dependencies_concurrently",
-      "community": 1,
+      "community": 16,
       "norm_label": "concurrently"
     },
     {
@@ -220,7 +220,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "package_dependencies_cors",
-      "community": 1,
+      "community": 16,
       "norm_label": "cors"
     },
     {
@@ -230,7 +230,7 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "package_dependencies_dotenv",
-      "community": 1,
+      "community": 16,
       "norm_label": "dotenv"
     },
     {
@@ -240,7 +240,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "package_dependencies_express",
-      "community": 1,
+      "community": 16,
       "norm_label": "express"
     },
     {
@@ -250,7 +250,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "package_dependencies_gsap",
-      "community": 1,
+      "community": 16,
       "norm_label": "gsap"
     },
     {
@@ -260,7 +260,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "package_dependencies_multer",
-      "community": 1,
+      "community": 16,
       "norm_label": "multer"
     },
     {
@@ -270,7 +270,7 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "package_dependencies_react",
-      "community": 1,
+      "community": 16,
       "norm_label": "react"
     },
     {
@@ -280,7 +280,7 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "package_dependencies_react_dom",
-      "community": 1,
+      "community": 16,
       "norm_label": "react-dom"
     },
     {
@@ -290,7 +290,7 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "package_dependencies_resend",
-      "community": 1,
+      "community": 16,
       "norm_label": "resend"
     },
     {
@@ -360,28 +360,58 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_app",
-      "community": 2,
+      "community": 9,
       "norm_label": "app.tsx"
     },
     {
       "label": "App()",
       "file_type": "code",
       "source_file": "src/App.tsx",
-      "source_location": "L6",
+      "source_location": "L8",
       "_origin": "ast",
       "id": "src_app_app",
-      "community": 2,
+      "community": 9,
       "norm_label": "app()"
     },
     {
       "label": "InteractiveStandingCard()",
       "file_type": "code",
       "source_file": "src/App.tsx",
-      "source_location": "L576",
+      "source_location": "L683",
       "_origin": "ast",
       "id": "src_app_interactivestandingcard",
-      "community": 2,
+      "community": 9,
       "norm_label": "interactivestandingcard()"
+    },
+    {
+      "label": "ExperimentShowcase.tsx",
+      "file_type": "code",
+      "source_file": "src/components/ExperimentShowcase.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_components_experimentshowcase",
+      "community": 9,
+      "norm_label": "experimentshowcase.tsx"
+    },
+    {
+      "label": "Props",
+      "file_type": "code",
+      "source_file": "src/components/ExperimentShowcase.tsx",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "src_components_experimentshowcase_props",
+      "community": 9,
+      "norm_label": "props"
+    },
+    {
+      "label": "ExperimentShowcase()",
+      "file_type": "code",
+      "source_file": "src/components/ExperimentShowcase.tsx",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "src_components_experimentshowcase_experimentshowcase",
+      "community": 9,
+      "norm_label": "experimentshowcase()"
     },
     {
       "label": "ProjectModal.tsx",
@@ -510,7 +540,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_scrollcue",
-      "community": 4,
+      "community": 2,
       "norm_label": "scrollcue.tsx"
     },
     {
@@ -520,7 +550,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "src_components_scrollcue_scrollcueprops",
-      "community": 4,
+      "community": 2,
       "norm_label": "scrollcueprops"
     },
     {
@@ -530,7 +560,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "src_components_scrollcue_scrollcue",
-      "community": 4,
+      "community": 2,
       "norm_label": "scrollcue()"
     },
     {
@@ -612,6 +642,46 @@
       "id": "src_components_talentmodal_talentmodal",
       "community": 2,
       "norm_label": "talentmodal()"
+    },
+    {
+      "label": "portfolio.ts",
+      "file_type": "code",
+      "source_file": "src/data/portfolio.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_data_portfolio",
+      "community": 9,
+      "norm_label": "portfolio.ts"
+    },
+    {
+      "label": "PortfolioItem",
+      "file_type": "code",
+      "source_file": "src/data/portfolio.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_data_portfolio_portfolioitem",
+      "community": 9,
+      "norm_label": "portfolioitem"
+    },
+    {
+      "label": "portfolioItems",
+      "file_type": "code",
+      "source_file": "src/data/portfolio.ts",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "src_data_portfolio_portfolioitems",
+      "community": 9,
+      "norm_label": "portfolioitems"
+    },
+    {
+      "label": "bentoItems",
+      "file_type": "code",
+      "source_file": "src/data/portfolio.ts",
+      "source_location": "L31",
+      "_origin": "ast",
+      "id": "src_data_portfolio_bentoitems",
+      "community": 9,
+      "norm_label": "bentoitems"
     },
     {
       "label": "useProjectFormStore.ts",
@@ -740,7 +810,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_main",
-      "community": 2,
+      "community": 9,
       "norm_label": "main.tsx"
     },
     {
@@ -1812,6 +1882,16 @@
       "id": "design_handoff_brand_colors",
       "community": 6,
       "norm_label": "brand colors"
+    },
+    {
+      "label": "experimentItems",
+      "file_type": "code",
+      "source_file": "src/data/portfolio.ts",
+      "source_location": "L32",
+      "_origin": "ast",
+      "id": "src_data_portfolio_experimentitems",
+      "community": 9,
+      "norm_label": "experimentitems"
     }
   ],
   "links": [
@@ -2149,7 +2229,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/App.tsx",
-      "source_location": "L6",
+      "source_location": "L8",
       "weight": 1.0,
       "source": "src_app",
       "target": "src_app_app",
@@ -2159,10 +2239,32 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/App.tsx",
-      "source_location": "L576",
+      "source_location": "L683",
       "weight": 1.0,
       "source": "src_app",
       "target": "src_app_interactivestandingcard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_app",
+      "target": "src_components_experimentshowcase",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_app",
+      "target": "src_components_experimentshowcase_experimentshowcase",
       "confidence_score": 1.0
     },
     {
@@ -2191,11 +2293,86 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "src/App.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_app",
+      "target": "src_data_portfolio",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_app",
+      "target": "src_data_portfolio_experimentitems",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "src/main.tsx",
       "source_location": "L3",
       "weight": 1.0,
       "source": "src_main",
       "target": "src_app",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ExperimentShowcase.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "src_components_experimentshowcase",
+      "target": "src_components_experimentshowcase_experimentshowcase",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ExperimentShowcase.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "src_components_experimentshowcase",
+      "target": "src_components_experimentshowcase_props",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ExperimentShowcase.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_components_experimentshowcase",
+      "target": "src_data_portfolio",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ExperimentShowcase.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_components_experimentshowcase",
+      "target": "src_data_portfolio_portfolioitem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "field",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ExperimentShowcase.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "src_components_experimentshowcase_props",
+      "target": "src_data_portfolio_portfolioitem",
       "confidence_score": 1.0
     },
     {
@@ -2357,7 +2534,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/components/ProjectModal.tsx",
-      "source_location": "L588",
+      "source_location": "L602",
       "weight": 1.0,
       "source": "src_components_projectmodal_projectmodal",
       "target": "src_components_projectmodal_wordcount",
@@ -2513,7 +2690,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/components/TalentModal.tsx",
-      "source_location": "L429",
+      "source_location": "L432",
       "weight": 1.0,
       "source": "src_components_talentmodal_talentmodal",
       "target": "src_components_talentmodal_wordcount",
@@ -2529,6 +2706,36 @@
       "weight": 1.0,
       "source": "src_components_talentmodal_talentmodal",
       "target": "src_hooks_usetalentformstore_usetalentformstore"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data/portfolio.ts",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "src_data_portfolio",
+      "target": "src_data_portfolio_bentoitems",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data/portfolio.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "src_data_portfolio",
+      "target": "src_data_portfolio_portfolioitem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/data/portfolio.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "src_data_portfolio",
+      "target": "src_data_portfolio_portfolioitems",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -3592,5 +3799,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "23b8e446a0c35b6ea1f627683c3126468f069ba1"
+  "built_at_commit": "3f37ee7c88d616f51fa6b1ce7ba91569bb356361"
 }

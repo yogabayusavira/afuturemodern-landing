@@ -15,13 +15,13 @@
     "semantic_hash": ""
   },
   "src/App.tsx": {
-    "mtime": 1783339442.298962,
-    "ast_hash": "446eef7ba33c7eeeabf73643d823f005",
+    "mtime": 1784221199.328614,
+    "ast_hash": "4d519ee12d0e52e676a47b680c104b5e",
     "semantic_hash": ""
   },
   "src/components/ProjectModal.tsx": {
-    "mtime": 1783052711.3194325,
-    "ast_hash": "e8bce8fb38a75e87041ad375faafaaf6",
+    "mtime": 1783477675.3745162,
+    "ast_hash": "c1b93222995883d5e239c2e792bd0bf4",
     "semantic_hash": ""
   },
   "src/components/ScrollCue.tsx": {
@@ -30,8 +30,8 @@
     "semantic_hash": ""
   },
   "src/components/TalentModal.tsx": {
-    "mtime": 1783051897.526848,
-    "ast_hash": "177107037eb7c0170b5550b363743d9b",
+    "mtime": 1783472906.4612846,
+    "ast_hash": "a31029f8381d6663cc6d7763186de45e",
     "semantic_hash": ""
   },
   "src/hooks/useProjectFormStore.ts": {
@@ -105,18 +105,18 @@
     "semantic_hash": ""
   },
   "future-modern-landing.html": {
-    "mtime": 1783033540.1013656,
-    "ast_hash": "c00b123cd141655871a6aa098e72a2fe",
+    "mtime": 1784221201.4419727,
+    "ast_hash": "1baf6a9a22880af57b364a4a08aef6c4",
     "semantic_hash": ""
   },
   "index.html": {
-    "mtime": 1783050724.407482,
-    "ast_hash": "644a57bb10dc51fde7d755881e812e25",
+    "mtime": 1783617006.7449737,
+    "ast_hash": "e790bfa2aec4a20f19956bf1e70527de",
     "semantic_hash": ""
   },
   "launcher-overview.html": {
-    "mtime": 1783033512.7831419,
-    "ast_hash": "8ec25ea656bc9c465cc7a6b6882e6cc0",
+    "mtime": 1784221135.7768955,
+    "ast_hash": "8702dcdbadf6448debaa75271ff69801",
     "semantic_hash": ""
   },
   "public/mr2sbkcq-turtle.png": {
@@ -182,6 +182,131 @@
   "public/Final CTA bg.png": {
     "mtime": 1783339544.1962159,
     "ast_hash": "05885b2e7bad398b6658f4bf91ef44af",
+    "semantic_hash": ""
+  },
+  ".claude/settings.json": {
+    "mtime": 1783583150.680948,
+    "ast_hash": "d08cb42f5a05bb560ca84338c27252c4",
+    "semantic_hash": ""
+  },
+  ".claude/settings.local.json": {
+    "mtime": 1783341252.104918,
+    "ast_hash": "8873b4b5bc555b11082b1369ce09d845",
+    "semantic_hash": ""
+  },
+  "src/components/ExperimentShowcase.tsx": {
+    "mtime": 1783615915.0735595,
+    "ast_hash": "bb2d5d4a1c142ae03353026cca6ef3f7",
+    "semantic_hash": ""
+  },
+  "src/data/portfolio.ts": {
+    "mtime": 1783615665.3204262,
+    "ast_hash": "e1713e23a4f5740743b420029375e25c",
+    "semantic_hash": ""
+  },
+  "public/Build  A Team.jpg": {
+    "mtime": 1783473723.4359977,
+    "ast_hash": "2a1a12199fe684e54e24c581a803753c",
+    "semantic_hash": ""
+  },
+  "public/Find Talent.jpg": {
+    "mtime": 1783473664.7606547,
+    "ast_hash": "6c0d3f1d0566d6edcf0373670b325c7e",
+    "semantic_hash": ""
+  },
+  "public/Hero Thumbnail.png": {
+    "mtime": 1783617042.576552,
+    "ast_hash": "2ac685ff0d9fcda7b66ce17ece981098",
+    "semantic_hash": ""
+  },
+  "public/works/advanced-welding-solutions.webp": {
+    "mtime": 1783614084.277362,
+    "ast_hash": "436ec69f33b93c11107064a016ee477b",
+    "semantic_hash": ""
+  },
+  "public/works/bear-paw-consulting.png": {
+    "mtime": 1783614328.9805336,
+    "ast_hash": "d6f31010426df6d0ed7f51e9a8172878",
+    "semantic_hash": ""
+  },
+  "public/works/catalog.webp": {
+    "mtime": 1783583061.6721122,
+    "ast_hash": "4186c4f0b899ed2e41ca80d89464d40a",
+    "semantic_hash": ""
+  },
+  "public/works/dossiers.webp": {
+    "mtime": 1783583061.6746309,
+    "ast_hash": "aa45907fc17066b15f4ec59999cf5a4a",
+    "semantic_hash": ""
+  },
+  "public/works/giver-marketing.png": {
+    "mtime": 1783615228.4336853,
+    "ast_hash": "f313525626d074a72a10cc234f78369e",
+    "semantic_hash": ""
+  },
+  "public/works/immigrantly.webp": {
+    "mtime": 1783583061.6766305,
+    "ast_hash": "a596a35986f7bb80930854a12fa662da",
+    "semantic_hash": ""
+  },
+  "public/works/laser-reach.png": {
+    "mtime": 1783613611.5602555,
+    "ast_hash": "4a51186d0e5e5b37edc2f1f33dd9218c",
+    "semantic_hash": ""
+  },
+  "public/works/music-nerd.png": {
+    "mtime": 1783614246.9322822,
+    "ast_hash": "4e12b1fcfca2f1773e58488f39e3068f",
+    "semantic_hash": ""
+  },
+  "public/works/southern-power-fund.webp": {
+    "mtime": 1783583061.677688,
+    "ast_hash": "f3a812bd1a72b9b9b6a42794a2e25e8d",
+    "semantic_hash": ""
+  },
+  "public/works/the-utilize-project.png": {
+    "mtime": 1783614361.732408,
+    "ast_hash": "675a34cde188a6699c7558566a3a5986",
+    "semantic_hash": ""
+  },
+  "public/works/the-utilize-project.webp": {
+    "mtime": 1783614577.39834,
+    "ast_hash": "00368a560d53fd18e1b674984cf21547",
+    "semantic_hash": ""
+  },
+  "public/works/think-sys.png": {
+    "mtime": 1783614186.9345844,
+    "ast_hash": "17d6e6367cbe793d941586a589549451",
+    "semantic_hash": ""
+  },
+  "public/works/url-collective.png": {
+    "mtime": 1783615339.8130124,
+    "ast_hash": "5eb89d9f5016ab22916c36a1e3a71dae",
+    "semantic_hash": ""
+  },
+  "public/works/url-media.png": {
+    "mtime": 1783615156.9158912,
+    "ast_hash": "a55a799940f8401e035edc42f2478bf6",
+    "semantic_hash": ""
+  },
+  "public/works/urlcollective.webp": {
+    "mtime": 1783583061.6781971,
+    "ast_hash": "1ead84de5bbc887a199e0f8e0215c83c",
+    "semantic_hash": ""
+  },
+  "public/works/us-weed-channel.jpg": {
+    "mtime": 1783614542.6355195,
+    "ast_hash": "f4e53c70a7436fc4c947e81266afc848",
+    "semantic_hash": ""
+  },
+  "public/works/vision2050.webp": {
+    "mtime": 1783583061.6792088,
+    "ast_hash": "28be271cd4a522192d3679139cb692be",
+    "semantic_hash": ""
+  },
+  "public/works/visitthecapitol.jpg": {
+    "mtime": 1783614120.1653712,
+    "ast_hash": "b28e34efce0c7164a3367f0d69566987",
     "semantic_hash": ""
   }
 }

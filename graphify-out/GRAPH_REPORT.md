@@ -1,16 +1,16 @@
-# Graph Report - afuturemodern-landing  (2026-07-06)
+# Graph Report - afuturemodern-landing  (2026-07-16)
 
 ## Corpus Check
-- 21 files · ~560,014 words
+- 25 files · ~1,398,925 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 181 nodes · 176 edges · 16 communities (13 shown, 3 thin omitted)
+- 189 nodes · 188 edges · 17 communities (14 shown, 3 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `23b8e446`
+- Built from commit: `3f37ee7c`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -29,6 +29,7 @@
 - [[_COMMUNITY_Community 11|Community 11]]
 - [[_COMMUNITY_Community 12|Community 12]]
 - [[_COMMUNITY_Community 13|Community 13]]
+- [[_COMMUNITY_Community 16|Community 16]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `AFuture Modern Knowledge Base` - 24 edges
@@ -40,9 +41,11 @@
 7. `Getting Started` - 5 edges
 8. `ProjectModal()` - 3 edges
 9. `TalentModal()` - 3 edges
-10. `useProjectFormStore()` - 3 edges
+10. `PortfolioItem` - 3 edges
 
 ## Surprising Connections (you probably didn't know these)
+- `Props` --references--> `PortfolioItem`  [EXTRACTED]
+  src/components/ExperimentShowcase.tsx → src/data/portfolio.ts
 - `ProjectModal()` --calls--> `useProjectFormStore()`  [EXTRACTED]
   src/components/ProjectModal.tsx → src/hooks/useProjectFormStore.ts
 - `TalentModal()` --calls--> `useTalentFormStore()`  [EXTRACTED]
@@ -51,27 +54,27 @@
 ## Import Cycles
 - None detected.
 
-## Communities (16 total, 3 thin omitted)
+## Communities (17 total, 3 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.08
 Nodes (24): Additional Venture Labor Terms, Advantages, AFuture Modern Knowledge Base, Brand, Values, and Strategic Direction, Comparison With Upwork, Fiverr, and Similar Platforms, Cooperative Structure and Venture Labor OS, Direct Labor versus Administration, Executive Summary (+16 more)
 
 ### Community 1 - "Community 1"
-Cohesion: 0.10
-Nodes (20): dependencies, concurrently, cors, dotenv, express, gsap, multer, react (+12 more)
+Cohesion: 0.11
+Nodes (18): devDependencies, @types/react, @types/react-dom, typescript, vite, @vitejs/plugin-react, name, private (+10 more)
 
 ### Community 2 - "Community 2"
-Cohesion: 0.14
-Nodes (9): PILLARS, TalentModal(), TalentModalProps, wordCount(), defaultData, storedData, TalentFormData, UploadedFile (+1 more)
+Cohesion: 0.15
+Nodes (10): ScrollCueProps, PILLARS, TalentModal(), TalentModalProps, wordCount(), defaultData, storedData, TalentFormData (+2 more)
 
 ### Community 3 - "Community 3"
 Cohesion: 0.10
 Nodes (19): compilerOptions, allowImportingTsExtensions, isolatedModules, jsx, lib, module, moduleDetection, moduleResolution (+11 more)
 
 ### Community 4 - "Community 4"
-Cohesion: 0.11
-Nodes (13): ENGAGEMENT_LENGTHS, PILLARS, ProjectModal(), ProjectModalProps, TagInputProps, wordCount(), WORK_ARRANGEMENTS, ScrollCueProps (+5 more)
+Cohesion: 0.14
+Nodes (12): ENGAGEMENT_LENGTHS, PILLARS, ProjectModal(), ProjectModalProps, TagInputProps, wordCount(), WORK_ARRANGEMENTS, defaultData (+4 more)
 
 ### Community 5 - "Community 5"
 Cohesion: 0.11
@@ -90,32 +93,36 @@ Cohesion: 0.22
 Nodes (8): Boundaries, Intensity, Output, Persistence, Ponytail, Rules, The ladder, When NOT to be lazy
 
 ### Community 9 - "Community 9"
-Cohesion: 0.25
-Nodes (8): scripts, build, dev, dev:client, dev:server, preview, start, start:prod
+Cohesion: 0.23
+Nodes (6): ExperimentShowcase(), Props, bentoItems, experimentItems, PortfolioItem, portfolioItems
 
 ### Community 10 - "Community 10"
 Cohesion: 0.33
 Nodes (5): app, __dirname, __filename, resend, upload
 
+### Community 16 - "Community 16"
+Cohesion: 0.20
+Nodes (10): dependencies, concurrently, cors, dotenv, express, gsap, multer, react (+2 more)
+
 ## Knowledge Gaps
-- **134 isolated node(s):** `name`, `private`, `version`, `type`, `dev` (+129 more)
+- **137 isolated node(s):** `name`, `private`, `version`, `type`, `dev` (+132 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **3 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
+- **Why does `dependencies` connect `Community 16` to `Community 1`?**
+  _High betweenness centrality (0.012) - this node is a cross-community bridge._
 - **What connects `name`, `private`, `version` to the rest of the system?**
-  _134 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _137 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.08 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**
-  _Cohesion score 0.09523809523809523 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.10526315789473684 - nodes in this community are weakly interconnected._
 - **Should `Community 2` be split into smaller, more focused modules?**
-  _Cohesion score 0.13725490196078433 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.14705882352941177 - nodes in this community are weakly interconnected._
 - **Should `Community 3` be split into smaller, more focused modules?**
   _Cohesion score 0.1 - nodes in this community are weakly interconnected._
 - **Should `Community 4` be split into smaller, more focused modules?**
-  _Cohesion score 0.11428571428571428 - nodes in this community are weakly interconnected._
-- **Should `Community 5` be split into smaller, more focused modules?**
-  _Cohesion score 0.1111111111111111 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.13725490196078433 - nodes in this community are weakly interconnected._
