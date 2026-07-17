@@ -147,6 +147,7 @@ export default function App() {
             <div style={{ marginBottom: 'var(--gap-xl)', maxWidth: '72ch' }}>
               <h2 style={{ marginBottom: 'var(--gap-md)' }}>The world's first <span style={{ background: 'linear-gradient(90deg, var(--accent), var(--magenta), var(--green))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Venture Labor Cooperative.</span></h2>
               <p className="lead" style={{ maxWidth: '100%' }}>Future Modern Builderberg LLC is people-powered, exclusively. A cooperative of creatives, professionals, scientists, and techies who are already reputed in their fields — and who built this because the economics owed to the people doing the work weren't getting paid out anywhere else.</p>
+              <p className="lead" style={{ maxWidth: '100%', marginTop: 'var(--gap-sm)', fontStyle: 'italic', fontSize: '15px', color: 'var(--magenta)' }}>We're not trying to be special. We are special. We don't care if anyone sees it.</p>
             </div>
             <div className="grid-3" style={{ marginTop: 'var(--gap-xl)' }}>
               <div className="principle-card">
@@ -164,6 +165,87 @@ export default function App() {
             </div>
           </div>
         </section>
+
+        {/* ── Why we built this ── */}
+        <section className="section" data-od-id="why-we-built-this" style={{ borderTop: '1px solid var(--border)', position: 'relative' }}>
+          <div className="container">
+            <p className="section-label">Background</p>
+            <div style={{ marginBottom: 'var(--gap-xl)', maxWidth: '72ch' }}>
+              <h2 style={{ marginBottom: 'var(--gap-md)' }}>Why we built this</h2>
+              <p className="lead" style={{ maxWidth: '100%' }}>Every worker knows the shape of the deal they'd stay for.</p>
+            </div>
+            
+            <div className="grid-2" style={{ gap: 'var(--gap-xl)', alignItems: 'start', marginBottom: 'var(--gap-xl)' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--gap-md)' }}>
+                {[
+                  { n: '1', text: 'Real equity for the effort.' },
+                  { n: '2', text: 'Pay tied to what you deliver.' },
+                  { n: '3', text: 'Hours structured around the work, not the office.' },
+                  { n: '4', text: 'Recognition for what you shipped, not how you performed.' }
+                ].map(({ n, text }) => (
+                  <div key={n} style={{ display: 'flex', gap: 'var(--gap-md)', alignItems: 'flex-start' }}>
+                    <span style={{ fontFamily: 'var(--font-mono)', fontSize: '18px', color: 'var(--accent)', fontWeight: 'bold', width: '24px', flexShrink: 0 }}>{n})</span>
+                    <p style={{ fontSize: '18px', color: 'var(--fg)', margin: 0, fontWeight: 500 }}>{text}</p>
+                  </div>
+                ))}
+              </div>
+              <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', height: '100%', borderLeft: '1px solid var(--border)', paddingLeft: 'var(--gap-xl)' }}>
+                <p className="lead" style={{ fontSize: '20px', color: 'var(--muted)', fontStyle: 'italic', marginBottom: 'var(--gap-sm)' }}>
+                  "We looked. We stopped looking. So we built it."
+                </p>
+                <p style={{ color: 'var(--muted)', fontSize: '15px' }}>
+                  If it's the deal you've been waiting for, the door is open.
+                </p>
+              </div>
+            </div>
+
+            <div className="grid-3" style={{ marginTop: 'var(--gap-xl)' }}>
+              <div className="card" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', minHeight: '240px' }}>
+                <div>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 'var(--gap-md)' }}>
+                    <h3 style={{ margin: 0 }}>Companies</h3>
+                    <span className="pill" style={{ background: 'rgba(255, 255, 255, 0.05)', color: 'var(--muted)' }}>1 &amp; 2</span>
+                  </div>
+                  <p style={{ color: 'var(--muted)', fontSize: '15px', marginBottom: 'var(--gap-md)' }}>Equity + pay. Not the rest.</p>
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--muted)' }}><span className="platform-status status-good">✓</span> <span>Real Equity &amp; Pay</span></div>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--muted)' }}><span className="platform-status status-bad">✕</span> <span style={{ textDecoration: 'line-through', opacity: 0.5 }}>Flexible Hours &amp; Recognition</span></div>
+                </div>
+              </div>
+
+              <div className="card" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', minHeight: '240px' }}>
+                <div>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 'var(--gap-md)' }}>
+                    <h3 style={{ margin: 0 }}>Gig Platforms</h3>
+                    <span className="pill" style={{ background: 'rgba(255, 255, 255, 0.05)', color: 'var(--muted)' }}>3 &amp; 4</span>
+                  </div>
+                  <p style={{ color: 'var(--muted)', fontSize: '15px', marginBottom: 'var(--gap-md)' }}>Flexibility + results. Not the rest.</p>
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--muted)' }}><span className="platform-status status-bad">✕</span> <span style={{ textDecoration: 'line-through', opacity: 0.5 }}>Real Equity &amp; Pay</span></div>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--muted)' }}><span className="platform-status status-good">✓</span> <span>Flexible Hours &amp; Recognition</span></div>
+                </div>
+              </div>
+
+              <div className="card" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', minHeight: '240px', border: '1px solid var(--magenta)', position: 'relative', overflow: 'hidden' }}>
+                <div style={{ position: 'absolute', top: 0, right: 0, width: '150px', height: '150px', background: 'radial-gradient(circle, rgba(199, 34, 138, 0.15) 0%, transparent 70%)', pointerEvents: 'none' }} />
+                <div>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 'var(--gap-md)' }}>
+                    <h3 style={{ margin: 0 }}>Future Modern</h3>
+                    <span className="pill" style={{ background: 'linear-gradient(90deg, var(--accent), var(--magenta))', color: 'var(--white)', fontWeight: 600 }}>All Four</span>
+                  </div>
+                  <p style={{ color: 'var(--fg)', fontSize: '15px', fontWeight: 500, marginBottom: 'var(--gap-md)' }}>The whole deal, structurally.</p>
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--fg)' }}><span className="platform-status status-good">✓</span> <span>Real Equity &amp; Pay</span></div>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--fg)' }}><span className="platform-status status-good">✓</span> <span>Flexible Hours &amp; Recognition</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
 
         {/* ── Purpose & How It Works Wave Wrapper ── */}
         <div style={{ position: 'relative', overflow: 'hidden' }}>
@@ -277,7 +359,12 @@ export default function App() {
             <div className="container">
               <p className="section-label">People-powered, exclusively</p>
               <h2 style={{ marginBottom: 'var(--gap-md)', maxWidth: '36ch' }}>The resumes speak for themselves.</h2>
-              <p className="lead" style={{ maxWidth: '100%' }}>The people who built this are already reputed in their fields. Top performers at the companies they passed through. Founding hires at platforms that went on to IPO. Engineers at Caltech, Berkeley, and the Smithsonian. Designers and writers at Columbia Records, Bad Boy, Mad Decent, Complex. Operators at Microsoft, Amazon, Lenovo, Bird, WebMD, and the LADWP.</p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--gap-md)', marginBottom: 'var(--gap-md)' }}>
+                <p className="lead" style={{ maxWidth: '100%' }}>The people who built this are already reputed in their fields. Top performers at the companies they passed through. Founding hires at platforms that went on to IPO. Engineers at Caltech, Berkeley, and the Smithsonian. Designers and writers at Columbia Records, Bad Boy, Mad Decent, Complex. Operators at Microsoft, Amazon, Lenovo, Bird, WebMD, and the LADWP.</p>
+                <p className="lead" style={{ maxWidth: '100%', fontSize: '16px' }}>We didn't stay long inside any of them. Top performance wasn't the issue. Fit was. The pattern was the same every time: vindication afterwards. The people who built Future Modern are the ones who keep moving when the room they're in stops being big enough for what they actually do.</p>
+                <p className="lead" style={{ maxWidth: '100%', fontSize: '16px' }}>None of our clients came from freelance platforms. Anything visible there is a testament to who we are, not a credential we're trading on. Our work has always come through relationships. Through the people who've seen us deliver and stayed in the room.</p>
+                <p className="lead" style={{ maxWidth: '100%', fontSize: '16px', color: 'var(--fg)', fontWeight: 500 }}>$BUILD.Store is the platform we built so the next generation of that talent doesn't have to leave a half-dozen companies to be paid what their work is worth. The cooperative is the structure. The people are the proof.</p>
+              </div>
               <div className="disclaimer-fine">Contributor affiliations are listed for context only and do not imply endorsement of Future Modern Builderberg LLC or $BUILD.Store.</div>
             </div>
           </section>
@@ -355,8 +442,11 @@ export default function App() {
           <div className="container">
             <p className="section-label">The contract</p>
             <h2 style={{ marginBottom: 'var(--gap-md)' }}>Venture Labor.</h2>
-            <p className="lead" style={{ marginBottom: 'var(--gap-lg)', maxWidth: '100%' }}>Venture Capital pools money and goes looking for labor to multiply it. Venture Labor is the inversion. People who can do the work pool their skill and time, and the upside on what gets shipped belongs to the people who shipped it.</p>
-            <p className="lead" style={{ marginBottom: 'var(--gap-lg)', maxWidth: '100%', color: 'var(--fg)' }}>The cooperative is the structure. The people are the proof.</p>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--gap-md)', marginBottom: 'var(--gap-lg)' }}>
+              <p className="lead" style={{ maxWidth: '100%' }}>Venture Capital pools money and goes looking for labor to multiply it. Venture Labor is the inversion. People who can do the work pool their skill and time, and the upside on what gets shipped belongs to the people who shipped it.</p>
+              <p className="lead" style={{ maxWidth: '100%', fontSize: '16px' }}>The phrase is honest about where we came from. Patrons used to buy into an artist's work to keep it moving until it sold. The tradition is real, and the controls around it were historically lazy: no point-of-sale discipline, contracts that read like favors, profit conversations that did not happen until the money was already gone. We kept the underlying idea and fixed the controls. We stopped pretending the labor was not equity.</p>
+              <p className="lead" style={{ maxWidth: '100%', color: 'var(--fg)', fontWeight: 500 }}>The cooperative is the structure. The people are the proof.</p>
+            </div>
             <div className="compare-wrap">
               <div className="compare-grid">
                 <div className="compare-card vc">
@@ -377,6 +467,23 @@ export default function App() {
           </div>
         </section>
 
+        {/* ── Vetting Bar ── */}
+        <section className="section" data-od-id="vetting-bar" style={{ position: 'relative', borderTop: '1px solid var(--border)' }}>
+          <div className="container">
+            <div className="grid-2" style={{ alignItems: 'start' }}>
+              <div>
+                <p className="section-label">The vetting bar</p>
+                <h2 style={{ marginBottom: 'var(--gap-md)' }}>Ideological as much as technical.</h2>
+                <p className="lead" style={{ maxWidth: '100%' }}>The failure mode of pooled labor is not the people who cannot do the work. It is the people who can do the work and will throw out the agreement the moment a check clears. We vet for that first. The craft we can teach. The values we cannot, and we have stopped trying.</p>
+              </div>
+              <div style={{ background: 'var(--surface-deep)', padding: 'var(--gap-lg)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border)', marginTop: 'var(--gap-md)' }}>
+                <p className="lead" style={{ fontSize: '18px', color: 'var(--fg)', fontStyle: 'italic', lineHeight: '1.6', margin: 0 }}>
+                  "Anyone who can't handle money, in the sense that they throw out all ideals for it, is not one of us. We don't care how good they are."
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* ── People-Powered ── */}
         <section className="section" data-od-id="people-powered" style={{ position: 'relative' }}>
@@ -480,6 +587,67 @@ export default function App() {
                       <span className="platform-fees" style={{ background: 'linear-gradient(90deg, #10b981, #ffffff)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', fontWeight: '600', display: 'inline-block' }}>15% flat operations fee · 85% to direct labor · Permanent equity</span>
                     </div>
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── Discipline & Shift ── */}
+        <section className="section" data-od-id="discipline-shift" style={{ position: 'relative', borderTop: '1px solid var(--border)', background: 'var(--surface-deep)' }}>
+          <div className="container">
+            <div className="grid-2">
+              <div>
+                <p className="section-label">The discipline</p>
+                <h2 style={{ marginBottom: 'var(--gap-sm)' }}>What we say no to.</h2>
+                <p className="lead" style={{ fontSize: '15px', marginBottom: 'var(--gap-lg)' }}>
+                  Every refusal below is a discipline. The refusals produce the outcomes. Take one away and the model breaks.
+                </p>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                  {[
+                    "No bidding. No pay for access. Ever.",
+                    "No paid tiers. No sponsored listings. No boosted profiles.",
+                    "No cold closing. Every match is curated per skillset.",
+                    "No exit strategy. No dilution of cooperative ownership.",
+                    "No discounts. Rarity is the pricing model.",
+                    "No opaque compensation. Talent sees the gate before it fires."
+                  ].map((refusal, idx) => (
+                    <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: 'var(--gap-sm)', background: 'var(--surface)', padding: '12px 18px', borderRadius: 'var(--radius)', border: '1px solid var(--border)' }}>
+                      <span style={{ color: 'var(--magenta)', fontWeight: 'bold', fontSize: '16px' }}>—</span>
+                      <span style={{ color: 'var(--fg)', fontSize: '14px', fontWeight: 500 }}>{refusal}</span>
+                    </div>
+                  ))}
+                  <p className="lead" style={{ fontStyle: 'italic', fontSize: '14px', marginTop: 'var(--gap-sm)', color: 'var(--muted)' }}>
+                    "We cold pitch to get in the door. We don't cold close. That's the whole difference."
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <p className="section-label">Structural Shift</p>
+                <h2 style={{ marginBottom: 'var(--gap-sm)' }}>What we changed</h2>
+                <p className="lead" style={{ fontSize: '15px', marginBottom: 'var(--gap-lg)' }}>
+                  Concrete differences between the conventional freelance economy and the cooperative we built.
+                </p>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--gap-md)' }}>
+                  {[
+                    { before: "Platform takes ~10–20%, agency takes a margin, contributor gets the residual.", now: "Contributors keep 85% of contract revenue. The 15% house cut funds shared infrastructure, not outside shareholders." },
+                    { before: "Direct contact info is a leak vector. Clients and contributors both hide it to keep the door open for off-platform deals.", now: "Admins scrub direct-contact info on the way out so contributors get attribution without becoming a circumvention target." },
+                    { before: "Each contributor pitches themselves cold. Quality of self-presentation drowns out quality of work.", now: "Members submit objective fields: price, timeline, work samples. Admins author the positioning narrative consistently." },
+                    { before: "Bidding platforms extract from both sides. Workers pay to be seen. Clients wade through 50+ proposals to find 3-5 matches.", now: "No bidding. No pay for access. The cooperative curates 3-5 qualified matches per skillset. Workers stay in delivery mode." },
+                    { before: "When the contract closes, the relationship resets to zero. No equity, no compounding ownership.", now: "Contributors accrue $BUILD tokens on every shipped contract. Real attribution, real co-ownership, and real governance." }
+                  ].map(({ before, now }, idx) => (
+                    <div key={idx} style={{ background: 'var(--surface)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border)', padding: '16px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                      <div style={{ display: 'flex', gap: '8px', alignItems: 'baseline' }}>
+                        <span className="pill" style={{ background: 'rgba(199, 34, 138, 0.1)', color: 'var(--magenta)', fontSize: '10px' }}>Before</span>
+                        <span style={{ color: 'var(--muted)', fontSize: '13px', lineHeight: '1.4' }}>{before}</span>
+                      </div>
+                      <div style={{ display: 'flex', gap: '8px', alignItems: 'baseline', borderTop: '1px solid var(--border)', paddingTop: '8px', marginTop: '4px' }}>
+                        <span className="pill" style={{ background: 'rgba(16, 185, 129, 0.1)', color: '#10b981', fontSize: '10px' }}>Now</span>
+                        <span style={{ color: 'var(--fg)', fontSize: '13px', fontWeight: 500, lineHeight: '1.4' }}>{now}</span>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
