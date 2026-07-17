@@ -282,7 +282,6 @@ export default function App() {
                   <p className="section-label">Purpose</p>
                   <h2 style={{ marginBottom: 'var(--gap-md)' }}>The wave others ride.</h2>
                   <p className="lead" style={{ maxWidth: '100%' }}>We exist to acknowledge and compensate the expression of original ideas and labor that move culture forward. Provenance first — then everything else.</p>
-                  <p className="lead" style={{ maxWidth: '100%', marginTop: 'var(--gap-md)', fontSize: '15px', color: 'var(--fg)' }}>In one sentence: the world's first Venture Labor Cooperative.</p>
                 </div>
                 <div>
                   <p className="section-label">Vision</p>
@@ -361,8 +360,6 @@ export default function App() {
               <h2 style={{ marginBottom: 'var(--gap-md)', maxWidth: '36ch' }}>The resumes speak for themselves.</h2>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--gap-md)', marginBottom: 'var(--gap-md)' }}>
                 <p className="lead" style={{ maxWidth: '100%' }}>The people who built this are already reputed in their fields. Top performers at the companies they passed through. Founding hires at platforms that went on to IPO. Engineers at Caltech, Berkeley, and the Smithsonian. Designers and writers at Columbia Records, Bad Boy, Mad Decent, Complex. Operators at Microsoft, Amazon, Lenovo, Bird, WebMD, and the LADWP.</p>
-                <p className="lead" style={{ maxWidth: '100%', fontSize: '16px' }}>We didn't stay long inside any of them. Top performance wasn't the issue. Fit was. The pattern was the same every time: vindication afterwards. The people who built Future Modern are the ones who keep moving when the room they're in stops being big enough for what they actually do.</p>
-                <p className="lead" style={{ maxWidth: '100%', fontSize: '16px' }}>None of our clients came from freelance platforms. Anything visible there is a testament to who we are, not a credential we're trading on. Our work has always come through relationships. Through the people who've seen us deliver and stayed in the room.</p>
                 <p className="lead" style={{ maxWidth: '100%', fontSize: '16px', color: 'var(--fg)', fontWeight: 500 }}>$BUILD.Store is the platform we built so the next generation of that talent doesn't have to leave a half-dozen companies to be paid what their work is worth. The cooperative is the structure. The people are the proof.</p>
               </div>
               <div className="disclaimer-fine">Contributor affiliations are listed for context only and do not imply endorsement of Future Modern Builderberg LLC or $BUILD.Store.</div>
