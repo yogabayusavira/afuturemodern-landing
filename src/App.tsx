@@ -293,7 +293,7 @@ export default function App() {
               <div className="rare-block">
                 <div className="rare-left">
                   <p className="section-label">Tagline</p>
-                  <img src="/rare-infinity.svg" alt="Rare∞" style={{ height: '48px', display: 'block' }} />
+                  <img src="/rare-infinity.svg" alt="Rare∞" style={{ height: '48px', display: 'block', maxWidth: '100%' }} />
                 </div>
                 <div className="rare-right">
                   <p className="rare-copy">For savvy seekers and independent creators who share a deep value for cultural contribution. We provide content, services, and resources counter to those currently found in legacy media and traditional industry, which fail to cater to their appetites.</p>
