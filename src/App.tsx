@@ -293,7 +293,44 @@ export default function App() {
               <div className="rare-block">
                 <div className="rare-left">
                   <p className="section-label">Tagline</p>
-                  <img src="/rare-infinity.svg" alt="Rare∞" style={{ height: '48px', display: 'block', maxWidth: '100%' }} />
+                  <svg
+                    viewBox="0 0 210 62"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-label="Rare∞"
+                    style={{ height: '48px', display: 'block', maxWidth: '100%', overflow: 'visible' }}
+                  >
+                    <defs>
+                      <linearGradient id="ri-gold" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stopColor="#B8971E"/>
+                        <stop offset="50%" stopColor="#F4CF57"/>
+                        <stop offset="100%" stopColor="#B8971E"/>
+                      </linearGradient>
+                      <linearGradient id="ri-spectrum" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stopColor="#D828A0"/>
+                        <stop offset="55%" stopColor="#5070F0"/>
+                        <stop offset="100%" stopColor="#007048"/>
+                      </linearGradient>
+                    </defs>
+                    {/* textLength forces "Rare" to exactly 108px wide regardless of which font renders */}
+                    <text x="0" y="52"
+                      fontFamily="var(--font-display)"
+                      fontWeight="700"
+                      fontSize="60"
+                      textLength="108"
+                      lengthAdjust="spacing"
+                      fill="#FFFFFF"
+                      stroke="url(#ri-gold)"
+                      strokeWidth="1.5"
+                      style={{ paintOrder: 'stroke' }}>Rare</text>
+                    <text x="112" y="35"
+                      fontFamily="var(--font-display)"
+                      fontWeight="700"
+                      fontSize="54"
+                      fill="url(#ri-spectrum)"
+                      stroke="url(#ri-gold)"
+                      strokeWidth="1"
+                      style={{ paintOrder: 'stroke' }}>∞</text>
+                  </svg>
                 </div>
                 <div className="rare-right">
                   <p className="rare-copy">For savvy seekers and independent creators who share a deep value for cultural contribution. We provide content, services, and resources counter to those currently found in legacy media and traditional industry, which fail to cater to their appetites.</p>
